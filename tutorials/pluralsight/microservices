@@ -1,0 +1,267 @@
+microservices
+
+Micro
+
+1. does one thing
+2. defines scope of functionality
+3. autonomously developed
+4. independently deployed
+5. bounded context
+6. identify sub-domains
+
+Service
+
+1. indendently deployable component
+2. interoperability
+3. message based communication
+
+Monolith
+
+Pros
+
+1. Simple to develop, test, build, deploy and scale
+
+Cons
+
+1. New team members productivity
+2. Growing teams
+3. Code is harder to understand
+4. No emerging technologies
+5. Scale for bad reasons
+6. Overloaded container
+7. Huge database
+
+Microservices
+
+1. Domain
+2. Sub domain
+3. Dependencies (duplicate entities)
+4. Independent Databases
+
+Organization
+
+1. Team per subdomain
+2. Right size teams
+3. Independent
+4. Responsible
+5. Agile and Devops
+6. Communication
+7. Management
+
+Data Store
+
+1. Independent
+2. Different requirements
+3. Different databases - SQL, NoSQL, Graph, LDAP etc.
+4. Loosely coupled
+
+Data Synchronization 
+
+1. No distributed transaction
+2. Lose immediate consistency and move to eventual consistency model
+3. Capture data change
+4. Event sourcing pattern
+5. Event publishing tools: Akka, Kafka, RabbitMQ
+6. Data change capture tool: Debezium
+
+User interface
+
+1. Unique UI
+2. Should feel like single application
+3. UI composition - Server side, client side
+
+Services
+
+1. Inter communication between services
+2. Remote Procedure invocation
+	- RPC
+	- request/reply pattern
+	- Synchronous or asynchronous
+3. Messaging
+	- Broker or channel
+	- Message or event
+	- Publish/Subscribe to messages
+	- Loosely couple
+4. Protocol format exchange
+	- Text - XML, JSON, YAML
+	- Binary - gRPC
+5. APIs and contracts
+	- Different devices, different needs, different APIs and contracts
+	- APIs and contracts per device
+
+Distributed services
+
+1. Network location can change dynamically
+2. Service registry - phonebook of services with their locations and let clients lookup services by their logical names
+3. Self registration on startup and deregister on shutdown
+4. Client needs to do discover location of service by query service registry
+5. Service registry tools: Eureka, Zookeeper, Consul
+6. Cross-origin Resource Sharing
+	- Same origin policy (same protocol, server and port) is too restrictive
+	- To allow CORS, microservices need to use HTTP Headers to let user agent gain permission to access selected resources from a server on a different origin
+	- Service needs to be available when sharing resource
+	- Circuit breaker to deviate calls
+	- Circuit broker tools: Hystrix, JRugged
+7. API Gateway 
+	- single entry point for all clients
+	- unified interface to all microservices
+	- can address cross cutting concerns like Security, Authentication, Authorization
+	- insert API translation for API per device
+	- Gateway tools: Zuul, Netty, Finagle
+
+Security
+
+1. Authentication - Verify user
+2. Authorization - Policies to allow access to users
+3. Identity and Access Management system
+4. Authentication protocol: Kerberos, Open ID, Oauth 2.0, SAML
+5. IAM Systems: Okta, Keycloak, Shiro
+6. Assert authenticity of request in a consistent way across all services. This is done using Access Token
+7. Access token stores information about user
+8. It is exchanged between services. Each service ensures token is valid and takes user information to verify if user is authorized to perform the operation or not
+9. JSON Web Token specification
+
+Scalability
+
+1. Scale independently depending on its needs
+2. Vertical - add more power (CPU & RAM) to existing machine
+3. Horizontal - add more machines
+4. Service replication
+5. Clustering
+6. Scale up or down based upon pre-defined metrics
+7. Several instances of same service registered on service registry
+8. Client side load balancer to pick single instance among registered instances (criteria - Round robin, Weight, Capacity of services)
+9. Client load balancing tools: Ribbon, Meraki
+
+Availability
+
+1. Be operational
+2. Single Point of Failure (SPOF) - Part of system if it fails stops the entire system
+3. To fix this, all SPOF instances need to be scaled horizontally and clustered (to keep in sync)
+
+Monitoring
+
+1. Centralized logging and monitoring system
+2. Visual dashboards
+3. Monitoring dashboards: Kibana, Grafana, Splunk
+4. Health check
+5. Log aggregators: Logstash, Splunk, PaperTrail
+6. Exception tracking
+7. Metrics
+	- Instrument our service to gather statistics about individual operations
+	- Time taken for operations
+8. Metrics Tools: Dropwizard, Spring Actuator, Prometheus
+9. Auditing
+	- Behavior of users or user activity
+10. Rate limiting 
+	- Control API usage
+	- Defend DOS attacks
+	- Limit traffic in a period of time
+	- Monetize APIs
+11. Alerting
+	- Be proactive to fix error when it occurs
+	- Configure threshold
+	- Trigger alerts
+12. Distributed Tracing
+	- Requests span multiple services
+	- Unique correlation identifier passed between services
+	- Trace chain of calls
+	- Trace entire request
+	- Tracing Tools: Dapper, HTrace, Zipkin
+
+Deployment
+
+1. On physical or virtual server
+2. On premise or on cloud
+3. Multiple services on single host or single service per host
+4. Package microservice with dependencies - Containers
+	- Easy to move from environment to environment
+	- Scale up and down
+	- Container tools: Docker, rocket
+5. Orchestrator
+	- instances on multiple machines
+	- start at the right time
+	- failed containers
+	- Orchestration tools: Kubernetes, Mesos, Docker swarm
+6. Continuous Delivery
+	- Automated deployment
+	- Cost effective
+	- Quick
+	- Reliable
+	- Tools: Jenkins, Asgard, Aminator
+7. External configuration
+	- Different configuration on different environments like Log level, Database credentials
+	- Activate functionality
+	- Tools: Archaius, Consul, Decider
+
+Challenges
+
+1. Globally competitive world
+2. Business is more and more complex
+3. Highly available, scalable and secure
+4. Reduce costs
+5. Open, robust and agile technologies
+6. Maintain legacy
+7. Time to market
+8. Small batches of work
+9. Move to production quickly
+
+Business concerns
+
+Benefits
+
+1. Small teams easier to manage, Reduced dependencies, Easier estimation
+2. Easy to mix developers and share knowledge with new developers
+3. Pick appropriate technology stack
+4. Open source products and dynamic open source communities
+5. Start small, start cheap, cheap deployment on cloud, small budget and grow up when needed
+6. Faster to market, Earning revenues faster, small batches of work, Move to production faster
+
+Challenges
+
+1. Separate teams need to synchronize
+2. Occasional central management
+3. Training when embracing new technologies
+	- Lots of technologies
+	- Lots of languages
+	- Lots of data store
+	- Constantly train the team
+	- Moving people between teams is difficult and more training will be required
+4. No standard technological stack to rely on. No single framework 
+5. Integration of several technologies implies there is no single point of support when you need help
+
+Technical concerns
+
+Benefits
+
+1. Technical diversity, most appropriate tech for each microservice, right tool for the right job
+2. One database per subdomain, loosely couple services, different style of databases
+3. Performance benefits in choosing right tools for microservice
+4. Testing less code, mock and test microservice in isolation
+5. Less code to write, test, maintain and understand
+6. Extensible by design - new feature as a microservice, access 3rd party service as a microservice
+
+Challenges
+
+1. How to partition the system? How many microservices? How small?
+2. Highly distributed - complexity of distributed systems, Integration implies network call which is slow
+3. Network fallacies
+4. Deal with failures
+5. Data synchronization - Capture data change, event sourcing for eventual consistency
+6. Avoid distributed transactions for strong/immediate consistency
+7. Security is difficult - each service needs to validate tokens. can lead to security flaws
+10. Integration testing is difficult
+12. Need for chaos testing to see how system behaves on introducing failure
+
+Production concerns
+
+1. DURS - Deploy, Update, Replace, Scale - need to have independent DURS for microservice
+2. CI/CD - Errors are identified early in automated testing and deployment pipelines
+3. Build container images of microservices so that same image can be used across every step of the deployment process 
+4. Hybrid infrastructure - Traditional IT (on premise), private cloud, public cloud and data centers
+5. Scalability - meet the increased demand
+6. Availability - Ensure a level of operation performance or Uptime, enable graceful degradation (handle other services not being available)
+7. Critical components like Service registry, Gateway, IAM must be highly available
+8. Constantly monitor the system - More logs to aggregate, more heart beats to control, more metrics to gather, alerts to detect system slowing down
+9. Large volume of monitoring data, external calls and rate limit, possible security issues and fraud
+

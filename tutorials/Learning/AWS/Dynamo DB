@@ -1,0 +1,18 @@
+Dynamo DB - https://medium.com/@lewisdgavin/aws-dynamodb-overview-184e53aedcd6
+
+- NoSQL database - low latency and large scales
+- document and key-value storage
+- stored in SSD storage 
+- distributed across 3 geographically distinct data centers for redundancy
+- support for eventual (default) and strongly consistent reads
+
+How it works?
+- Tables (like collection)
+- Items (row in table)
+- Attributes (column or field in table)
+
+- must have primary key
+	- partition key - single attribute - field that uniquely identifies the row (like auto-generated, unique product id)
+	- partition key & sort key - composite key - combo of two fields that uniquely identifies row and how data should be naturally sorted
+	(like unique product id and purchase date timestamp)
+- partition key must be unique and sparse

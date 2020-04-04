@@ -1,0 +1,125 @@
+Brief
+1. effective from May 25, 2018 across EU
+2. Privacy by design and privacy by default mandated for every new service or process
+3. 28000 DPO in Europe
+4.  8 core individual rights under GDPR - 72 hrs given to notify a data breach
+5. rights to be forgotten, object data portability, notification
+6. 4% annual turnover as fines
+7. strong focus on data minimization and data pseudonymization
+8. 150+ countries in scope for regulation
+
+Timeline
+1. 1995, EU release European directive 95/46/CE relative to PDP
+2. EC reform current legal framework to deal with new challengers for PDP and make EU member states fit for digital age
+3. 4 May, 2016 EU Regulation on GDPR published on Official Journal of EU. Entered into force on 24 May, 2016 replacing former derective
+4. GDPR came into effect from 25 May 2018 across EU
+
+Changes
+1. Broader territorial scope - applies to players whose activities consist of dealing with data subjects in EU
+2. Enforcement - DPA to impose 2-4% annual turnover as fines
+3. Accountability - demonstrate compliance through DPO, PIA
+4. Expanded definitions - personal data includes location, IP address, technology identifiers
+5. Data subject rights - Reinforced rights; no automated profiling and no data portability
+6. Consent - need for affirmative action
+7. Data breach notification - within 72 hrs
+8. One stop shop - DPA
+9. International data transfers - corporate law
+
+GDPR
+1. supersedes DPA 
+2. strengthen individual rights and obligations on organisations in looking after personal data
+3. have legitimate reason for processing data
+4. ensure consent is freely given and also easily withdrawn
+5. ensure Data processing action must start with privacy by design and default
+6. subject access requests
+7. subject can request data deletion - right to be forgotten
+8. mandatory breach reporting
+9. data processors will be held liable
+10. demonstrate GPDR compliance
+11. 4% of annual turnover of 20m euros fines whichever is greater
+12. it's happening regardless of Brexit
+
+Personal data
+1. which can identify individual
+2. sensitive personal data (special categories of personal data) - relating to race or ethnic origin, political opinion, religious belief, trade union membership, health condition, sexual life, criminal records
+
+Examples of personal data
+1. name
+2. address
+3. email id
+4. id number
+5. location
+6. IP address
+7. cookie id
+8. hospital data to identify individual
+
+Examples of sensitive personal data
+1. race or ethnic origin
+2. political opinion
+3. religious belief
+4. union
+5. health record
+6. sexual life
+7. criminal record
+
+GDPR compliance
+1. includes data controllers or processor activities to offer goods or services or monitor behavior of EU data subjects
+2. reinforce data protection rights, facilitate free flow of data. applies to any organization regardless of Geo. location that controls or processes data of EU resident
+3. breach implies breach of security leading to accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, access to, personal data transmitted, stored or otherwise processed
+4. Data breach notification - S.A., Data subject and data controller
+5. appoint sub-processor on breach
+6. processing - carried out on controller's instructions
+
+Organization responsibilities
+1. culture of monitoring, reviewing and assessing data processing procedures
+2. minimize d.p. and d. retention
+3. safeguards to d.p.a.
+4. documention d.p.a.
+5. free consent
+6. informed consent
+7. explicit consent
+
+Data Protection Officer DPO
+1. first PoC
+2. At LTI - Dilip Panjwani, CDPO & Vikram Patil, DPO
+
+Data subject rights
+1. info.
+2. access
+3. rectification
+4. deletion
+5. restriction of processing
+6. notification
+7. data portability
+8. object
+9. appropriate decision making and profiling
+
+Obligations of Data processor
+1. Appoint DPO
+2. Security measure
+3. comply with contract and controller's instruction
+4. documentation
+5. co-operation with supervisory authority
+6. conduct impact assessment prior processing
+7. employing staff
+8. permission for processing
+9. prohibition on transfer to Int. Org. or third country
+
+@LTI
+1. data protection certification
+2. appointment of CDPO & DPO
+3. workstation data protection controls implemented
+4. data protection controls inside ODC
+5. cookie and privacy policy implementations
+
+Data protection controls inside ODC
+1. physical security perimeter - access only for designated employees
+2. relocation of machines - only after valid approval
+3. clear desk policy
+4. application and device controls
+5. laptop usage
+6. reporting breaches
+7. storage/use of PII/PCI/PHI
+8. awareness/training
+9. compliance
+10. non-compliance may result in counseling, warning, disciplinary proceedings extending to termination of service

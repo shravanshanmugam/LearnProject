@@ -1,0 +1,116 @@
+TDD
+---
+
+Reference: https://www.udemy.com/course/learn-test-driven-development-in-java/learn/lecture/153621#overview
+
+Red-Green-Refactor loop
+
+1. Write Test
+2. Code fails
+3. Write code
+4. Code passes
+5. Refactor
+
+SOLID Principle
+---------------
+
+1. Single responsibility principle
+	- every class should have a single responsibility
+	- responsibility should be entirely encapsulated by that class
+	- cohesion - degree to which elements of a class belong together
+2. Open closed principle
+	- class should be open for extension but closed for modification
+	- not modify existing code too much as we risk breaking the existing code
+3. Liskov substitution principle
+	- If we have two classes A and B, A is subtype of B, then objects of type B may be replaced with object of type A without altering any of the properties of the program
+	- any instance of super class can be replace with instance of sub class without changing any of the behavior
+4. Interface segregation principle
+	- prefer more smaller specific interfaces than large interfaces
+	- when new implementation is written, all methods may not be relevant to implement
+	- large interface makes it hard to make changes to implementation of the interface
+5. Dependency inversion principle
+	- high level classes depend on abstractions than implementation of low level classes
+	- abstractions shouldn't depend on the details
+
+Introducing test doubles
+- stand-in implementation of interface in place of real implementation classes used for testing
+
+Test doubles
+------------
+
+1. Stubs
+	- pre-determind or canned answers to anything that you might ask of that object and records state
+	- can provide state-based verification
+	- assertions made directly in test method
+2. Fakes
+	- emulate real application behavior in a simplied way
+	- assertions made directly in test method
+3. Mocks 
+	- provide behavior based verification
+	- assertions made by mock object
+
+Testing legacy code
+-------------------
+
+- Using mock frameworks
+	- Mockito
+	- Power mock - mock static methods, constructors, private variables, and behavior of objects/dependencies encapsulated in methods using mock, expect and replay methods
+
+Test principles
+---------------
+
+FIRST Principle
+
+1. Fast
+	- really quick to run
+2. Independence
+	- not required to run specific tests before executing other tests
+3. Repeatable
+	- test should perform in same away across environment
+4. Self-validating
+	- Simple pass/fail
+	- not produce output which in turn needs to be checked/verified
+5. Timely
+	- Write tests before production code
+
+Anti-Patterns
+-------------
+
+1. Singleton
+	- ends up retaining state
+	- difficult to track usages of Singletons
+2. Create the world
+	- massive setup
+	- either tightly coupled system or verify too much in a single test
+	- can be slow to run
+3. Completely mocked
+	- setting up mocks and verify mocks itself
+	- not testing application code
+	- create test boundaries
+		- classes under test
+		- classes out of test scope
+4. The Exceptional test
+	- no assertions itself
+	- just validating if code executed is not throwing exceptions
+	- this is a weak test
+5. Usually passes
+	- classes that pass most of the time but occasionaly fail
+	- can happen when testing multi threaded code or access external resource whose state can change outside of test
+	- put sleep to wait for multi threaded code to complete before verify tests
+6. One big test
+	- multiple assertions
+	- multiple method calls
+	- can be split into smaller, self-contained tests
+7. The slow test
+	- should be quick to pass
+	- should also be quick to fail
+	- run frequently
+8. Second-class test
+	- testing other classes scenarios
+
+Applying TDD
+------------
+
+1. Not required for short-lived, experimental, temporary projects
+2. Not required when design is fixed well before development/testing
+3.TDD Kata - exercises

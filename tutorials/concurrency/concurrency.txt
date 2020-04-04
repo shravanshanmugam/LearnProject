@@ -1,0 +1,143 @@
+- Parallelism vs Concurrency
+* Parallelism - doing multiple things at once
+* Concurrency - dealing with something when multiple things are happening (shared resource management with multiple tasks)
+* scheduler interleaving threads
+* OS schedules tasks to threads and allocated certain amount of time for each thread
+
+- Java memory model
+* out of order execution to improve performance
+* field visibility issue
+* core -> register -> l1 cache -> l2 cache (per 2 cores) -> l3 cache (per 4 cores) -> RAM
+* -----> increasing size of memory and increasing latency for access
+* threads cache values in shared memory
+* happens before relationship
+https://dzone.com/articles/java-multi-threading-volatile-variables-happens-be-1
+
+- volatile vs Atomic
+* volatile will not synchronized for compound operations, only for atomic operations
+
+- Adders and accumulators
+* LongAdder will keep a counter in its local cache for each thread and then add up all the values from all local caches using sum() operation which is when synchronization happens and hence avoids contention which is an issue in AtomicLong
+* Accumulator is a generic adder which takes custom Function for performing operations
+* Don't keep state or external variables inside custom function of accumulator
+
+- Forkjoinpool
+* Task producing subtasks a.k.a. forkjoin
+* per thread queueing & work stealing
+
+- Synchronous Queue
+* Blocking queue of size 1 (technically it has zero capacity)
+* put() operation waits/is blocked for take() operation
+* producer thread requires consumer thread to be available so there is a direct hand off
+
+- ThreadLocal
+* create one object per thread
+* creating global object causes is not thread safe and requires locks for synchronization which degrades performance
+* creating one object per task takes too much memory
+* instead create one object per thread in the thread pool which can be reused by the thread for a different task
+* memory efficient and thread safe
+
+- CountDownLatch
+* run n number of tasks with m threads
+* after each task is complete decrement counter
+* main thread will wait till all n tasks are completed by m threads
+* after all tasks are completed main thread execution will continue
+
+- CyclicBarrier
+* if n tasks need to be run repeatedly, cyclic barrier can be used which acts similar to count down latch
+* after a task is completed by a thread, it waits for other threads to complete the task
+* once all tasks are completed, it will repeat execution of the tasks
+
+- Java asynchronous programming
+* on single core if n threads are running, only active thread will have its data on cpu cache, remaining threads data will be flushed to shared cache
+ 
+ - Reentrant lock and Condition
+ * locks are explicit
+ * locks allow looking/unlocking in any scopes and in any order
+ * ability to tryLock() and tryLock(timeout)
+ * when a thread tries to reacquire a lock, its hold count will get incremented
+ * unfair lock allows barge-in meaning new thread will get lock over thread waiting in queue
+ 
+ * provides thread ordering
+ * avoids thread starvation
+ * condition on lock
+ * one thread will await till condition is met
+ * another thread can signal once condition is met
+
+ * tryLock() doesn't respect fairness condition
+ * work around is use tryLock(0)
+
+ - Semaphore
+ * it has n number of permits that need to be acquired by threads
+ * at a time out of m threads only n threads can acquire permit and execute the task at a time
+ * always take and release same number of permits
+ * fairness - FIFO or not
+
+ - ReadWriteLock
+ * ReentrantLock locks resource for both read and write operation
+ * ReadWriteLock has two separate locks one for read and one for write
+ * Multiple Reader threads can access resource at a time
+ * Reader and writer threads block execution
+ * Writer and writer threads block execution
+ * In waiting queue, reader threads will not be pushed up before writer threads
+ * Reader and writer threads will be allowed access to locks in FIFA manner
+
+ - Exchanger
+ * Two way SynchronousQueue
+
+ - Striped lock
+ * n objects, t threads allows us to use m number of locks
+ * n number of locks will increase memory
+ * 1 global lock will lead to thread contention
+ * buckets for each group of objects (logic similar to hash functions)
+
+ - Coroutines
+ * Java fibers
+ * Kotlin (coroutines)
+ * Python (Trio)
+ * Go (goroutines)
+
+ - Spinlocks
+ * When thread locking time is small enough, there is no need to completely block a thread into waiting state
+ * Instead keep trying to acquire lock until lock is released by another thread without going into the wait state
+ * Avoid thread switching and CPU cycles
+ * a.k.a. busy-loop, busy-wait, spinning
+ * JVM flags to enable spinning for locks
+ -XX:-UseSpinning
+ -XX:PreBlockSpin=12 => try 12 times to acquire lock, if still not available go into wait state
+ * JVM - Adaptive spinning - number of times to try to acquire lock is dynamic and profiled by JVM
+
+ - Deadlocks
+ * Deadlocks occur when a thread is waiting for a lock held by other thread and vice versa
+ * Detect using threaddump
+ * kill -3 <pid>
+ * jstack <pid> > <file>
+ * Java provides ThreadMXBean API to find dead locked threads 
+ * Avoid dead lock using timeouts when acquiring lock
+ * Consistent Ordering of locks by acquiring and releasing locks in order
+
+ - Stopping thread execution
+ * interrupt() method but run() method has to check if Thread.currentThread().isInterrupted() and exit the execution of runnable
+ * volatile boolean or AtomicBoolean flag to stop execution
+
+ - Double checked locking
+ * use volatile keyword to avoid out of order execution of statements, otherwise double checked locking will not work
+ * static holder pattern - thread safe and lazy initialization
+ * using enums 
+
+ - Data races
+ * Multiple threads access shared variable without synchronization. Atleast one thread is writing to variable
+ * Java Language Specification mandates atomic writes of primitive int, hence no data corruption
+ * JLS does not mandate atomic writes for long/double (64 bits)
+ * It can be considered as two separate variables of each size 32 bits
+ * one thread sets first 32 bits another thread sets remaining 32 bits leading to word tearing
+ * It can occur even if single thread is writing due to interleaving leading to data corruption 
+
+ - Race condition
+ * Multiple threads access shared variable. Value of variable depends on execution order of threads
+ * Output of computation depends on ordering of threads/instructions
+ * Occurs in check and update
+ * When operations do not occur atomically
+ * Use locks to fix race condition
+ * Occurs in read and update
+

@@ -1,0 +1,28 @@
+Redis
+
+1. Socket - TCP connection based
+2. caching database
+3. distributed caching - access from multiple application servers
+4. Other cache databases - Memcached, Solr
+5. Querying ability better than Memcached
+6. Pipelining - multiple queries
+7. Pub/Sub - when producer and consumer capacity is incompatible
+8. Indexed DBs
+
+Redis commands
+1. Connection
+2. Hashes
+3. Keys
+4. List
+5. Pub/Sub
+6. Sets
+7. Sorted sets
+8. Streams
+9. Strings
+10. Transactions
+
+Topics
+1. Streams
+2. I/O Streams
+3. Sockets
+4. Redis Commands

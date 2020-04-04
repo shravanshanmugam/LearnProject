@@ -1,0 +1,41 @@
+Design Patterns
+
+1. Creational patterns - how shouldobjects be created?
+2. Behavioral patterns - how should objects behave and interact with each other?
+3. Structural patterns - how should classes behave and interact with each other?
+4. Concurrency patterns - how should a specific situation be handled under multi-threading?
+5. Architectural pattern - Model-View-Controller Paradigm
+
+--
+Creational Patterns
+1. Decouple construction of object from its use
+2. Hide implementation of object, only reveal its interface
+3. Defer instantiation until run-time
+4. families of related object that must be used together
+5. restrict creation of instances (finite number of instances)
+
+Behavioral Patterns
+1. logical unit interaction with outside world
+E.g. Iterator pattern
+
+Structural Patterns
+1. logical unit interaction with each other
+E.g. MVC paradigm
+
+--
+Design principle
+1. Rely on interface not implementation - "Program to an interface, not an implementation"
+2. The open/closed principle - "Classes should be open for extension but closed for modification" 
+- Inheritance - abstract base classes E.g. Template pattern
+- Delegation - fire events and expose properties, other code can listen in and use via delegation E.g. observer, MVC, chain of responsibility
+- Composition - taken in member variable to determine behavior E.g. Strategy pattern
+3. Principle of least knowledge a.k.a. Demeter's Law - "Only talk to friends, don't talk to strangers"
+- only make method calls to 'friends'
+- Friends - objects passed in as paramters to methods of your class or objects created inside your class (including member variables)
+- don't include multiple '.' operators in the same function call
+4. Dependency inversion - "Depend on abstractions, never on details"
+- implementation of an interface should reference only other interfaces
+- both high-level component and low-level component now both depend on abstractions (Dependency direction in UML diagram is inverted)
+5. Hollywood principle - "Don't call use, we'll call you" - High-level module should call low-level module
+
+--

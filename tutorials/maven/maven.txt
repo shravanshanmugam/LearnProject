@@ -1,0 +1,147 @@
+1. Setup Java xxxJDK and Maven
+
+2. Java packaging
+
+*.java -> *.class by compiler
+*.class -> executed at run time by jvm
+jar - class files
+war - class files, jars, web resources
+ear - wars
+
+
+3. Java deployment
+war, ear deployed on application servers like Apache Tomcat
+
+4. Maven source is src/main/java folder
+
+5. Maven POM
+<groupId></groupId> // reverse of domain
+<artifactId></artifactId> // project
+<version></version>
+
+6. Maven clean and package
+mvn clean - remove target folder
+mvn package - create target folder with class files
+
+7. Maven dependency
+
+compile time dependency build jar without dependencies
+
+<dependencies>
+	<dependency>
+		<groupId></groupId> // reverse of domain
+		<artifactId></artifactId> // project
+		<version></version>
+	</dependency>
+</dependencies>
+
+8. build properties
+ 
+ <properties>
+ 	<project.build.sourceEncoding></project.build.sourceEncoding>
+ 	<project.reporting.outputEncoding></project.reporting.outputEncoding>
+	 <java.version></java.version>
+	 <maven.compiler.source></maven.compiler.source>
+	 <maven.compiler.target></maven.compiler.target>
+</properties>
+
+9. Maven coordinates - groupId, artifactId, version
+
+10. Maven repositories - local, central, remote
+
+11. Maven wagon - ways to publish or pull from repositories
+
+12. Maven POM/Dependencies - define build steps
+
+13. Maven Build Life Cycles - clean, default, site
+
+14. Maven wrapper - build maven project with different maven versions without installing multiple versions of maven
+
+15. Maven archetypes - project templates
+
+--
+
+16. Maven plugins
+
+build lifecycle is predefined group of build steps called phases
+each phase can be bound to one more plugin goals
+
+clean - remove files generated during build process
+compile - compilation
+resources - copy resources to output directory
+surefire - execute unit test
+jar - build jars from compiled artifacts and project resources
+deploy - deploy project artifacts
+site - generate site for project
+
+It is needed to enable TLS 1.2 protocol with Java property in the command line
+mvn -Dhttps.protocols=TLSv1.2 install
+mvn -Dhttps.protocols=TLSv1.2 site
+mvn -Dhttps.protocols=TLSv1.2 deploy
+--
+17. Maven generate source
+JAXB
+jsonschema2pojo
+lombok
+MapStruct
+
+18. Maven Testing
+Pojo test
+Junit4-5
+TestNG
+surefire test reports
+Integration Testing - mvn verify
+Jacoco - Code coverage - https://www.petrikainulainen.net/programming/maven/creating-code-coverage-reports-for-unit-and-integration-tests-with-the-jacoco-maven-plugin/
+Spotbugs report
+
+19. Maven multi module projects
+Parent project-child modules
+Other modules as dependencies - install to add to /.m2 repository
+Build order of modules depends on dependency tree
+Maven dependency version management using maven properties
+
+<version>${revision}</version>
+
+<properties>
+	<revision>1.0-SNAPSHOT</revision>
+</properties>
+
+<dependency>
+	<groupId></groupId>
+	<artificatId></artifactId>
+	<version>${project.version}</version>
+</dependency>
+
+20. Maven flatten plugin
+To replace version placeholders with version in maven pom
+
+21. Maven enforcer plugin
+Build rules like required java versions, maven versions
+
+22. Maven bom
+Dependency management of POM
+Used to standardize version
+Not transitive dependencies
+
+23. Maven repositories
+Repositories other than Maven central like Sonartype, Jboss, Spring framework, Atlassian
+
+24. Maven settings
+User level (/.m2/settings.xml) and Global level settings (apache-maven/conf/settings.xml)
+Plugin groups, repositories, mirrors, proxies, Profiles, active profiles
+
+25. Maven master password
+
+26. Maven distribution management
+Publish your artifacts on a remote repository using mvn deploy goal
+
+27. Maven build profiles
+Deactivate or activate profiles
+mvn -P \!<profile id 1>,<profile id 2> help:active-profiles
+
+Execute goal with a profile
+mvn <goal> -P<profile id>
+
+28. Maven release plugin
+-- Pending
+

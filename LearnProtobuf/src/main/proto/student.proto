@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+package com.shravan.learn.model;
+
+option java_package = "com.shravan.learn.model";
+option java_outer_classname = "Data";
+
+message Student {
+    required int32 id = 1;
+    required string name = 2;
+    optional string marks = 3;
+}

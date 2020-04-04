@@ -1,0 +1,199 @@
+Golang
+
+Reference: https://www.youtube.com/watch?v=YS4e4q9oBaU&t=5159s
+
+Problems with current languages used in Google
+----------------------------------------------
+
+Python - easy to use but slow - interpretive
+Java - increasingly complex type system
+C/C++ - complex type system and slow compile times
+Concurrency is patched in at best in these languages
+
+Golang
+------
+
+- Strong (cannot change type over time) and statically (have to be defined at compile time) typed
+- Excellent community
+- Key features
+	- Simplicity
+	- Fast compile times
+	- Garbage collected
+	- Built-in concurrency
+	- Compile to standalone binaries
+
+Setup
+-----
+
+1. Install binary
+2. Setup $GOROOT and $GOPATH and $PATH variables
+3. go get github.com/nsf/gocode in go lib folder
+4. setup go lib and go code folders for creating workspace
+5. create src, bin and pkg directory in go code folder
+6. Open project in Visual Studio Code IDE
+7. install go extensions
+8. install all vscode recommended go packages
+9. execute go program using
+go run src/github.com/shravan3000/firstapp/main.go
+10. execute go build and run
+go build github.com/shravan3000/firstapp/
+./firstapp
+11. execute go install and run
+go install github.com/shravan3000/firstapp
+./bin/firstapp
+
+Variables
+---------
+
+1. Variable declaration
+2. Redeclaration and shadowing
+3. Visibility
+4. Naming conventions
+5. Type conversions
+
+- compile timer error when variables are unused
+- cannot create multiple variables with same name
+- lower case first letter variables scoped to package
+- upper case first letter variables scoped to export
+- length of variable name should reflect lifetime of variable
+- use Pascal or camelCase
+- for acronyms, use upper case for readability
+- can't redeclare variables but can shadow them
+- all variables must be used
+
+Primitives
+----------
+
+1. Boolean type
+	- value is true or false
+	- not an alias for other types
+	- zero value is false
+2. Numeric types 
+	- Integers
+		- Signed (int8 to int64) & unsigned (uint8 to uint32) integers
+		- Arithmetic operations
+		- Bitwise operations
+		- Bitshift operations
+		- zero value is 0
+		- can't mix types in same family
+	- Floating point
+		- zero value is 
+		- float32 or float64
+		- decimal notation (3.14)
+		- exponential notation (12e18 or 2E10)
+		- mixed notation (13.7e12)
+		- Arithmetic operations
+	- complex numbers
+		- zero value is 0 + 0i
+		- complex64 and complex128 formed from float32 and float64 for each parts (real and imaginary) of complex number
+		- complex, real and imag function to contruct complex number, get real part and imaginary part respectively
+		- Arithmetic operations
+3. Text types
+	- Strings
+		- UTF-8 characters
+		- Immutable
+		- Concatenate with + operator
+		- convert to bytes using []byte
+	- Rune
+		- UTF-32 character
+		- alias for int32
+		- special methods normally required to process rune e.g. strings.Reader#ReadRune
+
+Constants
+---------
+
+1. Naming convention
+	- Immutable, but can be shadowed
+	- Value must be available at compile time
+	- camelCase for internal constants
+	- PascalCase for exported constants
+2. Typed constants
+	- work like immutable variables
+	- can interoperate only with same type
+3. Untyped constants
+	- work like literals
+	- can interoperate with similar types
+4. Enumerated constants
+	- Special symbol iota allows related constants to be created easily
+	- iota starts at 0 in each constant block and increments by one
+	- watch out of constant values that match zero values for variables
+5. Enumeration expressions
+	- Operations that can be determined at compile time are allowed
+		- Arithmetic
+		- Bitwise Op
+		- Bitshift Op
+
+Arrays
+------
+
+1. Creation
+	- collection of items with same type
+	- fixed size
+	- declaration styles
+		- fixed size with initialization
+		- fill size based on number of elements
+		- uninitialized array of fixed size
+	- access via 0-based index	
+2. Built-in functions
+	- len function return size of array
+3. Working with arrays
+	- copies refer to different underlying data
+
+Slices
+------
+
+1. Creation
+	- Backed by array
+	- Creation styles
+		- slice existing array or slice
+		- literal style
+		- via make function
+			- 2 args - type, length
+			- 3 args - type, length, capacity
+2. Built-in functions
+	- len function returns length of slice
+	- cap function returns capacity of underlying array
+	- append function to add elements to slice
+		- when concatentating two slices may cause expensive copy operation if underlying array is too small
+3. Working with slices
+	- copies refer to same underlying array
+
+Maps
+----
+
+1. What are they?
+	- Collections of value types that are accessed via keys
+2. Creating
+	- created via literals or via make function
+3. Manipulation
+	- access via [key] syntax
+	- check for presence with "value, ok" form of result
+	- multiple assignments refer to the same underlying data - reference types
+
+Structs
+-------
+
+1. What are they?
+	- Collections of disparate data types that describe a single concept
+2. Creating
+	- Keyed by name fields
+	- Normally created as types, but anonymous structs are allowed
+	- Structs are value types - not reference type
+	- No inheritance, but can use composition via embedding
+	- Tags can be added to struct fields to describe field
+3. Naming conventions
+4. Embedding
+5. Tags
+
+Control Flow
+------------
+
+- If Statements
+	1. Operators
+	2. if-else and if-else-if statements
+
+- Switch statements
+	1. Simple cases
+	2. cases with multiple tests
+	3. Falling through
+	4. Type switch

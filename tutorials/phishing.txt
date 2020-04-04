@@ -1,0 +1,35 @@
+Phishing
+1. attack end user to get information
+2. network username/password
+3. computer behind system firewall
+4. access to confidential information
+5. internal trade secrets
+6. bank account information
+7. domain username/password
+8. privileged access to critical systems
+
+Phishing techniques
+1. create fake email
+2. create fake websites and ask for payment confirmation
+
+Best practices to protect from fraudsters
+1. don't reply to unsolicited emails
+2. won't use sensational messages like threats, warnings or closing accounts
+3. won't look professional
+4. hover over link to verify source 
+
+Check link
+1. check domain name
+2. don't navigate to bank websites through email links
+3. don't click on unsolicited emails
+4. ensure website uses encryption - https protocol
+5. phishing mails can install malware that can track keystores or fully control your system
+
+Outwitting internet spear phishers
+1. spear phishers target specific individual with a highly tailored message
+2. harder to counter because the email messages seem so authentic
+3. estimated to be 4 times as effective as regular phishing
+
+how to avoid
+1. call the person before clicking on links
+2. information posted on social media can be used to make phishing mails look legitimate

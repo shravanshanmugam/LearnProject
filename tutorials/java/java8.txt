@@ -1,0 +1,209 @@
+- Interface
+* Default implementations make interface compatible with older versions.
+E.g. adding new method in interface with default implementation will make sure classes that implement interface do not have to modify and implement the new methods
+
+https://howtodoinjava.com/java-8-tutorial/
+
+Java 8 Aim
+1. concise code
+2. enabling functional programming
+
+Features
+1. lambda expressions
+2. functional interface
+3. default methods and static methods
+4. predefined functional interfaces
+i. Predicate
+ii. Function
+iii. Consumer
+iv. Supplier
+5. Double colon operator
+i. method reference
+ii. constructor reference
+6. Streams
+7. Date and Time API
+8. Optional class
+9. Nashorn javascript engine
+
+Lambda expressions
+1. Objective is to bring benefits of functional programming to Java
+2. It is an anonymous function without name
+3. without return type
+4. without modifier
+5. For return statements
+i. without curly braces, we cannot use return keyword
+ii. with curly braces, we have to use return keyword
+6. Used only for Functional interfaces
+7. java.util.function.* package
+
+Functional interface
+1. Interface containing Single Abstract Method (SAM)
+i. Runnable => run()
+ii. Comparable => compareTo()
+iii. Comparator => compare()
+iv. ActionListener => actionPerformed()
+v. Callable => call()
+2. It can contain default methods and static methods
+3. @FunctionalInterface annotation to mark interface as Functional interface
+i. use for compiler validation
+
+Lambda expression with Functional interface
+1. Inline implementation of functional interface using Lambda expression
+2. Does not generate any *.class file for implementation of Functional interface which is the lambda expression
+
+Lambda expression for Multi threading and collections
+1. used for Runnable FI
+2. used for Comparable and Comparator FI
+
+Anonymous inner class vs Lambda expression
+1. Anonymous inner class can contain implementation of interface with multiple methods
+2. Anonymous inner class can be replaced with lambda expression if interface contains Single Abstract Method
+3. AIC can extend a concrete class
+4. AIC can extend an abstract class
+5. AIC can implement an interface with multiple abstract methods
+6. LE can implement an interface with SAM a.k.a FI
+
+Default methods | Virtual extension method | Defender method
+1. Without affecting implementation classes, if we want to add new method to interface, we can use default methods
+2. If required, default implementation can be overriden by implementing class which will be public method
+3. java.lang.Object class methods (e.g. equals(), hashCode() methods) cannot be overriden as default methods
+4. Resolve conflict default methods by overriding default method of parent interface
+5. to call default method of one of the parent interface, In implementation class by overriding default method, call <Interface>.super.<method>()
+
+Static methods
+1. static methods can be added in interface
+2. interface is lightweight compared to class as class requires object creation
+3. static methods not available for implementation class
+4. static methods can be called by using Interface name only
+5. main method can also be added as static method inside interface
+6. General utility methods can be kept as static methods in interface
+
+Predefined Functional interfaces (java.util.function.* package)
+1. Predicate<T>:boolean
+i. used for conditional checks
+ii. test method accepts object, returns boolean
+iii. join predicates using and/or method
+iv. inverse condition using negate method
+v. we can create class/interface which contains methods that can return predicates
+
+2. Function<T,R>:R
+i. used to perform operation and return result
+ii. apply method accepts object, returns object
+iii. Function chaining using andThen method (first function, then second function)
+iv. Function chaining using compose method (second function, then first function)
+
+3. Consumer<T>:void
+i. used to perform operation
+ii. accept method accepts object and performs operation
+iii. no return value
+iv. chaining using andThen method
+v. Example: print result of an object
+
+4. Supplier<R>:R
+i. get method accepts no object, returns an object
+ii. Examples: return system date, return random number/OTP
+
+Two argument Predefined FI
+1. BiPredicate<T,U>:boolean
+2. BiFunction<T,U,R>:R
+3. BiConsumer<T,U>:void
+
+Primitive FI
+1. IntPredicate=>Predicate<Integer>:boolean
+2. IntFunction=>Function<Integer,R>:R
+3. IntConsumer=>Consumer<Integer>:void
+
+Same Input/Output FI
+1. UnaryOperator<T>:T
+i. apply method accepts object and returns object of same type
+ii. child of Function<T,T>:T
+2. BinaryOperator<T>:T
+i. apply method accepts two objects and returns object of same type
+ii. child of BiFunction<T,T,T>:T
+
+Primitive FI aim
+1. Advantage of primitive FI is avoiding autoboxing and autounboxing each time function is called
+2. Other primitives with Predefined FI are long, double
+3. primitive data type suitable Functions interfaces are available
+Reference: https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
+
+Method and Constructor reference
+1. using :: operator in lambda expression
+2. method reference used like following
+i. for static methods <classname>::<methodname>
+ii. for non-static/instance methods <objectreference>::<methodname>
+3. number of arguments and argument types should match
+4. return types of methods need not match
+5. method name need not match
+6. advantage is code reusability when implementation is already available
+7. Constructor reference used like <classname>::new
+8. In case of Constructor overloading, reference with matched argument types will get called
+
+Optional
+1. avoid NullPointerException
+2. concise readable code around objects that can have null values
+3. methods
+i. isPresent:boolean
+ii. get:T
+iii. of:Optional<T>
+iv. orElse:T
+
+Streams
+1. Collections - represent group of individual objects as a single entity
+2. Stream - process objects
+3. Creating stream on any collection
+E.g. Stream s = <collectionobject>.stream();
+4. Stream interface present in java.util.stream.* package
+5. Stream methods
+i. filter(Predicate<T> p) - filter objects based on condition
+ii. map(Function<T,R> f)
+a. for each object generate another object by performing some operation
+b. one-to-one map
+iii. flatMap(Function<T,R> f) - R is a Stream
+a. flattens collections
+b. for each object generate zero, one or more than one objects by performing some operation
+c. one-to-many map
+iv. count
+v. distinct
+vi. max/min by passing Comparator
+vii. forEach
+viii. toArray
+ix. collect
+x. Stream.of
+
+Date and Time API - Joda time API
+1. available in java.time.* package
+2. classes and methods
+i. LocalDate
+a. getDayOfMonth
+b. getMonthValue
+c. getYear
+ii. LocalTime
+a. getHour
+b. getMinute
+c. getSecond
+d. getNano
+iii. LocalDateTime
+a. getDayOfMonth
+b. getMonthValue
+c. getYear
+d. getHour
+e. getMinute
+f. getSecond
+g. getNano
+i. LocalDateTime.of(yy,mm,dd,h,m,s,n) - overloaded method with different args
+j. plusMonths - similarly for for nanos, seconds, minutes, hours, days and years
+k. minusMonths - similarly for for nanos, seconds, minutes, hours, days and years
+l. isAfter
+m. isBefore
+n. isEqual
+iv. Period
+a. Period.between(t1, t2) -> (returns t2 - t1)
+b. getYears
+c. getMonths
+d. getDays
+v. Year
+a. Year.of(y)
+b. isLeap
+vi. ZoneId
+vii. ZonedDateTime

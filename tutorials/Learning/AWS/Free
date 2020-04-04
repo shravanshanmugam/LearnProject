@@ -1,0 +1,18 @@
+Free
+
+Always free
+-----------
+
+DynamoDB - 25GB storage
+Lambda - 1 Million requests per month - 3.2 million seconds compute time per month - 37 days
+SNS - 1 Million publishes
+Cloudwatch - 1 Million requests, 5GB of log data, 5GB of log archive data
+KMS - 20,000 requests per month - 1 CMK (customer master key) - $1/month
+Step functions - 4,000 state transitions per month
+
+12 months free
+--------------
+
+EC2 - 750 hours per month - 31.25 days per month of t2.micro instance
+S3 - 5GB storage - 20,000 GET and 2,000 PUT requests
+API Gateway - 1 Million API calls received per month

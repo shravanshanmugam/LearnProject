@@ -1,0 +1,21 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99.9%)","Unit","Param: size"
+"com.shravan.learn.benchmark.LoopBenchmark.foreachloop","avgt",1,1,5.293057,NaN,"ns/op",1000
+"com.shravan.learn.benchmark.LoopBenchmark.foreachloop","avgt",1,1,5.578443,NaN,"ns/op",10000
+"com.shravan.learn.benchmark.LoopBenchmark.foreachloop","avgt",1,1,5.483876,NaN,"ns/op",100000
+"com.shravan.learn.benchmark.LoopBenchmark.foreachloop","avgt",1,1,5.480735,NaN,"ns/op",1000000
+"com.shravan.learn.benchmark.LoopBenchmark.forloop","avgt",1,1,1.094829,NaN,"ns/op",1000
+"com.shravan.learn.benchmark.LoopBenchmark.forloop","avgt",1,1,1.093350,NaN,"ns/op",10000
+"com.shravan.learn.benchmark.LoopBenchmark.forloop","avgt",1,1,1.090174,NaN,"ns/op",100000
+"com.shravan.learn.benchmark.LoopBenchmark.forloop","avgt",1,1,1.093652,NaN,"ns/op",1000000
+"com.shravan.learn.benchmark.LoopBenchmark.iterator","avgt",1,1,4.769202,NaN,"ns/op",1000
+"com.shravan.learn.benchmark.LoopBenchmark.iterator","avgt",1,1,4.772991,NaN,"ns/op",10000
+"com.shravan.learn.benchmark.LoopBenchmark.iterator","avgt",1,1,4.721366,NaN,"ns/op",100000
+"com.shravan.learn.benchmark.LoopBenchmark.iterator","avgt",1,1,4.603694,NaN,"ns/op",1000000
+"com.shravan.learn.benchmark.LoopBenchmark.parallelStream","avgt",1,1,52.625829,NaN,"ns/op",1000
+"com.shravan.learn.benchmark.LoopBenchmark.parallelStream","avgt",1,1,51.754405,NaN,"ns/op",10000
+"com.shravan.learn.benchmark.LoopBenchmark.parallelStream","avgt",1,1,51.817173,NaN,"ns/op",100000
+"com.shravan.learn.benchmark.LoopBenchmark.parallelStream","avgt",1,1,71.517137,NaN,"ns/op",1000000
+"com.shravan.learn.benchmark.LoopBenchmark.stream","avgt",1,1,19.320540,NaN,"ns/op",1000
+"com.shravan.learn.benchmark.LoopBenchmark.stream","avgt",1,1,19.113633,NaN,"ns/op",10000
+"com.shravan.learn.benchmark.LoopBenchmark.stream","avgt",1,1,19.229750,NaN,"ns/op",100000
+"com.shravan.learn.benchmark.LoopBenchmark.stream","avgt",1,1,19.090023,NaN,"ns/op",1000000

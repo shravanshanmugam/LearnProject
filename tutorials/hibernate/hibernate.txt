@@ -1,0 +1,292 @@
+Hibernate
+
+- Problems
+* Mapping member variables to columns
+* Mapping relationships (between tables)
+* Handling data types
+* Managing changes to object state
+
+- Saving without Hibernate
+* JDBC Database Configuration (driver name, host, database name, username, password)
+* The model object (Java class object)
+* Service method to create the model object
+* Database design (creating database and table)
+* DAO method to save the object using SQL queries (Data access object to be stored in database)
+
+- Saving with Hibernate
+* JDBC Database Configuration - Hibernate Configuration
+* The model object - Annotations
+* Service method to create the model object - Use the Hibernate API
+* Database design - Not required
+* DAO method to save the object using SQL queries - Not required
+
+- Hibernate configuration
+* default filename is hibernate.cfg.xml
+
+- Model object
+* Annotated as @Entity using JPA
+* Primary key of the entity is annotated as @Id
+
+- Service method using the Hibernate API
+* Create session factory
+* Create a session from the session factory
+* Use the session to save model objects
+
+Hibernate
+1. Auto DDL
+2. DB independent queries (HQL)
+3. Cache support
+4. primary key generators
+5. validation support by using annotations
+6. compile time exception free
+7. ORM support (for RDBMS machines - Object Relational Mapping - inheritance is-a and association has-a relationship between objects)
+8. OGM support (for NoSQL - Object Graph Mapping)
+9. Search support
+10. Annotations support
+11. Connection pools support
+
+Object states
+1. transient - object is created
+2. persistent - object attached to hibernate (to save/update/delete) - moved to Database/permanent state on commit
+3. detached - remove object from hibernate (by closing session)
+
+How to
+1. POJO class
+2. Mapping file
+3. Configuration file
+4. Test class (main program)
+
+POJO class (public access)
+1. needs to contain required number of properties stored in table
+2. needs to have default constructor
+3. needs to have getters and setters for every property
+4. can have other variables, methods and constructors
+
+Mapping file
+1. read property from POJO
+2. store properties in table
+3. <entity>.hbm.xml file
+4. map class name to table
+5. map primary key field or composite primary key field
+6. map other fields
+
+Configuration file
+1. hibernate.cfg.xml file
+2. database driver name, connection url, username, password, connection pool, dialect, hibernate commands (show_sql property to debug queries, format_sql property to display formatted query), mapping files
+
+Main program
+1. Create object and set data - transient state
+2. Create configuration class object (container class for hibernate)
+3. Use SessionFactory and create Session
+4. Pass object to hibernate using Session - persistent state
+5. Perform transaction using session with object and commit - permanent state
+6. clear object in Session - detached state (available for GC)
+
+Auto DDL operations
+1. using a hibernate command hbm2ddl-auto we can do ddl operations (create, alter, drop, truncate, rename table)
+2. create/update/validate/create-drop options for hbm2ddl-auto property
+3. create - on creating SessionFactory, drop existing tables and create new tables (drop and create)
+4. update - keep exisiting tables. create new table if required. on existing table do alter if required.
+add field in POJO class, add field-column mapping. if table contains data, new field cannot be NOT NULL as existing rows will get NULL values
+(alter and create)
+5. validate - check mapping schema against existing table schema (validate)
+i. mapping columns = table columns (mapping columns should be present in table)
+ii. mapping column count <= table column count
+otherwise, table doesn't contain required column exceptions
+6. create-drop - drop existing tables, create new tables, on closing SessionFactory, drop created tables (used for testing)
+(drop create and drop)
+
+CRUD operations
+1. insert data using following methods
+i. save - returns Serializable primary key, can execute without transaction boundaries
+ii. persist
+iii. saveOrUpdate - update existing record with primary key only if new object not equal to existing object
+2. update data using following methods
+i. update - only non-primary keys can be updated, complete record has to be updated i.e. not possible to update fewer columns so need to set all non-primary key properties, object with same data cannot be updated if Session contains object by some read operation
+ii. merge - only non-primary keys can be updated, complete record has to be updated
+iii. saveOrUpdate method
+3. delete data using following method
+i. delete
+4. select data using following methods
+i. get (eager select) - query executed on calling get method. transactions are not required. if record is not present, null is returned
+ii. load (lazy select)- query executed on calling getter method of non-primary field of object. if record is not present, no object found exception on accessing with getter method of non-primary field of object
+
+Auto Primary key generators
+1. application should generate primary key to avoid unique key constraint violation
+2. types of generators in hibernate
+i. assigned (default primary key generator) - view layer is responsible. passed by user, set in application
+ii. increment - application will select max id, increment and set in database for new record
+iii. sequence - database and application responsible for creating id. internally creates a hibernate sequence table which keeps next value. application gets next value (select next value each time) from hibernate sequence table and then increment and update. Not supported in MySQL, DB2 databases. Supported in Oracle database. No cycle. No cache.
+Custom sequence can also be created
+iv. identity - database is responsible to increment id. column will be AUTO INCREMENT. supported by MySQL, DB2 databases. not supported by Oracle database
+v. native - sequence/identity/hilo depending on Database vendor like MySQL/Oracle/DB2 etc.
+vi. hilo - hibernate hilo table is created which is responsible for keeping next high value which is updated on deployment.
+first deployment, next high = 0, sequence=1,2,3,..
+second deployment, next high = 1, sequence=32768,..
+third deployment, next high = 2,  sequence=65536,..
+for every restart, order is increase by 32767
+it generates of type short, int and long
+vii. foreign - used in one-to-one relationship
+viii. custom generators - database and application responsible for creating id. using custom sequence
+
+HQL - Hibernate Query Language
+1. CRUD operations
+i. insert - dump table 1 data into table 2. cannot insert record into table
+ii. update - no limitations
+iii. delete
+iv. select
+2. following methods can be used to execute HQL queries
+i. executeUpdate - DML queries (insert/update/delete)
+ii. uniqueResult - DRL queries (select) - for selecting single record
+iii. list - DRL queries - for selecting multiple records
+3. HQL queries written on POJO class, not on tables
+
+HQL vs SQL
+1. hibernate related vs RDBMS related
+2. Object oriented queries vs Table related queries
+3. Database independent vs Database dependent queries
+
+Criteria
+1. make select operations by applying conditions using Criteria interface
+2. following methods can be used
+i. uniqueResult
+ii. list
+3. use Restrictions API to apply conditions and add Criterion to Criteria and execute query
+4. use Projections API to apply aggregate functions, filter by columns and set Projection to Criteria
+5. use ProjectionList to add multiple projections and then set ProjectionList to Criteria
+
+ORM Relations
+1. Inheritance (IS-A)
+i. table per class
+a. create super class and sub class mapping in mapping file
+b. create discriminator column and set discriminator value for sub classes
+c. E.g. SoftwareEmployee,HardwareEmployee,AdminEmployee children of Employee. Discriminator column - employee type
+ii. table per sub class
+a. super class (common fields) in single table,  sub class (particular fields) in separate tables
+b. create foreign key constraint between super class and sub class
+iii. table per concrete class
+a. create concrete table for each concrete class
+2. Association (HAS-A)
+i. one-to-one
+a. primary key of table 1 is primary key of table 2 by foreign key constraint
+b. foreign key generator
+ii. one-to-many
+a. foreign key constraint
+b. cascade options
+iii. many-to-one (similar to many-to-one)
+iv. many-to-many
+
+Annotation Mapping
+1. mapping file not required. mapping can be done in POJO class using Annotations
+2. AnnotationConfiguration container used in hibernate3.x for annotation based mapping
+3. Configuration container used in hibernate4.x for both xml and annotation based mapping
+
+Pagination
+1. Used to return records using limit offset
+2. Can be done using HQL or Criteria API
+3. HQL - using setFirstResult and setMaxResult methods of Query API
+4. Criteria API - using setFirstResult and setMaxResult methods of Criteria API
+
+Cache support
+1. Advantages
+i. reduce number of Database calls
+ii. improve application performance
+2. Session level cache - Default (for one user)
+i. if Session is not closed, result is returned from Session level cache on second retrieval
+3. SessionFactory level cache (for all users)
+i. if SessionFactory is not closed, result is returned from SessionFactory level cache on second retrieval
+ii. result is made available across Session opened from same SessionFactory
+4. Query cache (for one instance or application)
+i. result of particular Query is cached, result is returned from Query level cache on second retrieval
+
+Annotations
+1. annotate on getters to use value from getter method in which case field value can be modified
+2. annotate on field to use value present in field which is set using setter method.
+3. @Entity annotation to declare class as entity for hibernate, entity name used in HQL
+4. @Table annotation to set table name in database
+5. @Id annotation from primary key
+6. @Transient annotation on field to not persist value of field on database
+7. @Temporal annotation for Date objects/timestamp and use TemporalType enum to set date format
+8. @Lob annotation for large objects/blob/clob so that String is not limited to varchar(255) like in MySQL
+9. @GeneratedValue annotation to generate primary key value automatically. strategy can be set to decide how to generate primary key
+
+Embedded objects
+1. @Embeddable annotation to create value object to be embedded inside an entity
+2. @Embedded annotation when defining value object as member variable
+3. New columns created for value object in existing table
+4. @AttributeOverride annotation - when using multiple embedded objects, override default name to avoid column name conflict5.
+5. @AttributeOverrides annotation - for overriding multiple column names
+6. @EmbeddedId annotation - composite key as primary key. Embedded object member variable will be used for columns
+
+Collections
+1. @ElementCollection annotation - mark embeddable collection object. creates separate sub table for embeddable object along with a foreign key reference
+2. @JoinTable annotation - configuration for sub table of embeddable entity
+3. @CollectionId annotation (hibernate annotation) - configure primary key generator for sub table. use with collection that uses/supports indexes (unlike Set, like List/Collection)
+4. @GenericGenerator (hibernate annotation) - create generic generator of particular strategy and then use as generator
+5. Fetch types for sub table data items can be set in @ElementCollection annotation
+i. on calling getter method of collection (LAZY INITIALIZATION - DEFAULT - done by hibernate internally using proxy objects)
+ii. on calling get method of session (EARLY INITIALIZATION)
+
+ORM Relations
+1. One-to-one relationship
+i. @OneToOne annotation - new column is created in table 1 as foreign key which is primary key of table 2
+ii. @JoinColumn annotation - configure new column
+2. One-to-many relationship
+i. @OneToMany annotation - new table is create to map primary key of table 1 to primary key of table 2
+ii. @JoinTable annotation - configure new table
+iii. set mappedBy field in @OneToMany annotation - to create new column as foreign key instead of creating new table
+iv. set cascade field in @OneToMany annotation - to set cascade type on insert/delete record on one table to affect other table
+iv. configuration is done in actual mappedBy field
+3. Many-to-one relationship
+i. @ManyToOne annotation - similar to One-to-many mapping
+4. Many-to-many relationship
+i. @ManyToMany annotation - creates 2 new join table with map of primary key of table 1 to primary key of table 2 and an inverse table
+ii. set mappedBy field in @ManyToMany annotation - to create only single join table
+iii. @NotFound annotation - configure action when mapping is not found for a particular record
+
+Inheritance
+1. @Inheritance annotation - set strategy field
+2. InheritanceType - Single table strategy (Default) - Discriminator Type column added
+i. @DiscrimantorColumn annotation - configure discriminator properties (column name, data type)
+ii. @DiscriminatorValue annotation - configure discriminator column value
+3. InheritanceType - Table per class strategy
+i. insert properties of entity in its own table
+4. InheritanceType - Table per sub class strategy/Joined table strategy
+i. single parent table for common properties
+ii. separate child tables for particular properties referenced with primary key of parent table
+
+Object states
+1. create
+i. create new object - transient
+ii. session save - persistent
+iii. session close - detached
+2. read
+i. session get - persistent
+ii. session close - detached
+3. delete
+i. session get - persistent
+ii. session delete - transient (can be saved again in same session and made persistent)
+iii. session save - persistent
+iv. session close - detached
+4. @Entity annotation (hibernate annotation)
+i. set selectBeforeUpdate field, if session needs to execute update query only when there is change in object state
+
+HQL
+1. @NamedQuery annotation - to mark HQL queries on entities and use them to execute by name
+2. @NamedNativeQuery annotation - to mark SQL queries on entities and use them to execute by name
+3. use getNamedQuery method of Session to get Query object and then execute the query
+4. In Criteria, use Order API to sort result by column
+5. Query by example object using Example API
+i. NULL properties and Primary key properties are not considered when retrieving data
+ii. create an example object or exclude property of example object
+
+Cache
+1. First level cache - Session level
+2. Second level cache
+i. Across sessions in an application
+ii. Across applications
+iii. Across clusters
+3. @Cacheable annotation - to cache an entity
+4. @Cache annotation (hibernate annotation) - set CacheConcurrencyStrategy - when the data should be cached
+5. Query level cache
+i. set Query API setCacheable method to true and config flag to true

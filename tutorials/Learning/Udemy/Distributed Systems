@@ -1,0 +1,241 @@
+Distributed Systems
+-------------------
+
+Reference: https://www.udemy.com/course/data-science-real-world-business/learn/lecture/9339494#overview
+
+Course contents
+---------------
+
+Storage - Relational/Mongo, Cassandra, HDFS
+Computation - Hadoop, Spark, Storm
+Synchronization - Network Time Protocol, Vector clocks
+Consensus - Paxos, Zookeeper
+Messaging - Kafka
+
+Distributed System
+------------------
+
+- A collection of independent computers that appears to the users of the system as a single computer
+
+3 Significant characteristics
+-----------------------------
+
+- concurrency of components
+- lack of a global clock
+- independent failure of components
+
+A computer is not a distributed system - different components work synchronously with processor - has a global clock
+
+Single master storage
+---------------------
+
+- Single node for storage
+- RW on single node
+
+Read replication
+----------------
+
+- Copy data from a leader/master node to follower/slave node
+- Solves problem of there being lots more reads than writes
+- Not going to help in case of write heavy traffic
+- Problems
+	- Complexity
+	- Consistency
+
+Sharding
+--------
+
+- split up writes based on keys to multiple shard
+	- pre-defined rule for selecting shard
+	- example
+		- 1-1000,1001-3000,3001-5000
+		- A-H, I-R, S-Z
+- each shard can have a read replica set
+- used by MongoDB
+- Problems
+	- More complexity
+	- Limited data model 
+		- sharding is easy to do in a key-value store
+		- in case where you don't have a common key to query with/identify a record uniquely sharding won't work
+	- Limited data access patterns 
+		- query based on shard key is easy
+		- query based on other fields will have to scatter the query to all nodes and gather the results
+
+Consistent Hashing
+------------------
+
+- every node in a ring co-operates in storage
+- not pre-defined rule
+- dynamic selection of node
+- hash the key 
+- find the node to write to based on hash range allowed to write on a node
+- add nodes to this ring to handle write heavy traffic
+- all nodes act as peers
+- not master/slave architecture
+- Problems
+	- Operational complexity
+
+- read replica
+	- copy data to 2 consecutive nodes from selected write node
+- strong consistency
+	- R + W > N
+	- N - total number of replicas
+	- W - number of write acknowledgements
+	- R - number of read acknowledgements
+- low latency performance - eventual consistency
+	- R + W not greater than N
+
+When to use Consistent hashing based database? (E.g. Cassandra)
+- Scale
+- Transactional data (data changing a lot)
+- Always on requirement
+
+CAP Theorem
+-----------
+
+Single distributed database can never realise the properties of Consistency, Availability and Partition tolerance
+
+Consistency (C) - Read sees recent write (system will wait to synchronize for consistent read or it can return error or time out)
+Availability (A) - accessible to read and write at all times (system will not wait to synchronize and make stale reads)
+Partition tolerance (P) - node continues to function even when it is cut off from other nodes in distributed system
+		- broken network cable
+		- major GC pause
+		- power going down to a rack
+		- misconfigured route
+
+- we can make decisions as to whether we want CA, CP or AP
+- in a distributed system, we have to pick partition tolerant system
+- so we have to pick between consistency (CP) or availability (AP)
+- in other words, in a network parition or failure, we can have only one of Consistency or Availability
+- misunderstood as abandon one of the three guarantess at all imtes
+- choice is only when a network partition or failure happens
+- there is no trade off when there is no network partition or failure
+- Partition means failure or unable to reach or communicate with other nodes in distributed system
+
+Distributed Transactions
+------------------------
+
+ACID Transactions
+
+A - Atomic (completes all statements successfully or not)
+C - Consistent (valid state after a transaction)
+I - Isolated (concurrency control by sequential execution)
+D - Durable (remembers on commits)
+
+Why split the work?
+- Parallelization
+- Uneven workloads
+
+What to do in case of failure?
+- Write-off (complete unsuccessfully)
+- Retry (try again to complete successfully)
+- Compensating action (rollback to previous state)
+
+Distributed Computation
+-----------------------
+
+- Scatter/Gather
+	- scatter computation/program to nodes where the data is
+	- perform computation at locality of data
+	- gather result from multiple nodes
+- MapReduce
+- Hadoop - Distributed File System
+- Spark - scatter/gather based framework
+- Storm - real-time, event processing
+
+MapReduce
+---------
+
+- computation pattern in distributed computation
+- All computation in two functions
+	- Map
+	- Reduce
+- Keep data (mostly) where it is
+- Move compute to data
+
+(k,v) -> Mapper -> [(k,v), (k,v), (k,v), ...] -> Shuffle (done by framework) -> [(k1, [v1, v2, v3]),(k2, [v4, v5, v6]), ...]
+	-> Reducer -> [(k,v), (k,v), (k,v), ...] (Scalar/Aggregate) 
+
+Shuffle 
+	- move data around in the network
+	- data for a particular key is moved
+
+Example: number of words in a poem
+
+Key : Value
+poems/raven.txt: <Poem>
+
+Mapper: Tokenize the value
+For every key-value pair it emits, key - word, value - number of times mapper has seen that word
+E.g. suddenly: 1, a: 1, a: 1, came: 1
+
+Shuffle: Group the like keys and move the data with same key to a single node
+E.g. suddenly: [1], a: [1, 1], came: [1]
+
+Reduce: Add the word count
+E.g. suddenly: 1, a: 2, came: 1
+
+Hadoop
+------
+
+- MapReduce API
+- MapReduce job management
+- Distributed File system (HDFS)
+- Enormous ecosystem
+
+HDFS
+----
+
+- Files and directories
+- Metadata managed by a replicated master
+- Files stored in large, immutable, replicated blocks
+
+- Name Nodes
+	- node holding file name and data node location
+- Data Nodes
+	- nodes holding the data
+	- has blocks which contain the data
+	- blocks are replicated
+	- default replication factor is 3
+
+Distributed computation of Hadoop (Hadoop Jobs)
+--------------------------------- 
+
+- Name node
+- Job tracker
+- Data nodes
+
+1. Client app submits a job containing Map + Reduce functions
+2. Job can be in the form of a jar
+3. Job tracker will take the job, and split it up into mappers and send those mappers out to data nodes
+4. Send the map function to a process called task tracker on each data node
+5. Map function is executed by the task tracker on the data present on the node
+6. Map function emits new key-value pairs and writes to the file system
+7. Shuffle happens leading to key-value pairs moving around nodes for grouping by like keys
+8. Job tracker then sends reducer function to the data nodes
+9. Reduce function is applied and writes new key-value pairs into the file system 
+10. Job tracker gets the job done on individual data nodes
+
+Real-world Hadoop
+-----------------
+
+- Cloudera, Hortonworks, MapR
+- Nobody writes map, reduce functions
+- Hive (SQL-like interface to query on DFS)
+- Integration with BI front-ends
+
+When to use Hadoop?
+------------------
+
+- Data volume is large
+- Data velocity is low
+- Latency SLAs are not aggressive
+
+Spark
+-----
+
+- Distributed computing framework
+- Scatter/gather pattern in distributed computation (similar to MapReduce)
+- More general data model (RDDs - Resilient Distributed Datasets)
+- More general programming model (transform/action)
+- Storage agnostic

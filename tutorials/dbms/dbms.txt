@@ -1,0 +1,82 @@
+Database Normalization:
+
+Idea is to Minimize data redundancy
+
+I. First Normal Form
+--------------------
+
+1. No two columns should have same name E.g. |id|name|subject|
+2. Each column should have value of the same type
+3. Order of insertion should not matter
+4. Multiple values should not be stored in a single column E.g. |1|Shravan|Java,C++| is not right form
+
+II. Second Normal Form
+----------------------
+1. First Normal Form
+2. No Partial Dependency
+
+E.g.
+id | studentId | subjectId | marks | teacher
+1  | 1		   | 1		   | 100   | K
+2  | 1		   | 2		   | 90    | L
+3  | 2		   | 1		   | 80    | K
+4  | 3		   | 1		   | 70    | K
+5  | 3		   | 2		   | 60    | L
+
+id - Uniquely identifies a row => Primary key
+studentId + subjectId - Uniquely identifies a row e.g. marks of studentId and subjectId => Primary key
+Functional dependency : a non-prime attribute which depends on the primary attribute
+
+But teacher column is dependent only on subjectId
+Partial dependency : a non-prime attribute which depends only on part of the primary attribute
+
+Solution: Keep separate table for teacher like |subjectId|subject|teacher| 
+or like |teacherId|teacher| 
+
+III. Third Normal Form
+----------------------
+1. Second Normal Form
+2. No Transitive dependency
+
+E.g.
+id|studentId|subjectId|marks|examName|totalMarks
+
+examName depend on both studentId and subjectId
+But totalMarks depend on examName
+But examName is not a part of primary key
+Transitive dependency : a non-prime attribute depends on another non-prime attribute which is not part of the primary attribute 
+
+Solution: Two tables like
+id|studentId|subjectId|marks|examName
+examName|totalMarks
+
+IV. Boyce-Codd Normal Form
+--------------------------
+1. Third Normal Form
+2. For B depends on A, A should be super key meaning A cannot be non-prime attribute if B is prime attribute or in other words A has to be prime attribute
+
+E.g.
+studentId|subject|professor
+1		 | Java  |Prof. 1 of Java
+2 		 | C++	 |Prof. 1 of C++
+3  		 | Java  |Prof. 2 of Java
+
+studentId + subject is primary key
+professor can uniquely identify subject but professor is not primary key
+subject is dependent on professor
+
+Solution: Break the table
+studentId|professorId
+professorId|professor|subject
+
+V. Fourth Normal Form
+---------------------
+1. Boyce-Codd Normal Form
+2. No Multi-Valued dependency
+
+Multi-Valued dependency : 
+1. B depends on A, for single value of A more than one value of B exists
+2. Also it should have atleast 3 columns for Multi-Valued dependency
+3. For table with columns A,B and C, B and C should be independent
+
+Solution: Break the tables by columns which are independent

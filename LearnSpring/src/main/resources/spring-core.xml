@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--global callback for all beans, set default-init-method="customInit" default-destroy-method="customDestroy"-->
+
+    <bean id="triangle" class="com.shravan.learn.spring.core.model.Triangle">
+        <property name="type" value="Equilateral"/>
+    </bean>
+
+    <bean id="triangle-with-all-args-constructor" class="com.shravan.learn.spring.core.model.Triangle">
+        <constructor-arg type="java.lang.String" value="Scalene"/>
+        <constructor-arg type="int" value="20"/>
+    </bean>
+
+    <bean id="triangle-with-height-arg-constructor" class="com.shravan.learn.spring.core.model.Triangle">
+        <constructor-arg type="int" value="30"/>
+    </bean>
+
+    <bean id="triangle-using-index-for-constructor" class="com.shravan.learn.spring.core.model.Triangle">
+        <constructor-arg index="0" value="Isosceles"/>
+        <constructor-arg index="1" value="40"/>
+    </bean>
+
+    <!--alias name-->
+    <bean id="origin" class="com.shravan.learn.spring.core.model.Point" name="xy-intersection">
+        <property name="x" value="0"/>
+        <property name="y" value="0"/>
+    </bean>
+
+    <!--alias tag-->
+    <alias name="origin" alias="center"/>
+
+    <bean id="triangle-with-points" class="com.shravan.learn.spring.core.model.TriangleWithPoints">
+        <!--using reference-->
+        <property name="a" ref="origin"/>
+        <!--inner bean-->
+        <property name="b">
+            <bean id="pointB" class="com.shravan.learn.spring.core.model.Point">
+                <property name="x" value="1"/>
+                <property name="y" value="0"/>
+            </bean>
+        </property>
+        <!--inner bean-->
+        <property name="c">
+            <bean id="pointC" class="com.shravan.learn.spring.core.model.Point">
+                <property name="x" value="0"/>
+                <property name="y" value="1"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="pointB" class="com.shravan.learn.spring.core.model.Point">
+        <property name="x" value="1"/>
+        <property name="y" value="0"/>
+    </bean>
+    <bean id="pointC" class="com.shravan.learn.spring.core.model.Point">
+        <property name="x" value="0"/>
+        <property name="y" value="1"/>
+    </bean>
+    <bean id="pointD" class="com.shravan.learn.spring.core.model.Point">
+        <property name="x" value="1"/>
+        <property name="y" value="1"/>
+    </bean>
+    <!--abstract bean not initialized, only used as skeleton. set abstract="true"-->
+    <bean id="polygon" class="com.shravan.learn.spring.core.model.Polygon" >
+        <property name="points">
+            <list>
+                <ref bean="origin"/>
+                <ref bean="pointB"/>
+                <ref bean="pointC"/>
+                <ref bean="pointD"/>
+            </list>
+        </property>
+    </bean>
+
+    <!--bean definition inheritance-->
+    <bean id="pentagon" class="com.shravan.learn.spring.core.model.Polygon" parent="polygon" init-method="customInit"
+          destroy-method="customDestroy">
+        <property name="points">
+            <list merge="true">
+                <bean id="pointE" class="com.shravan.learn.spring.core.model.Point">
+                    <property name="x" value="${pentagon.point.x}"/>
+                    <property name="y" value="${pentagon.point.y}"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <!--scope-->
+    <bean id="circle" class="com.shravan.learn.spring.core.model.Circle" autowire="byName" scope="prototype">
+        <property name="radius" value="1"/>
+    </bean>
+
+    <!--Bean post processor class-->
+    <bean class="com.shravan.learn.spring.core.processor.DisplayNameBeanPostProcessor"/>
+
+    <!--Bean factory post processor class-->
+    <bean class="com.shravan.learn.spring.core.processor.InitBeanFactoryPostProcessor"/>
+
+    <!--property place holder configurer bean factory post processor-->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="config.properties"/>
+    </bean>
+</beans>

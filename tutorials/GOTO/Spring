@@ -1,0 +1,19 @@
+Java
+
+1. Spring cloud
+	- Config server
+		- supports feature flags
+		- decouple release of software from launch/deployment of that software 
+		- supports branch by abstraction and continues delivery pipelines
+2. Eureka - Service Discovery
+3. Zuul - micro proxy
+4. Zipkin - Distributed tracing
+5. Hystrix Circuit breaker - graceful degradation on reads
+	- Monitor traffic with Hystrix dashboard
+6. Spring cloud stream - graceful degradation on writes - gives eventual consistency
+7. Netflix Simian Army
+8. KS Kong - https://www.baeldung.com/kong
+9. Spring notes
+	- use constructor injection over member injection for unit test cases
+	- Single constructor doesn't have to be annotated @Autowired
+	- Configuration class can use @Autowired annotation

@@ -1,0 +1,85 @@
+Java8
+
+1. Nashorn Engine - Java - Javascript interoperability
+2. CompletableFuture
+	- a mechanism for asynchronous reaction upon result completion
+	- combines interfaces Future and CompletionStage
+	- asynchronously execute the specified task
+	- execute task in specified executor or internal ForkJoinPool.commonPool()
+	- on normal completion
+		- execute action with result from future as argument
+		- return a new CompletableFuture (for fluent programming)
+	- 3 flavors of execution
+		- synchronous (default)
+		- asynchronous (use this stage's execution facility)
+		- custom (via a supplied Executor)
+	- combine results of multiple futures using thenCombine()
+	- combine more than 2 futures using allOf()
+	- terminate future using thenRun()
+	- whenComplete(), handle(), exceptionally() upon failure
+	- Result producer
+		- create empty, incomplete CompletableFuture
+		- setup asynchronous result calculation 
+		- must place result in CompletableFuture using complete() and completeExceptionally()
+		- return future (before result even exists)
+3. Reactive style programming
+	- put emphasis on push rather than pull or poll
+	- event based
+		- event i.e. result completion is pushed to dependent tasks
+		- depender task = result processors interested in the event of completion
+	- higher scalability with push
+		- 'poll' wastes resources for re-checks
+		- 'pull' wastes time due to wait states
+4. FutureTask vs CompletableFuture
+	- FutureTask
+		- tight coupling of result retrieval and task control
+	- CompletableFuture
+		- has no task control
+		- decouples result retrieval from task control
+5. StampedLock
+	- alternative to ReentrantReadWriteLock
+	- supports regular pessimistic read and write locks
+	- has optimistic read locks
+	- for better throughput in low contention situations
+	- consists of
+		- a version (or stamp)
+		- a mode
+	- write mode
+		- no read locks may be obtained
+		- all optimistic read validations fail
+	- read mode
+		- non-exclusive access
+	- optimistic read mode
+		- an extremely weak version of read lock
+		- can be broken by a writer at any time => validation necessary
+		- tryOptimisticRead() fails if lock in write mode
+		- validate() fails if lock in write mode since obtaining stamp
+		- for short read only code segments
+		- reduces contention and improves throughput
+		- must check data consistency
+6. LongAdder, LongAccumulator - an alternative to AtomicLong
+7. ConcurrentHashMap extensions
+	- compute value based on current value for key or initialized if value is absent for key
+	- uses compute(), computeIfAbsent(), computeIfPresent()
+	- functional operations for remapping values
+	- merge()
+	- Atomic Bulk Operations
+		- forEach(), search(), reduce()
+8. Common pool
+	- a single pool instance for common use
+	- used by bulk operations on collections
+	- reduces resource usage
+	- lazy initialization - when first task is submitted to common pool
+	- pre-defined default parallelism - java.lang.Runtime.availableProcessors() - 1
+	- dynamic size - reclaims idle threads and re-instates them when needed
+	- stays around until JVM terminates (pool threads are daemon) - doesn't shutdown on completing tasks and terminating last user thread
+	- ignores shutdown() or shutdownNow()
+9. @Contended - false sharing
+	- avoid false sharing by isolating hot fields by means of padding
+10. JMH - Java Microbenchmark Harness - https://www.baeldung.com/java-microbenchmark-harness
+
+Other uses
+
+1. Lazy method execution using Supplier Function Interface (FI)
+2. Stream executes only when terminal function is provided
+3. Streams perform exactly same number of operations as imperative style iteration

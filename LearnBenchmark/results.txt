@@ -1,0 +1,34 @@
+nohup java -jar target/benchmarks.jar -to 60 -wi 0 -i 1 -r 5 -p delay=1,100,500,1000 -p rate=100,200,500,1000 -rf csv -o output.csv >> benchmark.log &
+Benchmark                                                     (delay)  (rate)   Mode  Cnt     Score   Error  Units  Count
+MyBenchmark.test_sendAsync                                          1     100  thrpt        100.155          ops/s  502
+MyBenchmark.test_sendAsync                                          1     200  thrpt        200.165          ops/s  1003
+MyBenchmark.test_sendAsync                                          1     500  thrpt        500.226          ops/s  2504
+MyBenchmark.test_sendAsync                                          1    1000  thrpt       1000.025          ops/s  4443
+MyBenchmark.test_sendAsync                                        100     100  thrpt        100.195          ops/s  502
+MyBenchmark.test_sendAsync                                        100     200  thrpt        200.210          ops/s  1002
+MyBenchmark.test_sendAsync                                        100     500  thrpt        500.202          ops/s  2505
+MyBenchmark.test_sendAsync                                        100    1000  thrpt       1000.062          ops/s  4191
+MyBenchmark.test_sendAsync                                        500     100  thrpt        100.182          ops/s  502
+MyBenchmark.test_sendAsync                                        500     200  thrpt        200.162          ops/s  1002
+MyBenchmark.test_sendAsync                                        500     500  thrpt        500.126          ops/s  2454
+MyBenchmark.test_sendAsync                                        500    1000  thrpt       1000.069          ops/s  2406
+MyBenchmark.test_sendAsync                                       1000     100  thrpt        100.160          ops/s  502
+MyBenchmark.test_sendAsync                                       1000     200  thrpt        200.175          ops/s  1003
+MyBenchmark.test_sendAsync                                       1000     500  thrpt        500.132          ops/s  1660
+MyBenchmark.test_sendAsync                                       1000    1000  thrpt       1000.088          ops/s  1606
+MyBenchmark.test_sendExecutorClient                                 1     100  thrpt        100.129          ops/s  502
+MyBenchmark.test_sendExecutorClient                                 1     200  thrpt        200.205          ops/s  1002
+MyBenchmark.test_sendExecutorClient                                 1     500  thrpt        500.177          ops/s  2503
+MyBenchmark.test_sendExecutorClient                                 1    1000  thrpt       1000.243          ops/s  5009
+MyBenchmark.test_sendExecutorClient                               100     100  thrpt        100.126          ops/s  501
+MyBenchmark.test_sendExecutorClient                               100     200  thrpt        200.166          ops/s  1003
+MyBenchmark.test_sendExecutorClient                               100     500  thrpt        500.189          ops/s  2506
+MyBenchmark.test_sendExecutorClient                               100    1000  thrpt       1000.079          ops/s  5011
+MyBenchmark.test_sendExecutorClient                               500     100  thrpt        100.208          ops/s  502
+MyBenchmark.test_sendExecutorClient                               500     200  thrpt        200.182          ops/s  1003
+MyBenchmark.test_sendExecutorClient                               500     500  thrpt        500.207          ops/s  2505
+MyBenchmark.test_sendExecutorClient                               500    1000  thrpt       1000.042          ops/s  2646
+MyBenchmark.test_sendExecutorClient                              1000     100  thrpt        100.142          ops/s  501
+MyBenchmark.test_sendExecutorClient                              1000     200  thrpt        200.125          ops/s  1002
+MyBenchmark.test_sendExecutorClient                              1000     500  thrpt        500.200          ops/s  1806
+MyBenchmark.test_sendExecutorClient                              1000    1000  thrpt       1000.025          ops/s  1806

@@ -1,0 +1,200 @@
+Java 9 Features
+1. JShell
+2. JPMS - Java Platform Module System
+3. JLinker
+4. HTTP/2 Client API
+5. Process API updates
+6. private methods in Interface
+7. try with resources enhancement
+8. Factory methods to create Immutable collections
+9. Stream API enhancements
+10. <> Diamond operator for anonymouse inner classes
+11. Safevarargs annotation
+12. G1GC - Garbage first garbage collector
+
+JShell
+1. REPL tool for Java
+
+JPMS - Java Platform Module System
+1. classes, interfaces, enums in packages compiled and compressed to jars
+2. Issues/Jar Hell
+i. NoClassDefFoundError - runtime error when *.class file missing in jar
+ii. Version conflicts
+iii. Security problem (due to public methods)
+iv. JDK/JRE having monolithic structure and large size
+
+JLinker
+1. create customised required JRE of small size
+
+HTTP/2 client
+1. Send HTTP Request and get response from Java application
+2. HttpUrlConnection (JDK1.1 1997) issues
+i. supports only HTTP/1.1 protocol but not HTTP/2.0 (2015)
+a. only one request per connection
+b. only text data can be sent (not binary data)
+ii. only blocking requests can be made (only synchronous requests)
+iii. difficult to use
+3. In Java1.9, HTTP/2 client
+i. lightweight and easy to use
+ii. supports HTTP/1.1 and HTTP/2
+a. supports text data and binary data
+b. supports multiple requests
+iii. supports synchronous and asynchronous requests
+4. part of jdk.incubator.httpclient (Incubator) module
+5. jdk.incubator.http.* package
+6. import module in module-info.java file
+7. classes
+i. HttpClient
+ii. HttpRequest
+iii. HttpResponse
+8. steps
+i. create HttpClient object
+ii. create HttpRequest object
+iii. By using HttpClient object, send request and get HttpResponse
+iv. process HttpResponse
+9. Reference: https://www.baeldung.com/java-9-http-client
+
+Process API Updates
+1. Issues
+i. machine level communication/processor level communication (communicating with processor/OS/platform/memory level)
+2. Java not suitable for developing system level components
+3. In Java1.9, Process API features
+i. PID of current running process
+ii. create a new process
+iii. destroy already running process
+iv. complete information of process like start time, cpu duration of process, user of the process
+v. child process information
+vi. parent process information
+3. Process API methods
+i. pid
+ii. info
+4. ProcessBuilder API methods
+i. ProcessBuilder(String...):ProcessBuilder (Constructor)
+ii. start():void
+iii. destry():void
+5. ProcessHandle API methods (new interface added in Java1.9)
+i. ProcessHandle.current():ProcessHandle
+ii. <processobject>.toHandle():ProcessHandle
+iii. ProcessHandle.of(<PID>):Optional<ProcessHandle>
+iv. ProcessHandle.asProcesses():Stream<ProcessHandle>
+6. ProcessHandle.Info API (new interface added in Java1.9)
+i. <processhandle>.info():ProcessHandle.Info
+7. interfaces available on java.lang.* package
+8. some methods for getting Process information
+i. current PID: <processhandle>.pid():long
+ii. user that started process: <processhandle.info>.user():Optional<String>
+iii. command to start process: <processhandle.info>.command():Optional<String>
+iv. start time of process: <processhandle.info>.startInstant():Optional<String>
+v. total cpu duration of process: <processhandle.info>.totalCpuDuration():Optional<String>
+8. Reference: https://docs.oracle.com/javase/9/docs/api/java/lang/Process.html
+
+private methods inside Interface
+1. code reusability for multiple default methods inside interface without affecting implementation classes
+2. abstract class can have following but not interface
+i. instance variable
+ii. constructor
+iii. instance block
+3. private methods cannot be abstract, hence should contain implementation
+4. private methods inside interface can be static or non-static method
+
+Automatic Resource Management
+1. Issues
+i. Resource (class implements AutoCloseable interface) created outside try block cannot be made to use ARM
+2. try-block code - risky code
+3. catch-block code - exception handling
+4. finally-block code - cleanup code/resource deallocation code
+5. finally-block code always executed
+6. resource opened in try-block will automatically be closed, no need to close explicitly in finally-block
+7. In Java1.9, existing resource or multiple resources can also be made available for ARM in try-block
+
+Factory methods to create immutable collections
+1. Concise code inplace of Collections.unmodifiablelist() method
+2. Collections - represent a group of individual objects as a single entity
+i. List
+a. duplicates are allowed
+b. insertion order is preserved
+ii. Set
+a. duplicate are not allowed
+b. insertion order is not preserved
+iii. Map
+a. key-value pairs
+b. duplicate keys are not allowed, duplicate values can exist
+c. each key-value pair is called an Entry
+3. Unmodifiable objects - Immutable
+i. reuse the same object with reference
+ii. memory utilization will be reduced
+iii. performance will be improved
+4. Static factory method
+i. class returns object of same class E.g. Runtime r = Runtime.getRuntime();
+5. In Java1.8, to create immutable collection
+i. create list
+ii. add elements
+iii. create unmodifiablelist using Collections API unmodifiablelist method
+6. In Java1.9, factory methods for immutable collections available for List, Set and Map
+i. List l = List.of(E... e);
+a. 12 methods for 0 args to 10 args and var args
+ii. Set s = Set.of(E... e);
+a. 12 methods for 0 args to 10 args and var args
+iii. Map m = Map.of(K,V);
+a. 12 methods for 0 args to 10 args
+b. key-value pairs as arguments
+iv. Map m = Map.ofEntries(E<K,V>... e);
+a. var args method
+b. E.g. Map<String, String> map = Map.ofEntries(
+  new AbstractMap.SimpleEntry<>("foo", "a"),
+  new AbstractMap.SimpleEntry<>("bar", "b"),
+  new AbstractMap.SimpleEntry<>("baz", "c"));
+7. UnsupportedOperationException when trying to modify these immutable collections created using factory methods
+8. NullPointerException when null values are set using factory methods
+9. IllegalArgumentException if in Set & Map duplicate entries set using factory methods
+10. Every var-args method call implicitly creates an array. Having the overloaded methods avoid unnecessary object creation and the garbage collection overhead thereof.
+11. Value-Based Instances
+The instances created by factory methods are value based. This means that factories are free to create a new instance or return an existing instance.
+Hence, if we create Lists with same values, they may or may not refer to the same object on the heap:
+List<String> list1 = List.of("foo", "bar");
+List<String> list2 = List.of("foo", "bar");
+In this case, list1 == list2 may or may not evaluate to true depending on the JVM.
+
+Stream API enhancements
+1. In Java1.9, new methods of Stream Interface
+i. takeWhile - default method
+a. similar to filter method but stop filter once condition fails
+b. does not go through entire collection
+ii. dropWhile - default method
+a. drop if condition is true
+b. once consider fails, consider remaining elements
+iii. iterate - static method
+a. Generate a group of values based on 3 arguments - initial value, terminal condition (added in Java1.9), function
+b. In Java1.8, iterate method takes 2 arguments and has no terminal condition. It was an infinite stream
+c. In Java1.8, to terminate stream, limit method can be used to limit number of elements that stream produces
+iv. ofNullable - static method
+a. prevent NullPointerException
+
+<> Diamond operator
+1. Generics in Java
+i. Provides type safety
+ii. Resolves type casting problems
+2. Diamond operator - Inferred type parameter
+3. Issue
+i. not applicable for Anonymous Inner classes
+4. In Java1.9, applicable for Anonymous inner class also
+
+SafeVarargs annotation
+1. varargs => variable number of arguments
+e.g. m1(int... x) accepts array of integers of any size
+2. Issue
+i. In case of using varargs with Generics like m1(List<String>... x) - can lead to Heap Pollution problem due to unchecked generic array creation
+ii. heap pollution problem - one type of variable pointing to another type of object or refers to an object that is not of parameterized type there may be chance of ClassCastException
+iii. if we use var-args methods with Generic type, then there may be chance of heap pollution
+E.g.
+3. Annotation is used to suppress warnings
+4. can be used for static methods, final methods and constructors till Java1.8
+5. In Java1.9, can be used from private methods also
+
+G1GC - Garbage First Garbage Collector
+1. Serial GC - Generation based GC
+2. Parallel GC (Default GC until Java1.8) - Generation based GC
+3. CMS (Concurrent Mark and Sweep) GC - Generation based GC
+4. G1GC (Default GC in Java1.9)
+i. divide heap space into regions
+ii. pick region with max garbage and destroy

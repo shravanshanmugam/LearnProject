@@ -1,0 +1,348 @@
+oauth2
+
+Problem of API Authorization
+
+1. Authorize service to use 3rd party API
+Example: Allow an application to access an API to send an email on a user's behalf
+
+Solution 1 - Credential Sharing
+
+1. Application asks user for credentials to login to 3rd party to access the API
+2. No way to tell the user and application apart. Application is implicating the user
+3. If application is compromised, need to revoke the credentials. But credentials used on other websites also
+4. Storing user credentials increases chance of exposing user credentials. Increases APIs attack surface
+5. Single factor authentication - 2 Factor or Multi factor auth are unavailable to us
+6. Cannot federate with other companies unless they also support credential sharing - Benevolent phishing
+7. Incompatibilities - Single page application with no server backend that cannot keep a secret credential
+
+Solution 2 - Cookies
+
+1. Redirect user to the 3rd party where they enter credentials and get a cookie
+2. Restrict access by letting user to decide what functionality to allow
+3. Cross site request forgery (CSRF or XSRF) attack - Other application running in the browser can also access the 3rd party API with cookie by making user perform an action on the site
+4. Instead of authorizing the application to access the API, we've instead authorized the browser
+
+Solution 3 - API keys
+
+1. Application asks user to enter a key that was given to them by the API
+2. No standards
+3. No or Long expiration times meaning if it gets stolen it can be used indefinitely until discovered
+
+Solution 4 - Oauth 2.0
+
+1. Authorization framework specifically built for HTTP APIs
+2. Allows user to securely delegate scoped API access - define which APIs to be used specifically
+3. Delegation Protocol
+
+Players
+
+1. Protected resource - 3rd party API
+2. Client (requesting) application that wants to access protected resource
+3. Resource owner (user) - User needs to consent access their protected resource whether API belongs to same company or not
+4. Authorization server
+
+Misunderstandings
+
+1. It is not an identity or authentication protocol
+2. Access tokens do not represent the user
+3. An access token's intended audience is the protected resources
+4. The client is not the token's intended audience. They should not try to look into it or try to validate it
+5. Client cannot reliably verify the access token
+
+What it does right
+
+1. Delegate access and API access control
+2. Separate user credentials from 3rd party application while still being able to authenticate the client application
+3. User consent
+
+Oauth in details
+
+Protocol Endpoints
+
+1. Authorization endpoint
+2. Access token endpoint
+3. They must use Transport layer security
+
+Scope
+
+1. A permission to do something within a protected resource on behalf of the resource owner
+2. Access to entire API
+3. Specific type of access within the API like read-only access. Example: pluralsight_api.read - to give read access to one API instead of read - which gives read access to all APIs
+4. Access to certain functionality
+
+Authorization code grant type
+
+1. Designed for confidential clients
+2. Best for websites with a server backend
+3. Explicit user and client authentication
+
+Authorization request
+
+1. response_type=code
+2. client_id=<unique id to identify client application>
+3. redirect_uri=<authorization endpoint will redirect to this url once it has finished interacting with resource owner. this should be registered by client application with authorization server>
+4. state=<some state which will be returned back in the response. helps to verify the grant type or token is intended for client application. prevents CSRF>
+5. scope=<scope of access. Example: api1 ap2.read. if not specificied will default to global access or access specific to client application or application type>
+
+Authorization response
+
+1. redirected to requested redirected_uri
+2. code=<authorization code synonymous with the grant type and represents user's consent and authorization. short lived. bound to client_id, redirect_uri, resource owner and scope>
+3. state=<same value>
+
+Token request
+
+1. form url-encoded Content-Type
+2. client will authenticate itself with an Authorization header using their own username and password known as client_id and client_secret. Recommended to use HTTP basic authentication
+3. grant_type=authorization_code
+4. code=<code>
+5. redirect_uri=<redirect_uri>
+6. client_id=<client_id required if not using Basic auth>
+7. client_secret=<client_secret required if not using Basic auth
+
+Basic authentication style (RFC 7617) - Base64(client_id + ":" + client_secret)
+Oauth style (RFC 6749) - Base64(urlformencode(client_id) + ":" + urlformencode(client_secret))
+
+Token response
+
+1. access_token=<access token>
+2. token_type="Bearer"
+3. expires_in=<time in seconds>
+4. scope=<scope>
+
+The implicit grant type
+
+1. What if client application does not have backend? What if it is not able to securely store credentials?
+2. Designed for public clients
+3. Best for clients accessing resources directly from the browser. Built specifically for Javascript applications
+4. No explicit client authentication
+5. Less secure than Authorization code grant type
+6. No authorization grant to access token swap in this flow
+
+Authorization request
+
+1. response_type=token
+2. client_id=<client id>
+3. redirect_uri=<redirect uri>
+4. state=<state>
+5. scope=<scope>
+
+Authorization response
+
+1. redirected to redirect_uri
+2. receive token in url. they will remain in the scope of our browser
+3. access_token=<access token>
+4. token_type=example
+5. expires_in=<time in seconds>
+6. state=<state>
+
+Security concerns
+
+1. Access tokens exposed to the resource owner. we may not want to give resource owner access to all functionality that client normally requests
+2. Access tokens accessible to 3rd party Javascript from url or browser storage
+3. No way to validate the access token in intended for the client
+
+The Client credentials grant type
+
+1. What if there isn't a clear resource owner? What if the client application has no users involved?
+2. Designed for applications where the client applications itself is the resource owner
+3. No users involved in the transaction. Best for machine to machine communication
+4. Required client authentication
+5. No user authentication for authorization grant in this flow
+6. client application directly sends its credentials for an access token
+
+Token request
+
+1. Authorization header with client credentials
+2. grant_type=client_credentials
+3. scope=<scope>
+
+Token response
+
+1. access_token=<access token>
+2. token_type="Bearer"
+3. expires_in=<time in seconds>
+4. scope=<scope>
+
+Differences with API keys or HTTP Basic authentication
+
+1. Not sending the client credentials with every single requested to protected resource
+2. Use of short lived access tokens without manual input to update
+
+The Resource owner Password credentials (ROPC) grant type
+
+1. Designed as a stop gap for legacy applications
+2. Client application accepts username and password from user
+3. Negates most of the benefits of Oauth
+4. Should no longer be used
+5. It has same vulnerabilities as Credential sharing
+
+Token request
+
+1. grant_type=password
+2. username=<username>
+3. password=<password>
+4. Authorization header with client credentials
+5. scope=<scope>
+
+Token response
+
+1. access_token=<access token>
+2. token_type="Bearer"
+3. expires_in=<time in seconds>
+4. scope=<scope>
+
+Refresh tokens
+
+1. What happens if access tokens expire?
+2. Refresh token is a long lived token which can be used by client application at some point in the future and swapped for new access tokens or new refresh tokens
+3. This avoids having user authorize the client application frequently
+4. Highly confidential. If stolen, can get unlimited access to the APIs, negating the effectiveness of short lived access tokens
+5. User should be informed that refresh tokens are being requested
+6. Requires explicit user consent to use refresh tokens in the background
+7. Swap refresh token for new access token based on 401 Unauthorized response or based on expires_in time value
+8. Refresh tokens can be reusable or one time use
+9. Refresh tokens can have set expiry time or sliding expiry time based on usage
+
+Authorization request
+
+1. response_type=code
+2. client_id=<client id>
+3. redirect_uri=<redirect uri>
+4. state=<state>
+5. scope=api offline_access
+
+Token response
+
+1. access_token=<access token>
+2. token_type="Bearer"
+3. expires_in=<time in seconds>
+4. scope=<scope>
+5. refresh_token=<refresh token>
+
+Refresh token request
+
+1. grant_type=refresh_token
+2. refresh_token=<refresh token>
+3. scope=<scope>
+4. Authorization header with client credentials
+
+Refresh token response
+
+1. access_token=<access token>
+2. token_type="Bearer"
+3. expires_in=<time in seconds>
+4. scope=<scope>
+5. refresh_token=<refresh token>
+
+Who can use refresh tokens?
+
+1. Authorization code - YES
+2. Implicit - NO (No secure backend to store tokens and too vulnerable to store refresh tokens on browser and request for new access tokens)
+3. Client credentials - NO (Not required as it can simple request new access token directly)
+4. Resource owner password credentials - YES (Meaning we don't have to store user credentials within the client application)
+
+Response modes
+
+1. query string (Using query string we expose the code or tokens to every server between the client and the authorization server)
+2. hash fragment (to avoid the contents being exposed to servers)
+3. Form post response mode to receive code or token to our registered redirect_uri
+
+When things go wrong
+
+1. error (invalid_request, invalid_client, invalid_grant, unauthorized_client, unauthorized_grant_type, invalid_scope)
+2. error_description
+3. error_uri
+4. state
+
+Native applications - RFC 8252
+
+1. Native apps = public clients
+2. Implicit flow should not be used for native applications. Tokens will be visible to every other application on that device
+
+Problem 1 - Code stealing
+
+1. How to keep other applications from stealing access tokens on the device?
+2. Proof Key for Code Exchange (PKCE) - Links the authorization request to the token request - RFC 7636
+3. Client application generates code_verifier, hashes it using sha-256 and send as code_challenge in authorization request
+5. Authorization server stores the code_challenge. Responds with authorization code
+6. Client application sends token request along with code_verifier
+7. Authorization server can compare hash of code_verifier with the stored code_challenger and verify the initiator. Responds with access token
+
+Problem 2 - Exposed redirect_uri
+
+1. Private-Use URI scheme
+	- Example: com.pluralsight.ios:/cb
+	- Not available on all platforms
+	- One URI scheme per application
+ 	- Collisions possible
+ 	- Use reverse DNS-style notation for identification incase of collision
+2. Claimed HTTPS Scheme
+3. Loopback device
+
+Extending Oauth
+
+1. OpenID connect to add identity
+2. Oauth metadata for programmatic client configuration
+3. Oauth device flow for browserless devices
+4. Combine SAML 2.0 and Oauth 2.0
+
+OpenID connect
+
+1. Identity layer on top of Oauth 2.0
+2. Formalizes some Oauth ambiguity
+3. Authorization server becomes identity provider
+4. Identity access through UserInfo endpoint scoped by identity specific scopes e.g. profile scope gives access to name, gender, website and username
+5. Identity token 
+	- describes the authentication event
+	- intended for the client application
+	- client application can verify the data within it or whether or not it has been tampered with
+	- verifiable signature
+	- JWT 
+		- header, payload, signature separated by .
+		- header and payload, Base64 encoded
+			- payload 
+				- time related parameters, issued by and audience
+				- nonce (not more than once) - digital signature
+				- hash of other tokens
+				- subject
+				- identity provider
+				- authentication method reference
+6. Hybrid flow - for server side applications and native applications
+
+Oauth 2.0 Authorization server metadata - RFC 8414
+
+1. well known path for oauth metadata document along with a caching policy using response headers
+2. can be refreshed periodically by client application at runtime to see if there have been any changes
+3. this gives programmatic integration with authorization server with minimal manual configuration. we also get automatic updates
+
+Oauth device flow for browserless devices
+
+1. Used for Devices like IOT 
+2. Offload user authentication to secondary device which has access to browser
+
+Device authorization request
+
+1. client_id=<client id>
+
+Device authorization response
+
+1. device_code=<device code unique identifier for this authorization request, it will be used by the device when polling the authorization server and will be swapped for tokens>
+2. user_code=<user code unique identifier for authorization request and to be used by user and submitted within the authorization server>
+3. verification_uri=<verification uri to be visited on secondary device>
+4. verification_uri_complete=<verification uri plus the user code to avoid manually entering user code in the verification uri on browser>
+5. expires_in=<expiry time in seconds>
+6. interval=<minimum polling interval defaults to 5 seconds>
+
+Token request (polling by the device)
+
+1. grant_type=urn:ietf:params:oauth:grant-type:device_code
+2. device_code=<device code>
+3. client_id=<client id>
+
+Token response
+
+1. error=authorization_pending (in case of error or still pending)
+2. access_token=<access token>
+3. token_type="Bearer"
+4. expires_in=<time in seconds>

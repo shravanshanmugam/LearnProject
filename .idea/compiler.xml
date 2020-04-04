@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="LearnMaven" />
+        <module name="LearnReactiveJava" />
+        <module name="LearnConcurrency" />
+        <module name="NewMavenModule" />
+        <module name="DesignPatterns" />
+        <module name="LearnSpring" />
+        <module name="LearnBenchmark" />
+        <module name="learnframeworks" />
+        <module name="LearnHibernate" />
+        <module name="LearnSpringBoot" />
+        <module name="LearnLambda" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="LearnBenchmark" options="" />
+      <module name="LearnHibernate" options="-parameters" />
+      <module name="LearnReactiveJava" options="-parameters" />
+      <module name="LearnSpring" options="-parameters" />
+      <module name="LearnSpringBoot" options="-parameters" />
+      <module name="learnframeworks" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,159 @@
+Java9
+
+Reference: https://gotober.com/2017/sessions/272 | https://files.gotocon.com/uploads/slides/conference_7/272/original/Java%209%20Overview.GOTO.pdf
+- _ is not a valid variable name
+- sun.misc package is wrapped. For example - Base64Encoder
+_ Jigsaw modules
+	- Motivation
+		- protection scheme (private, protected, public) is insufficient
+		- unable to hide internal packages/classes not meant to be used yin public
+	- jar hell - modules not able to solve it
+		- modules do not have version
+	- program size
+		- deploy only the modules needed
+	- jdeps
+		- dependency analyzer
+	- additional directory on top of package layer which matches module name
+	- additional module-info.java file
+	- qualified export - available only to specified modules using 'to' keyword
+	- unqualified export - available publicly
+	- exports related to packages
+	- requires related to modules
+	- transitive readability using 'transitive' keyword
+	- module path
+		- list all jar files containing modules
+		- similar to class path
+	- module jar - 1:1 relationship between module and jar file
+	- Jlink - link to a modular runtime image
+		- includes only those JDK modules which are needed
+	- modularize based on components not layers
+	- module-info.java files - module path and not class path
+	- module-info.java should contain required dependencies listed
+	- can also export module and hide other internal modules/packages
+	- which module it needs (readability)
+	- which packages it makes accessible to other modules (accessibility)
+	- both modules must agree upon their relationship
+	- Pros
+		- cleaner design
+		- smaller deployables
+	- Steps to modularize
+		- jdeps to understand dependencies
+		- change source code directory structure
+		- write module-info.java files
+		- problem - 3rd party libraries not modular
+			- solution
+				- all jars from classpath form the unnamed module
+				- unnamed module exports all its packages
+				- unnamed module requires all other modules
+		- problem - but named modules cannot require the unnamed module
+			- solution
+				- automatic modules
+				- existing jar file put on the module path
+				- module name derived from jar file name
+				- acts as real module i.e. can be required from a named module
+		- problem - but may not be the module that 3rd party library provides after modularization	
+- Reactive streams
+	- Implementations
+		- Akka streams
+		- MongoDB Reactive Java Driver
+		- Ratpack
+		- Reactive Rabbit
+		- Reactor
+			- http://www.reactive-streams.org
+			- https://projectreactor.io
+		- RxJava
+		- Vert.x
+	- Where to use?
+		- Pub-sub around business logic. Publish message, perform business logic, subscribe to output of business logic.
+	- work with multiple streams
+	- have multiple consumers
+	- backpressure
+	- very different concurrency model
+	- reactive API lets you work with different implementations
+	- merge, split and re-use streams
+	- Reactive architecture
+		- Responsive
+		- Elastic
+		- Resilient
+		- Message Driven
+		- Reactive Streams
+- Convenience factory methods for collections
+- private methods on interfaces
+	- reduce code duplication in interfaces
+- New methods on streams API
+	- takeWhile()
+	- dropWhile()
+- Stack walking API
+	- java.lang.StackWalker APIs
+- Process API updates
+- Update deprecation
+	- deprecated since and for removal fields in annotation
+- HTML5 in Javadoc
+- JShell
+- Multi release JAR files
+- diamond operator with anonymous class
+- effectively-final variables in try-with-resources
+- @SafeVargs on private instance methods
+- string deduplication - replace duplicate char array with content of cached array
+- G1GC default GC - https://www.youtube.com/watch?v=OhPGN2Av44E
+	- GC
+		- memory heap
+		- contains objects for fields
+		- also contains references
+		- pause application for GC
+		- GC finds which objects are in use
+		- scan references
+		- find used objects and do compaction to one end of the heap
+		- contigious free memory area available in heap
+	- Goal of GC
+		- throughput - number of transactions per second
+		- low latency - maximum time of a transaction
+		- default pause goal is 200ms
+			- higher pause goal => more throughput, higher latency
+			- lower pause goal => less throughput, lower latency
+		- Generational region-based memory management
+			- Region size depends on heap size
+			- New objects are allocated into Eden (E) regions
+			- A young collection happens after a number of Eden regions have been allocated
+			- Young collections compactly copy live objects in Eden regions to Survivor (S) regions
+			- Objects will then continue to be allocated in Eden regions
+			- If object survives multiple Young collections, then they are compactly copied into an Old (O) region
+			- After a while the heap fills up with Eden, Survivor and Old regions
+			- All live objects in Old regions are then marked concurrently
+			- Java application is not stopped during concurrent mark
+			- Eden, Survivor and Old regions are then collected in mixed collections
+			- Live objects are compactly copied into Survivor and Old regions
+			- When no more old regions are suitable for collection, then G1 will resume doing young collections
+			- G1 transitions between following states
+				- Young Collections
+				- Young Collections + Concurrent Mark
+				- Mixed Collections
+		- Java 8 improvements
+			- String deduplication - Try with -XX:+UseStringDeduplication
+			- Class unloading with concurrent mark - 
+				- if all objects/instances of class are dead, then class itself is dead
+				- if all classes loaded by same class loader are dead, then we can unload these classes and GC the class loader
+				- try with -XX:+ClassUnloadingWithConcurrentMark
+			- Eagerly reclaim humongous regions
+				- objects larger than half a region are humongous objects
+				- reclaim during young collection 
+				- does not wait for concurrent mark
+			- Adaptive start of concurrent mark
+				- Old regions can't be collected until concurrent marking finishes
+				- try with -XX:+G1UseAdaptiveIHOP
+				- enabled by default
+			- More efficient collections
+- string compaction - based on whether content of string requires one-byte encoding or two-byte encoding
+- string concatenation - indification
+	- invoke dynamic bytecode
+	- applies MetaFactory internally
+- CDS = class data sharing
+	- shared data archive instead of rt.jar to save class loading time
+- Unified JVM logging (JVM and GC logs)
+- HTTP/2 benefits over HTTP/1.1 (which dates back to 1996)
+	- binary protocol
+	- TLS (SSL) everywhere
+	- connection multiplexing
+	- headers compression
+	- request prioritization
+	- push of correlated resources 

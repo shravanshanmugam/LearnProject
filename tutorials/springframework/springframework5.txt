@@ -1,0 +1,70 @@
+JAVA_HOME=/usr/lib/jvm/jdk1.8.0_121
+export JAVA_HOME
+
+Spring Boot
+
+* Sets up default configuration
+* Starts Spring application context
+* Performs class path scan
+* Starts Tomcat server
+
+Controller
+* Java class
+* Marked with annotations
+* Has info about URL access triggers, method to run when accessed
+
+Bill of materials
+
+Embedded Tomcat Server
+* Convenience
+* Servlet container config is now application config
+* Standalone application
+* Useful for MicroServices Architecture
+
+Spring MVC Controller
+
+
+App
+----------------------------------------------------------
+|Spring MVC|Controller									 |
+|		   |URI, HTTP Method, Functionality (Java Method)|
+----------------------------------------------------------
+
+Resources: Things in domain. E.g. Topic
+
+GET /topics Get all topics
+GET /topics/id Get topic by id
+POST /topics Create new topic
+PUT /topics/id Update the topic with id
+DELETE /topics/id Delte the topic with id
+
+Business Service
+* Singleton - create single instance of service
+* Other controllers, classes depend on business service
+
+Booting Spring Boot
+* Spring Initializr http://start.spring.io
+* Spring Boot CLI
+* STS IDE
+* Configuration - application.properties
+https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+
+Spring Data JPA
+JPA - Java Persistence API
+ORM - Object-Relational Mapping
+CrudRepository - basic CRUD operations for any entity
+findByProperty method for custom select methods
+Define entity relation ships using JPA annotations like @ManyToOne, @OneToOne, @ManyToMany and so on
+Run app from CLI using
+java -jar <jar>
+In pom.xml set <packaging>war</packaging> for creating war
+
+Spring Actuator
+https://spring.io/guides/gs/actuator-service/
+https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready.html
+
+Postman:
+Topic : https://www.getpostman.com/collections/c7b3e0a0575e4cfdf6cd
+Topic Jpa : https://www.getpostman.com/collections/758d8d5f2add8e41064b
+Course Jpa : https://www.getpostman.com/collections/dfe288c91e15f4c1afd8
+Actuator : https://www.getpostman.com/collections/ec1473b9d944a2c6342a

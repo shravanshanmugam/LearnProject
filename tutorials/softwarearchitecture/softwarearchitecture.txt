@@ -1,0 +1,439 @@
+- Event Driven Architecture
+* request reply pattern
+* asynchronous using messaging queues
+* correlation id between sender and receiver 
+* using temporary queues which only exists for a particular request or specific sender. once reply is received queue can be deleted
+
+- Kafka vs standard messaging
+* payload of Kafka - small key-value pairs
+* payload of MQ - large JSON payloads
+* Kafka - unbounded continuous flow of data
+* MQ - distinct bounded messages
+* Kafka - throughput upto 1 million messages/sec (10 byte messages)
+* MQ - throughput upto 4K/10K messages/sec
+* Kafka - good for operational data (auditing, logging, metrics, streaming data)
+* MQ - good for transactional data
+* Kafka - supports only Publisher-subscriber topology
+* MQ - 
+	1. point-to-point messaging (single consumer)
+	2. pub-sub
+	3. exchange topology (topic bindings)
+
+- Technical Breadth
+* InfoQ
+* ThoughtWorks / Technology Radar
+* DZone
+
+- Distributed Logging
+* Logging consolidation - for microservices/distributed applications
+* Log streaming (application does not contain logs) followed by a subscriber to consolidate the logs
+	1. For e.g. based on Log level filters
+	2. Filters on log statements
+
+* Steps for distributed logging
+	1. request context id
+	2. context id hierarchy (when there are multiple context ids)
+	3. context id extraction (using interceptors for e.g. in API Gateway component)
+	4. context id consistency (consistency can be lost as one service can have one context id like userid and another service can use context id like account id)
+	5. create custom logging api wrapper (easy to apply filters on a log wrapper)
+		* service
+		* contextid
+		* message
+
+- Reducing Staging iterations
+* Reduce iterations to parallel working streams
+
+- Classifying Architecture Patterns
+* componenent-based
+	1. layered
+	2. microkernel
+	3. space-based
+	4. modular
+	5. event-driven
+	6. pipeline
+* service-based
+	1. microservices
+	2. service-based
+
+* monolithic
+	1. microkernel
+	2. layered
+	3. pipeline
+	4. modular monolith
+* distributed 
+	1. space-based
+	2. event-driven
+	3. microservices
+	4. service-based
+
+* Distributed architecture issues
+	1. contract creation, maintenance, versioning and coordination
+	2. remote service availability and service responsiveness
+	3. slower service invocations due to remote access protocols and distributed components
+	4. authenticating and authorizing remote connections and service invocations
+	5. distributed logging facilities to provide a holistic view of a transaction
+	6. atomic transactions and transaction scope BASE transaction - Basic Availability Soft state Eventual consistency
+
+- Analyzing Architecture: Structural Decay
+* architecture decisions
+* design principles
+
+- Analyzing Architecture: Components
+* component in microservice is a single purpose service
+
+- Analyzing Architecture: Macro Techniques
+* general structural decay indicators
+	1. static coupling (more coupling small crack lead to huge impact)
+		i. afferent coupling -> who talks to my component (depends on my component)
+		ii. efferent coupling -> who i am taking to (my component depending on what other components)
+	2. temporal coupling
+	3. component size (larger the component the more coupled it is with other components)
+
+- Analyzing Architecture: Microservices
+* code dependencies between services (shared libraries)
+* too much inter-service communication
+
+- Analyzing Architecture: Code Metrics
+* cyclomatic complexity = e (edges) - n (nodes)  + 2
+* core metrics
+	1. number of classes per package
+	2. number of lines of source code (based on a context)
+	3. average complexity (1 + number of paths through method; range: 2- 4)
+	4. DIT (Depth of Inheritance tree)
+	5. WMC (weighted methods/class; sum of cyclomatic complexity)
+	6. CE (efferent coupling count)
+	7. CA (afferent coupling count)
+
+- CQRS (command query responsibility segregation) and Microservices
+* separate model for commands (entity based) and separate model for queries (aggregate based)
+* split database to read database (read database for reads => indexes) and write database (fully optimized for writes => no indexes)
+* require synchronization from write database to read database
+* split into two separate services one for write (command service) and one for read (query service)
+* update service has cache and replicates the cache which is distributed/synchronized with query service
+
+- Microservices and Reporting
+* Microservices - bounded context (functionality, business rules, data and business domain bound by microservice)
+* Reporting Service
+	1. Database pull model (breaks bounded context so schema cannot be changed without impact)
+	2. HTTP pull model (Microservice exposes REST API to provide data but performance issues for aggregates/high data volumes)
+	3. Event-based push model 
+		* Pump data asynchronously as events from Microservice which is captured data capture service, which performs MapReduce or aggregation and insert into Reporting Database which Reporting service can use
+		* Bounded context not broken as data capture service only listening to events not the data (so schema change won't have big impact)
+		* Data capture services can have data filtering capabilities to use and aggregate or ignore events
+		* Both bounded context and data timeliness
+
+- Refactoring Patterns: Migration vs Adaptation
+* Migration 
+	1. replacement of old components with new ones through migration over time
+	2. Both services existing for a period of time (old and new so costs involved)
+	3. requires switching logic in calling components
+	4. less overall risk
+	5. easier to rollback changes
+* Adaptation
+	1. refactoring of existing components by adapting them to the new functionality
+	2. done over iterations
+	3. does not involve other components (in place refactor)
+	4. harder to rollback changes
+	5. no changes to calling components
+
+- Refactoring: Business Justification
+* technical justification
+	1. splitting the monolithic application into multiple deployable units will decouple components allow for more growth potential
+	2. components will be more decouple, thereby eliminating frequent build and deployment issues
+	3. each part will use fewer jvm resources, thereby increasing performance and allow for more growth
+	4. deployment is limited to a separate application unit, therby reducing deployment time and increasing robustness
+* business justification
+	1. new functionality can be delivered faster, thereby improving overall time to market
+	2. overall application quality will be improved, thereby reducing bugs and the associated costs of fixing them
+	3. development and deployment costs associated with developing new functionality will be significantly reduced
+* business metrics
+	1. reduced overall cost
+	2. better time to market
+	3. better user satisfaction
+
+- The Challenges of Architecture Teams
+* Witches brew AntiPattern (all ingredients mixing up incoherently)
+* using collective knowledge and experience to arrive at a unified vision for the architecture
+* mediator approach
+
+- Architecture Tradeoffs
+* performance
+* scalability
+* extensibility
+* agility
+* maintainability
+* feasibility
+* Architecture Tradeoff Analysis Method (ATAM)
+	1. proposed architecture
+	2. business drivers
+	3. quality attributes
+	Problems
+	1. assumes the architecture is complete
+	2. stakeholders are busy and often distributed
+	3. assumes a one time process with no change
+	4. assumes all scenarios are known up front
+	Solution
+	1. create an architecture presentation
+	2. validate architecture and establish trade offs
+	3. identify and mitigate risk
+	4. get stakeholder buy-in
+* Cost-Benefit Analysis Method (CBAM)
+	1. Maximize the difference of benefits and costs
+
+- Fallacies of Distributed Computing
+1. the network is reliable (network issues in reaching service or getting response from service)
+2. latency is zero (remote access call is slower than local in-memory call)
+3. bandwidth is infinite (volume of data over network)
+4. the network is secure (need to authenticate/authorize requests to a service)
+5. topology doesn't change (change in switches, routers, load balancers, network)
+6. there is one administrator
+7. transport cost is zero (monolith to distributed architecture has costs associated with hardware, network)
+8. the network is homogeneous (different networks used)
+
+
+- Integration Styles for systems
+1. File transfer
+2. Shared database
+3. Remote procedure invocation
+4. Messaging
+
+- Integration Styles: File transfer
+* FTP/SFTP
+* SCP (secure copy protocol)
+* Advantages
+	1. simple to integrate
+	2. system abstraction (platform, language independent)
+	3. universal integration style
+* Issues
+	1. error processing is difficult
+	2. Data-only transfer
+	3. Data synchronization timeliness
+
+- Integration Styles: Shared database
+* Advantages
+	1. near-universal integration
+	2. system abstraction
+	3. system decoupling
+	4. ease of integration
+* Issues
+	1. doesn't work well with ORMs
+	2. performance bottleneck issues
+	3. schema change issues
+	4. data ownership issues
+
+- Integration Styles: Remote Procedure Invocation
+* REST
+* SOAP
+* RMI
+* Websockets
+* gRPC
+* Advantages
+	1. data encapsulation and ownership
+	2. external systems integration
+	3. mature frameworks and tools
+* Issues
+	1. tight system coupling
+	2. async communications not available
+	3. broadcast capabilities not available
+
+- Integration Styles: Messaging
+* Communicating through events
+* JMS
+* MSMQ
+* AMQP (heterogeneous interoperability)
+* SNS
+* SQS
+* SMPP
+* MQTT
+* Advantages
+	1. highly decoupled systems
+	2. guaranteed delivery
+	3. async communications
+	4. broadcast capabilities
+	5. ease of scalability
+* Issues
+	1. integration beyond firewall
+	2. implementation complexity
+	3. testing complexity
+	4. cross platform standards
+	5. async error handling
+
+- Orchestration vs Choreography
+* Orchestration - Orchestra with a single conductor - separate service to handle the communication
+* Choreography - dancers moving with each other, no single conductor - communication between services
+
+- Lean Modeling Concepts - Lean Enterprise Architecture
+* traditional enterprise models
+	1. business workflow model
+	2. enterprise systems model
+	3. enterprise information model
+	4. technology infrastructure model
+	5. business automation model
+* lean modeling concept
+ 	1. create lists (as opposed to diagrams)
+ 	2. track relationships between items in the list
+ 	3. keep the items in some sort of repository
+* common list examples
+ 	1. list ownership responsibility
+ 	2. major business functions
+ 	3. applications and services
+ 	4. technologies and platforms
+ 	5. user groups and roles
+ 	6. standards
+ 	7. data stores
+ 	8. business segments
+
+- Architectural Abstraction
+* types of Abstraction
+	1. location transparency (location of service)
+	2. name transparency (name of service)
+	3. implementation transparency (platform and language)
+	4. access decoupling (e.g. do we need AMQP protocol to accept requests)
+	5. contract decoupling (contract between product id and quantity)
+* protocols for communicating between services A and B
+	1. Messaging [1,2,3 level of abstraction]
+	2. Adapter [1,2,3,4 (adapter does protocol transformation), 5 (adapter does message transformation) level of abstraction]
+	3. REST [2,3]
+	4. Message bus [1,2,3,4,5]
+
+- Agile architecture review boards
+* determine standards
+* approve solutions
+* approve variances
+* provide guidance
+* provide recommendations
+
+- Circuit Breaker Pattern
+* remote process responsiveness and server availability
+* timeout - max time on production under load * 2
+* simple heartbeat for availability
+* synthetic transactions for availability and responsiveness
+* real-user monitoring (trend analysis)
+
+- Service Design Patterns
+* Direct Access design
+	- logic resides in the methods
+* API Access design
+	- single API access facade which inturn calls methods of separate classes
+	- separation of concerns (validations, transformations)
+	- protocol-agnostic processing
+	- service context/binding
+	- service catalog (the API access facadef)
+
+- Component coupling
+* the extent to which component know about each other
+* types of coupling
+	1. afferent coupling (fan-in) - the degree to which other components are dependent on the target component
+	2. efferent coupling (fan-out)- the degree to which target component is dependent on other components
+	3. temporal coupling - components are coupled due to non-static timing dependencies (e.g A depends on B and C for a transaction but B and C are not coupled or dependent on each other)
+* levels of component coupling
+	1. pathological coupling (tight coupling)
+		- one component relies on the inner workings of another component (changes in business logic impact other components)
+	2. external coupling
+		- multiple components share an externally imposed protocol or data format (e.g. REST -> SOAP)
+	3. control coupling
+		- one component passes information to another component on what to do
+	4. data coupling (loose coupling)
+		- the degree to which components are bound to a shared data context (components not dependent on each other directly but only through share data)
+
+- Agile and Software Architecture
+* Software Architect
+	1. identify characteristics
+	2. define components
+	3. select architecture patterns
+	4. diagram architecture
+	5. document decisions
+	6. assess architecture risk
+	7. ensure compliance
+	8. analyze architecture
+	9. refactor components
+
+- Presenting Architecture
+* expansion joints
+* accordion slides
+* animation
+* dimensions and focus
+* build outs
+
+- Diagramming Software Architecture
+* Irrational Artifact Attachment - there is a proportional relationship between a person's irrational attachment to some artifact to how long it took to produce it
+* titles
+* lines and directions of flow
+* labels on lines for type of flow
+* shapes - consistency
+* avoid acronyms and use names
+* color
+* orientation
+* keys (legend)
+
+- Creating a Service Taxonomy
+* Functional services (public API service handling business functionality based on a user request)
+* Orchestration services (public API service that orchestrates multiple services for a single business request E.g. Act as orchestrator to aggregate from other services)
+* Infrastructure services (private service handling infrastructure and cross-cutting concerns like Auditing, Logging, Security)
+* Aggregation services (public API service that handles aggregate business requests. Data from Functional services pumped to aggregation services for reporting)
+* Gateway services (public API service that fronts a third-party application or custom system and handles protocol and contract transformation)
+* Use annotations to identify these services (E.g. @FunctionalService, @GatewayService)
+
+- Creating Service Domains
+* E.g. Customer, Shipping, Order processing, Payment, Tracking
+* federated API instead of a single Gateway API layer (one API layer for each domain of services)
+* Use annotations to identify domains (E.g. @CustomerDomain, @ShippingDomain)
+
+- Watch Notification Pattern
+* how to automatically notify systems or services whenever a configuration value changes?
+* Service broadcast pattern (broadcast through a message broker)
+	- Disadvantages
+		1. all services have to connect to message broker
+		2. SPOF
+		3. with more services tied to the broker, broker will be overloaded
+* Domain broadcast pattern (broadcast through domain specific message brokers)
+	- Similar disadvantages
+* Watch pattern
+	1. services register with external config server
+	2. when config value changes, external config server will connect to registered service, send the notification and disconnect
+	3. if external config server can not connect it deregisters the service
+
+- Embedded messaging
+* embedder broker is embedded or message broker is started within the service
+* Advantages
+	1. refer internally and externally
+	2. remove bottlenecks by parallel processing
+	3. connectionless or brokerless topologies (no intermediary) 
+		Service A
+		- connect to broker of B
+		- send request to B
+		- disconnect
+		Service B
+		- connect to requesting broker A
+		- send response to A
+		- disconnect
+* it can be done using ActiveMQ
+* no SPOF or bottlenecks
+
+- translating quality attributes to business concerns
+
+- Identifying Microservices
+* Function-driven approach (top-down)
+* Data-driven approach (bottom-up)
+* Request-driven approach (API driven design)
+* Use combination of all three
+	1. identify coarse-grained functional areas
+	2. create coarse-grained microservices
+	3. map services to data tables
+	4. refine service granularity based on mapping
+	5. create service dependencies (data dependency becomes service dependencies)
+	6. back to 4
+	7. identify orchestration level (80-20 - if 80 percent of requests require orchestration then combine the services)
+	8. back to 4
+
+- Integration Hubs
+* similar to an adapter that is compatible with any integration type
+* capabilities
+	1. message enhancement (message payload)
+	2. message transformation (message format)
+	3. protocol transformation (REST, SOAP, AMQP)
+	4. service orchestration
+	5. service registry and discovery
+	6. security management
+	7. system abstraction and evolution
+	8. contract decoupling

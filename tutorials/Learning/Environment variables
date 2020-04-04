@@ -1,0 +1,13 @@
+Environment variables
+
+Use cases for environment variables include but are not limited to data such as:
+- Execution mode (e.g., production, development, staging, etc.)
+- Domain names
+- API URL/URI’s
+- Public and private authentication keys (only secure in server applications)
+- Group mail addresses, such as those for marketing, support, sales, etc.
+- Service account names
+
+They are useful to share data across programs on a machine
+Not useful when editable
+Has to be common, constant data

@@ -1,0 +1,36 @@
+Containers
+
+1. Kubernetes
+	- Greek for 'Helmsman'
+	- also the root for the word 'Governor'
+	- Container orchestrator
+	- runs containers
+	- supports multiple cloud and bare-metal environments
+	- open source, written in Go
+	- spotify has a docker maven plugin that builds docker image when building Java application
+2. Kubernetes features
+	- labels to identify running containers
+	- pod - atomic unit managed by kubernets
+	- pod can have single container or multiple containers
+	- all containers in pod have same IP
+	- all containers in pod live/die together
+	- guaranteed to be scheduled on to the same physical machine
+	- e.g. frontend & backend in separate pods as you cannot scale independently if they are in same pod
+	- e.g. auxillary services/application can be kept in same pod
+	- service - like a load balancer that gives a stable IP address that will be able to load balance requests
+	- routing happens with help of labels
+	- service discovery/registry
+	- volume mount registry and persistence volume claim 
+3. NFS - Network File System
+	- shared hard drive used by server over network with clients
+	- commonly used data can be stored on a single machine and remains accessible to others over network
+	- home directories can also be setup on NFS instead of every network machine
+4. Kubernetes vs Docker - https://thehftguy.com/2016/11/01/docker-in-production-an-history-of-failure/
+One of the [future] major breakthrough is the ability to manage fleets of containers abstracted away from the machines they end up running on, with automatic start/stop/rolling-update and capacity adjustment,
+The issue with Docker is that it doesn’t do any of that. It’s just a dumb container system. It has the drawbacks of containers without the benefits.
+5. Kubernetes for Java Applications - https://github.com/aws-samples/kubernetes-for-java-developers
+6. Kubernetes Helm chart - manage container manifests
+7. Heptio ark - Disaster Recovery
+8. Istio - Service mesh
+9. Jenkins X - CI/CD for Kubernetes applications
+10. Skaffold - facilitates continuous development for Kubernetes applications

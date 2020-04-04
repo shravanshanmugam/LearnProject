@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnBenchmark" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnBenchmark/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnHibernate" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/DesignPatterns" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/DesignPatterns/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/LearnConcurrency" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/LearnConcurrency/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/LearnMaven" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/LearnMaven/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/LearnMaven/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/NewMavenModule" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/NewMavenModule/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnReactiveJava" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnSpring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnSpring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnSpringBoot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnSpringBoot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/learnframeworks" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/learnframeworks/src/main/java" charset="UTF-8" />
+  </component>
+</project>

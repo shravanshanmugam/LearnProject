@@ -1,0 +1,108 @@
+Domain Driven Design
+1. DDD is a way of looking at software from top down
+2. When we are developing a software our focus shouldn't be primarily on technology, it should be primarily on business or whatever activity we are trying to assist with the software, the domain
+3. Specifically we approach that by trying to develop models of that domain and make our software conform to that
+
+Tactical Design Tools
+Service
+- Exe/Jar/Zip
+- Project
+- Layers
+- Modules
+- Design Patterns
+- OOPS
+- Classes
+- Objects
+
+Strategic Design Tools
+Domain
+- Sub-Domain (Core, Supporting, Generic subdomains)
+- Services
+
+Strategic Design
+- OOD
+- Strategic Design - contexts
+- Context - the setting in which a word or statement appears that determines its meaning
+- Bounded Context
+- Context Map
+- Ubiquitous language
+
+Bounded Context
+1. Sales - customer = social interests, likes, needs
+2. Support - customer = history, tickets
+3. Accounting - customer = method of payment
+4. Order - customer = addresses, availability
+5. Model and Ubiquitous language within Bounded Context
+6. relationship between bounded context is Context Map
+
+DDD: Tactical Design
+- concerned with implementation details
+- takes care of components inside a bounded context
+- services, entities, repositories, factories
+- tactical design is expected to change during development unlike strategic design
+
+Model Driven Design
+- Domain
+- Subdomains
+- Bounded Context
+- Domain model
+- Ubiquitous language
+
+Layered Architecture
+1. Request Handlers
+2. Controllers
+3. Business
+4. Persistence
+5. Advantages
+- accept requests faster
+- organized, well-defined
+- flexible, maintainable
+- reusable components
+
+Value Objects
+- one of the best things about good design
+- String - general purpose value object designed to handle complexities (length, replace, reverse, indexOf) of char arrays
+- Value objects reduces complexity and forces ubiquitous language
+- Features
+1. don't care about uniqueness
+2. always immutable
+3. rich domain logic
+4. auto-validating
+5. strong equality
+6. thread safe because they are immutable
+
+Entities
+1. can be uniquely identified using an Id
+2. Consists of value objects
+3. Generally persisted as a row in DB
+4. Typically mutable
+5. Generally implements some business logic
+
+Aggregates
+1. when object graph becomes git it becomes difficult to maintain
+2. An aggregate is a collection of entities and values which comes under a single transaction boundary
+3. An aggregate controls the change
+4. An aggregate always has a root entity
+5. root entity govens the lifetime of other entities in the aggregate
+6. An aggregate is always consistent
+7. Domain events are generated to ensure eventual consistency
+8. Customer, Order bounded contexts
+
+Factories & Repositories
+1. Factories helps to create new aggregates
+2. Repositories helps to get persisted aggregates
+3. Repository is not DAO layers
+
+Event storming
+1. An exercise for creating Domain Models for strategic design
+2. brain storming workshop among domain experts and technology people to understand the events in a system
+3. aimed to achieve a common understanding of the domain in which software must operate
+4. How does event storming work?
+- domain experts and tech expert
+- events, commands, policies, processes, errors, roles and aggregates
+- write events in sequence
+- add commands, aggregates, policies to events
+- identify bounded contexts
+
+DDD in code
+1. Use value objects instead of domain primitives

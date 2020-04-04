@@ -1,0 +1,201 @@
+Docker
+
+Reference: https://www.youtube.com/watch?v=RppfZGuLsmA
+
+- OS level virtualization a.k.a. containerization
+- minimum required bins and lib
+- has in-built VCS like Git
+
+Lifecycle
+---------
+
+    	     Pull/Push
+Docker Hub <==========> Docker Engine -> Docker Images -> Container stages (run/stop/delete)
+
+Commands
+--------
+
+docker version 
+docker pull <image> - pull docker image from docker hub
+docker images - view docker images on system
+docker run -it (interactive terminal) -d (as a daemon i.e. in background) -p (port mapping) <image> - start docker container
+docker ps - currently running containers in system
+docker ps -a - all containers in system
+docker exec -it <containerid> bash - enter the container in bash 
+exit - exit docker container
+docker stop <containerid> - stop docker container (gracefully)
+docker kill <containerid> - kill docker container (forced)
+docker rm <containerid> - delete container from system
+docker rm -f <containerid> - stop and delete container from system
+docker rm -f $(docker ps -a -q) - stop and delete all containers from system
+docker rmi <imageid> - remove docker image from system
+docker commit <containerid> <new-image-name> - save changes to a container
+docker login - login to docker hub account
+docker push <new-image-name> - push image to docker hub
+docker inspect <image> - inspect a docker image
+
+Dockerfile
+----------
+
+- Text document that contains all commands a user would call on command line to assemble an image
+- Using docker build, users can create an automated build that executes several command line instructions in succession
+
+Commands
+--------
+
+FROM <image-name> - define base image on which we will be building
+ADD <cwd-files> <containerdir-files> - add files inside container
+RUN <cli command> - run a command in command line to install components on base image
+CMD <command> - run commands on start of the container. only runs when there is no argument specified while running the container i.e. the docker run command
+ENTRYPOINT <command> - strictly run commands the moment the container initializes. runs irrespective of whether argument is passed or not
+ENV <name> <value> - defined environment variables in container run-time
+
+docker build <cwd> -t <new-docker-image> - build a docker image from a dockerfile
+docker push <new-docker-image> - push docker image built from dockerfile to docker hub
+
+Docker Volumes
+--------------
+
+- used to persist data across the lifetime of a container
+- maps storage outside container to inside container
+
+Bind mount
+----------
+
+- Files not directly copied but mirrored inside the container
+- File system has to be same as specified
+- File path not compatible across OS
+
+docker run -it -v <system-dir>:<container-dir> -d <image-name> - map host file system to container when starting docker container
+
+
+Volumes
+-------
+
+- storage managed by docker
+- container engine identifies where the volume has to exist and creates the volume there
+
+docker volume create <volume-name> - create docker volume
+docker volume ls - list docker volumes
+docker run -it --mount source=<volume-name>,target=<target-in-container> -d <image-name> - map storage
+docker cp <file> <containerid>:/<target-in-container>
+
+Volume drivers
+--------------
+
+- allows to store data on remote hosts or cloud providers
+
+Microservices
+-------------
+
+Problems with Monolithic Application
+
+- application is large and complex to understand
+- entire application has to be re-deployed on an application update
+- bug in any module, can bring down entire application
+- has a barrier to adopting new technologies
+
+Microservices
+- software development architecture style that structures an application as a collection of loosely coupled services
+
+Docker and Microservices
+- microservices deployed on docker containers
+- application is distributed so easy to understand
+- the code of only the microservice which is supposed to be updated is changed
+- bug in one service does not affect other services
+- no barrier to any specific technology
+
+Docker compose
+--------------
+
+- tool for defining and running multi-container docker applications
+- uses a YAML file to confiure your application's services
+- with single command, create and start all the services from your configuration
+- run docker-compose up and compose starts and runs your entire app
+- docker-compose.yaml or docker-compose.yml - default docker compose file
+
+Commands
+--------
+
+docker-compose version - docker compose version
+docker-compose up -d - run docker compose
+docker-compose up -d --scale <service-name>=<number-of-containers> - scale a service
+docker-compose down - stop docker containers
+docker-compose config - check validity of docker compose configuration file
+
+Container orchestration
+-----------------------
+
+- monitor health of multiple docker containers that are launched
+
+Docker Swarm
+------------
+
+- clustering and scheduling tool for docker containers
+- IT administrators and developers can establlish and manage a cluster of Docker nodes as a single virtual system
+
+- health check on every container
+- ensure all containers are up on every system
+- scaling the containers up or down depending on the load
+- adding updates/changes to all the containers
+- similar tools: Kubernetes, Apache Mesos
+
+
+
+Architecture
+------------
+
+- Single Leader - manage containers and workers
+- Multiple workers - run containers in multiple machines
+
+Commands
+--------
+
+docker swarm init --advertise-addr=<private-ip> - leader
+docker swarm join --token <generated-token> <private-ip>:<port> - workers
+docker node ls - list docker nodes in docker swarm cluster
+docker swarm leave - worker node will leave cluster
+docker swarm leave --force - leader node will leave cluster
+
+Deploy an app on Docker swarm
+-----------------------------
+
+- containers on cluster are deployed using services on Docker swarm
+- A service is a long running Docker container that can be deployed to any node worker
+
+docker service create --name <service-name> --replicase <number-of-replicas> <image-name>
+docker service ls - list of docker services
+docker service scale <service-name>=<number-of-replicas> - scale up or scale down service to <number-of-replicas>
+docker service rm <service-name> - remove service from all nodes
+docker service update --image <image-name>:<tag> <service-name> - update service (automatically takes care of deployment on one node at a time)
+docker node update --availability drain <node-name> - shutdown a particular node
+
+Deploy an app on Docker swarm from docker-compose
+-------------------------------------------------
+
+docker stack deploy -c <docker-compose-yml> <service-name> - create docker service using docker compose file
+docker stack services <service-name> - view docker service details
+docker stack rm <service-name> - take down the service
+
+Notes
+-----
+
+- Docker images are templates used to create Docker containers
+- Container is a running instance of an image
+- Docker images are stored locally or remotely in repositories (Docker hub)
+- Docker can build images automatically by reading instruction from Dockerfile
+- Containers are running instances of an image
+- A single image can be used to create multiple containers
+- Containers isolate software from its surroundings
+- Features of containers
+	- Lightweight
+	- Less resources are used
+	- Booting of container is very fast
+	- Can start, stop, kill and remove container easily and quickly
+	- OS resources can be shared within docker
+- Dockerfile is a text file with instructions used to build a docker image
+- Docker compose is a tool for defining and running multi-container docker applications
+	- yaml file to configure application services
+	- start/stop services with a single command
+	- scale up/down services when required
+

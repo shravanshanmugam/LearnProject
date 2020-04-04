@@ -1,0 +1,49 @@
+shortcuts
+
+Intellij
+
+cmd + [ = Navigate back
+cmd + ] = Navigate forward
+
+ctrl + up = Move to previous method
+ctrl + down = Move to next method
+alt + P = Select in Project view
+
+ctrl + M = Toggle between start and end block of code
+cmd + alt + shift + [ = Select block of code from caret to start of block
+cmd + alt + shift + ] = Select block of code from caret to end of block
+
+fn + up = Page up
+fn + down = Page down
+
+shift + Enter = New line
+ctrl + shift + J = Join lines
+
+cmd + 1 = Project view
+cmd + 9 = Local changes in Git
+
+fn + 2 = Next error
+
+cmd + up = Navigation bar
+(cmd + up) + (cmd + enter) = Go to current class declaration
+
+Alt + Shift + Mouse Click = Add/remove a selection
+Ctrl + G / Shift + Ctrl + G = Select/unselect the next occurrence
+Ctrl + Cmd + G = Select all occurrences
+Esc = Remove all selections: 
+
+Ctrl + Alt + Shift + down = Go to next change
+Ctrl + Alt + Shift + up = Go to previous change
+
+Mac
+
+cmd + shift + 4 = Snipping tool
+
+ctrl + [ = Mission Control
+ctrl + ] = Application Windows
+
+F11 = Show desktop
+F12 = Show dashboard
+
+cmd + shift + , = System Preferences
+Reference: https://tantek.com/2010/242/b1/keyboard-shortcut-open-mac-system-preferences

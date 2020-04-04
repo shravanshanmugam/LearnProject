@@ -1,0 +1,167 @@
+- Java 8
+* Understanding lambdas
+* Using lambdas
+* Functional interfaces
+* Method references
+* Collections improvements
+
+- Lambdas
+* Enables functional programming
+* Readable and concise code
+* Easier-to-use APIs and libraries
+* Enables support for parallel processing
+
+- Function
+* name (anonymous in Lambda)
+* parameter list
+* body
+* return type (inferred in Lambda)
+
+- Java method
+
+public void perform() {f
+    System.out.println("Hello world!");
+}
+
+public int double(int a) {
+	return a * 2;
+}
+
+- Lambda expression
+* Remove access modifiers, return type and method name
+perform = () -> {
+    System.out.println("Hello world!");
+}
+
+double = (int a) ->{
+	return a * 2;
+}
+
+- For single line of Lambda expression
+* Remove parantheses and return type
+perform = () -> System.out.println("Hello world!");
+double = (int a) -> a*2;
+
+- Other lambda expressions
+add = (int a, int b) -> a + b;
+safeDivide = (int a, int b) -> {
+	if (b == 0) return 0;
+	return a/b;
+}
+stringLength = (String s) -> s.length();
+
+- Lambda vs interface implementations
+* Lambda expression acts like an anonymous implementation of an interface
+ just like an inline anonymous inner class implementation
+* Provides backward compatibility with existing interfaces
+
+- Type inference
+* As interface implements only single method, lambda expression can omit parameter types. For e.g. 
+	(String s) -> s.length();
+		to
+	(s) -> s.length();
+* For single argument, parantheses can be removed. For e.g.
+	(s) -> s.length();
+		to
+	s -> s.length();
+
+- Functional interface
+* In Java8, we can have default implementations of interface
+* Interface with one abstract method is a functional interface
+* Mark interface as functional using @FunctionalInterface annotation
+* In-build Java functional interfaces
+https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
+
+- Exception handling
+* Handle exception when invoking lambda expression or when creating the lambda expression itself
+like 
+private static void process(int[] someNumbers, int key, BiConsumer<Integer, Integer> consumer) {
+        for (int i : someNumbers) {
+        	try {
+            	consumer.accept(i, key);
+        	} catch (Exception e) {
+
+        	}
+        }
+    }
+
+or like
+process(someNumbers, key, (a, b) -> {
+	try {
+		System.out.println(a / b)
+	} catch (ArithmeticException e) {
+
+	}
+});
+* Concise way to do is use wrapper lambda function
+
+- Method reference
+* Used in pass through functions or lambda expressions
+E.g.
+static void printArray(int[] array) {
+	array.forEach(System.out::println);
+}
+* On parameter as an argument E.g. a -> System.out.println(a) to (System.out::println)
+* On parameter as an argument to a static method E.g. a -> String.valueOf(a) to String::valueOf
+* On parameter as a target E.g. e -> e.toString() to Integer::toString
+* 2 parameters as arguments Only when order of parameter is same
+* On parameter as argument and as target
+* Limitations when there is conflict between instance method and static method due to ambiguity between functions
+
+- Function composition
+* series of functions or apply pipeline
+
+- Iteration on collections
+
+- Streams
+* A sequence of elements supporting sequential and parallel aggregate operations
+* Streams as abstraction which has a set of functions on collections
+* Non mutating pipeline - original collection is not modified
+
+- Filter
+* input: Stream<T> filter takes Predicate<T>
+* output: elements of size 0 to n 
+
+- Map
+* map transforms values
+* output: number of output == number of input
+* no guarantee on the type of the output with respect to the type of the input
+* input: Stream<T> map takes Function<T, R> to return Stream<R>
+
+* both filter and map stay within their swimlanes
+
+		filter 		Map 	reduce
+							0.0
+x1		/					\
+------------------------	 \
+x2		->			x2'		  +
+------------------------	   \
+x3		/                       \
+------------------------         \
+x4		->			x4'           +
+								   \
+								    
+
+- Reduce
+* cuts across swimlanes
+* start with initial value, take as input, calculate new value. take new value as new input and repeat
+* input: first parameter is of type T, second parameter is of type BiFunction<R, T, R> to produce a result of R
+
+- Collect
+* Shared variable can be modified in stream and outside as well
+* Avoid shared mutability using collect
+
+- Efficiency of streams
+* Expected computations is More units of work as each pipeline has to complete its function over the entire collection before passing to the next pipeline
+* Lazy evaluation - intermediate operations only create pipeline. Computation only happens after terminal function is called
+* Apply one function on all elements and then apply second function as opposed to imperative program where one element is taken and all functions are applied and then second element is taken and so on
+* Due to this unit of work done using streams is same as imperative program
+
+- Characteristics of stream
+* sized
+* ordered/non-ordered
+* sorted/non-sorted
+* distinct/non-distinct
+
+- infinite stream
+

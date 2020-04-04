@@ -1,0 +1,25 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99.9%)","Unit","Param: delay","Param: rate"
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.newClient","thrpt",1,1,100.169217,NaN,"ops/s",1,100
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.newClient","thrpt",1,1,200.152577,NaN,"ops/s",1,200
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.newClient","thrpt",1,1,100.131555,NaN,"ops/s",100,100
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.newClient","thrpt",1,1,200.155502,NaN,"ops/s",100,200
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.newClient","thrpt",1,1,100.180735,NaN,"ops/s",500,100
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.newClient","thrpt",1,1,200.188323,NaN,"ops/s",500,200
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.newClient","thrpt",1,1,100.178563,NaN,"ops/s",1000,100
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.newClient","thrpt",1,1,200.140621,NaN,"ops/s",1000,200
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,100.178283,NaN,"ops/s",1,100
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,200.157699,NaN,"ops/s",1,200
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,500.220598,NaN,"ops/s",1,500
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,1000.035165,NaN,"ops/s",1,1000
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,100.158260,NaN,"ops/s",100,100
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,200.141021,NaN,"ops/s",100,200
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,500.210139,NaN,"ops/s",100,500
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,1000.187544,NaN,"ops/s",100,1000
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,100.167882,NaN,"ops/s",500,100
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,200.182836,NaN,"ops/s",500,200
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,500.161529,NaN,"ops/s",500,500
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,1000.043412,NaN,"ops/s",500,1000
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,100.164665,NaN,"ops/s",1000,100
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,200.209262,NaN,"ops/s",1000,200
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,500.181647,NaN,"ops/s",1000,500
+"com.shravan.learn.benchmark.http.HttpClientBenchmark.reuseClient","thrpt",1,1,1000.068374,NaN,"ops/s",1000,1000

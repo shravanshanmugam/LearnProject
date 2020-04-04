@@ -1,0 +1,8 @@
+Design patterns
+
+- SOLID principle
+- S - Single Responsibility Principle - single responsibility per method and per class
+- O - Open closed principle - Open for extension, closed for modification
+- L - Liskov substitution - parent should easily replace the child object
+- I - Interface segregation - extend existing interface to make it backward compatible
+- D - Dependency inversion principle

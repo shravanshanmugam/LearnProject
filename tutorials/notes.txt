@@ -1,0 +1,50 @@
+Udemy
+
+Java Memory Management
+JVM
+Algorithms & Data Structures
+Java In-Depth
+Efficient Java Multithreading with Executors
+--
+10.30.1.49:9999
+configsrv user
+configsrv00485 password
+--
+- TimerTask
+* Runnable
+* nextExecutionTime
+* Task state
+
+- TaskQueue
+* Array of TimerTasks
+* Array is sorted by increasing order of nextExecutionTime
+
+- Timer
+* adds Task to the Task queue
+* picks head of the queue
+* checks if currentTime has crossed nextExecutionTime. if true, set new nextExecutionTime and execute task, else wait till nextExecutionTime is reached from currentTime and repeat
+
+- Cache
+* ConcurrentHashMap<K,V>
+* put(K k, V v)
+* get(K k)
+* totalRequests
+* totalMisses
+* invalidRequests
+
+- ExpiryCache
+* Uses ExpiryHashMap
+* ConcurrentHashMap<K,V> mainMap
+* ConcurrentHashMap<K,KeyExpiryTask> expiryMap (KeyExpiryTask internally uses TimerTask to remove keys at scheduled time)
+* ExpiryCallback (event sent to this callback on expiry of key)
+* increaseExpiryOnGet (update expiry time on get. it is done by cancelling timer task and adding new task with same expiry time period)
+* hits
+* misses
+
+TableCache
+* dataStore - Map of data in memory
+* dataProvider - Provides data to be stored
+* refreshPeriod - time period for which cache should be refresh (uses timer task)
+* ITableCacheDataProvider implementation will provide data to be store in dataStore as cache
+* Refresh cache and send event with topic name to other instance to refresh cache using RabbitMQ pub-sub model
+--

@@ -1,0 +1,5 @@
+- Normal function
+* input objects and output objects
+
+- Higher order function
+* input function as parameter and return functions as result

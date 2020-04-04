@@ -1,0 +1,193 @@
+Serverless
+----------
+
+A Cloud Guru - https://acloud.guru/ | https://www.youtube.com/watch?v=LAWjdZYrUgI&list=PLEx5khR4g7PJNproQQ4SZ96Qeu-kr-Xbn&index=20
+------------
+
+custom Compute code - Function as a Service
+Third party services - Backend as a Service
+
+AWS Lambda
+- create a function
+- zip it
+- upload to Lambda
+- lamda executes function on HTTP request or file placed in S3 bucket or writing in DynamoDB and many more(event-sourcing)
+- lambda is to compute what S3 is to storage
+
+Limitations
+- lambda is limited to 5 mins (execution time) per run
+- no SLAs
+
+Principles of Serverless Architecture - 
+1. use a compute service to execute code on demand (aka don't run on a server)
+	- compute as backend
+	- compute as glue
+2. write single-purpose stateless function
+	- zero or one data transformations
+3. design push-based, event-driven pipelines
+4. create thicker, more powerful front-ends
+5. use third party services
+
+Benefits
+- rapid time to market
+- scale effortlessly
+- disruptive cost model
+
+Cons
+- service levels and customizations
+- vendor lock-in (with other related services like S3, DynamoDB, SNS etc.)
+- decentralization (increased complexity, failures, latencies on network)
+
+Pros
+- no more server to manage (managed by vendors)
+- versatile
+- lower cost (pay when function is used per request per 100ms (increments) of execution time at given memory capacity)
+- less code
+- scalable and flexible
+
+Pricing
+- Lambda - #requests, time, memory
+- API Gateway - #requests, transfer (bytes)
+- S3 - transfer (bytes)
+- Cognito (sessions, authentication) - #users
+- IoT Gateway - #messages
+
+Tips | https://www.youtube.com/watch?v=bMOh0p3fj1s&list=PLEx5khR4g7PJNproQQ4SZ96Qeu-kr-Xbn&index=11
+----
+
+- 1 function = 1 task (avoid fat monoliths)
+- No state (be idempotent)
+- Design for failure (Health checks using Route53)
+- More memory = more CPU and IO
+- Set function concurrency to 0 as a kill switch
+- Keep permissions and roles tight
+- Incremental architecture is not dirty
+
+Serverless chatbots - Amazon Lex & AWS Lambda | https://www.youtube.com/watch?v=TlKtGGoMpF0&list=PLEx5khR4g7PJNproQQ4SZ96Qeu-kr-Xbn&index=17
+-------------------
+
+Attributes of a serverless product
+1. No servers to provision or manage
+2. scales with usage
+3. never pay for idle
+4. Availability and fault tolerance built-in
+
+Servless architecture | https://www.youtube.com/watch?v=TCVprqrxufI&list=PLEx5khR4g7PJNproQQ4SZ96Qeu-kr-Xbn&index=16
+---------------------
+
+Event Source -> Function (Lambda) -> Services
+
+Event Source
+- Changes in data state
+- Requests to endpoints
+- Changes in resource state
+
+Function 
+- NodeJS
+- Python
+- Java
+
+Services
+- Anything
+
+Common Lambda use cases
+- Web Applications
+	- Static websites
+	- Complex web pages
+	- Packages for Flask and express
+- Back end
+	- Apps and services
+	- Mobile
+	- IoT
+- Data processing
+	- Real time
+	- MapReduce
+	- Batch
+- Chatbots
+	- Powering chatbot logic
+- Amazon Alexa
+	- Powering voice-enabled apps
+	- Alexa Skill kit
+- IT Automation
+	- Policy engines
+	- Extending AWS Services
+	- Infrastructure management
+
+AWS SAM template - Serverless Application Model
+- Infrastructure setup for serverless applications
+- AWS SAM local
+
+Lambda execution model
+- Synchronous (push)
+- Asynchronous (event)
+- Stream-based
+
+AWS API Gateway
+- Create a unified API fronted for multiple micro-services
+- DDoS protection and throttling for your backend
+- Authenticate and authorize requests to a backend
+- Throttle, meter and monitize API usaged by 3rd party developers
+
+AWS Step functions
+- "Serverless" workflow management with zero administration
+- Makes it easy to co-ordinate the components of distributed applications and micro-services using visual workflows
+- Automatically triggers and tracks each step and retries when there are errors, so your application executes in order and as expected
+- Logs the state of each step, so when things do go wrong, you can diagnose and debug problems quickly
+
+AWS Lambda
+- lower memory is not always cheaper - costing based on execution time and RAM
+- lazily load variables in the global scope - functions stay warm for several minutes
+- don't load it if you don't need it - cold starts are affected
+- Cold start - Function lifecycle
+	- Download your code - Full cold start
+	- Start new container - Full cold start
+	- With VPC - Create VPC Elastic Network Interface and Attach VPC ENI - Full cold start - don't add VPC if not necessary
+	- Bootstrap the runtime - Partial cold start
+	- Start your code and execute it - Warm start
+- 1000 concurrent requests
+- metrics, monitoring and logging built-in using AWS CloudWatch
+
+Anatomy of a Lambda function
+- Handler() function
+	- function to be executed upon invocation
+- Event object
+	- Data sent during Lambda function invocation
+- Context object
+	- Methods available to interact with runtime information (request ID, log group etc.)
+
+AWS X-ray (Profiling)
+- Trace requests
+- Record traces
+- View service map
+- Analyze issues
+
+AWS CodeStar
+- develop, build and deploy applications
+
+Best practices
+- Lambda based nano-services
+	- Event-driven -> One lambda per HTTP method
+
+Reference: https://aws.amazon.com/serverless/
+
+Problems with serverless
+1. No connection pooling - 1000 concurrent lambda functions working on a database without connection pooling
+2. Circuit breaker to reduce resource contention - they live in client code - not going to work in lambda
+	- concurrency setting available
+	- another lambda function infront of the service lambda function to check whether database connection can be created
+3. Security - isolation from other people's bad/harmful/untrusted code - through targeted attacks?
+4. Vendor Lock-in - moving from one cloud provider to another is not a seamless operation
+5. Migration cost
+	- Blob storage - Compute - Load Balancers - FaaS - BaaS
+	------------------------------------------------------->
+				Migration Cost
+
+Kubeless | https://www.youtube.com/watch?v=s1u4emFpSZw&list=PLEx5khR4g7PJNproQQ4SZ96Qeu-kr-Xbn&index=10
+--------
+
+FaaS on on-premises?
+
+Serverless is an architectural pattern | https://www.youtube.com/watch?v=yOpYYYRuDQ0&list=PLEx5khR4g7PJNproQQ4SZ96Qeu-kr-Xbn&index=9
+----------
+
+

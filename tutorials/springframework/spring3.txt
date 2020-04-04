@@ -1,0 +1,400 @@
+Heavy weight - dependent on OS libraries (e.g. AWT)
+Light weight - dependent on JDK libraries (e.g. Swing)
+
+Loosely coupled - e.g. mobile number compatibility with operators. phone number not tightly bound with network
+Java Runtime Polymorphism (Interface models) is used to loosely couple dependencies
+Spring recommends Association (has-a replationship) over Inheritance (is-a relationship) to loosely couple dependencies
+Use simple POJO classes
+Create instance at runtime by passing arguments
+IOC - Inversion of Control Container - it has core & j2ee container
+Spring MVC has Web Container built using IOC Container
+
+Spring Containers
+1. Core - BeanFactory interface - XMLBeanFactory implementation class (only instantiate POJO and DI)
+2. J2EE - ApplicationContext interface - ConfigurableApplicationContext interface - ClasspathXMLApplicationContext implementation class
+3. Web - WebApplicationContext interface - WebApplicationContextUtils (Factory class) - 
+
+Container
+1. Read XML file (E.g. tomcat container read web.xml file)
+2. Create instance of xml beans (POJO classes) (E.g. Load on startup Servlets instance created)
+3. ManageLifeCycle (E.g. call init method and destroy method)
+4. Dynamic parameters supplied to beans (E.g. create ServletConfig and ServletContext objects based on inputs from web.xml file)
+
+Dependency Injection
+1. Passing inputs from XML file to POJO classes
+
+Start Spring container
+1. from main program for stand alone application
+2. from init method of Servlet for Web application
+
+Spring application components
+1. XML file
+2. POJO class
+3. Driver class (main program to start container)
+
+XML file
+1. beans root node
+2. bean child node - class name and id for reference
+
+Driver class - Core container
+1. Create XMLBeanFactory Container class by passing XML file as resource
+2. getBean method of XMLBeanFactory creates only Single instance (Default) of the POJO class
+3. configure scope singleton/prototype (create new instance of POJO class for each getBean method call)
+
+Core container vs J2EE container
+1. getBean method call creates instance vs on loading XML file
+2. Lazy vs Eager instantiation
+3. Above points only for bean scope=singleton
+4. for bean scope=prototype, instance is created only on getBean method call
+
+Spring IOC Container
+1. Create instance of POJO class
+i. class with private constructor also accessed using Java reflection (getDeclaredConstructor method of Class and setAccessible method of Constructor)
+2. Manage lifecycle of POJO class
+3. Dependency Injection into POJO class
+4. Two types of Dependency Injection
+i. setter methods with single parameter only
+ii. parameterized constructors
+
+Data types
+1. primitive - int, String
+2. secondary - POJO classes - use references or inner beans
+3. collections
+i. List - ArrayList (Default)
+ii. Set - LinkedHashSet (Default)
+iii. Map - LinkedHashMap (Default)
+iv. to add different implementation, add util XML namespace, use util namespace and pass util list class name
+v. Properties 
+
+Dependency Check (bean attribute)
+1. To make setter method DI mandatory meaning ensure all required parameter values are passed
+2. types
+i. none (default) - not required to pass any values
+ii. simple - mandatory to pass values for primitive data types
+iii. objects - mandatory to pass values for secondary data types
+iv. all - both mandatory
+3. disadvantage - applied on entire bean
+4. if required data not injected, UnsatisfiedDependencyException is thrown
+
+Required annotation
+1. use @Required annotation for required parameter values on DI
+2. no need for Dependency Check
+3. can be applied for both primitive and secondary data types
+4. to activate @Required annotation, instantiate RequiredAnnotationBeanPostProcessor class
+
+Depends on (bean attribute)
+1. if one class depends on another class
+2. mutual/circular dependencies not possible
+
+Spring namespaces
+1. p-namespace for setter DI
+2. c-namespace for constructor DI
+
+Autowired DI
+1. applies for secondary data types
+2. following types of autowire attribute for bean
+i. byType - setter DI
+a. multiple beans of same type will get BeanCreationException due to ambiguity
+b. autowire-candidate attribute can be set to true (default)/false to make bean eligible/ineligible for autowiring
+ii. byName - setter DI
+a. id reference has to be same as member variable name
+iii. constructor - constructor DI
+iv. auto-detect - setter and constructor DI
+a. in case we don't know dependency type or dependency method (setter/constructor DI) we can set 
+auto-detect
+b. default constructor, parameterized constructor and setter method implies default constructor is called and setter method is used for DI
+c. parameterized constructor and setter method implies parameterized constructor is called and used for DI
+v. no (default)
+3. default-autowire attribute can be set for all beans
+
+@Autowired annotation
+1. property level annotation
+2. default DI type is byType
+3. @Qualifier annotation (instead of autowire-candidate) resolve ambiguity problem of byType DI
+4. In @Qualifier annotation, set bean id to resolve ambiguity in value attribute
+5. To activate these two annotations, instantiate AutowiredAnotationBeanPostProcessor
+
+Stereotype annotations
+1. Auto scanning - create instances of classes by scanning packages
+2. @Controller - Controllers in MVC
+3. @Repository - DAO classes
+4. @Service - Business classes
+5. @Component - non MVC classes/other classes - only for members with secondary types. for primitive data type bean has to be created from XML. cannot be created automatically in Spring Container
+6. context namespace for component scan of packages - for automatic component detection, bean creation and dependency injection (using @Autowired annotation)without declaration in XML file
+7. annotation-config for using annotations
+i. @Autowired
+ii. @Required
+iii. @PostConstruct
+iv. @PreDestroy
+8. to access bean call getBean method by passing Class reference
+
+Static variable DI
+1. MethodInvokingFactoryBean class to be used
+2. setStaticMethod and setArguments methods to be used for DI
+
+Factory pattern & Static variable DI
+1. hide instantiation implementation
+2. by returning instance into interface reference, makes client independent
+3. factory-bean, factory-method attribute to get instance of class using Factory pattern (Static factory/instance factory pattern)
+4. it can be used for Singleton and Factory(static/instance) pattern of instance creation
+5. Create Factory pattern by implementing FactoryBean interface and following methods
+i. getObject:Object
+ii. getObjectType:Class
+iii. isSingleton:boolean
+
+Spring Lifecycle methods
+1. ConfigurableApplicationContext in IOC container to use Lifecycle methods
+2. In POJO class implement InitializingBean (afterPropertiesSet method), DisposableBean (destroy method) interface
+3. Create custom init, destroy methods and configure init-method and destroy-method attributes in XML file for bean
+4. @PostConstruct, @PreDestroy annotations to implement life cycle methods
+5. destroy methods are called when ConfigurableApplicationContext is closed
+6. activate annotation by creating instance of CommonAnnotationBeanPostProcessor class
+7. default-init-method and default-destory-method attributes in XML file for beans
+
+Lookup method DI
+1. method doesn't have implementations or requires dependencies are lookup methods
+2. Abstract methods of interface or abstract classes are lookup methods
+3. Overriding methods of concrete class are lookup methods
+4. Spring provides implementations which are like setters and returns secondary type objects which can be DI from XML file
+5. Spring creates proxy classes and returns instance of interface type
+6. lookup-method name, bean attribute to be set
+7. solves problem of injecting prototype bean into a singleton bean
+8. using @Autowired would create only single instance of bean
+9. using lookup-method would allow to create new instance each time the method is invoked which is consistent with scope prototype
+
+MethodReplacer
+1. replaced-method name, replacer attribute to be set
+2. new class implements MethodReplacer interface and bean is set as replacer
+3. Spring creates proxy class, extends old class, overrides method and replaces old code with new code
+4. can be used as patch to avoid recompiling, rebuilding application. only patch class file, updated XML file to be added to server and restart application
+
+Spring vs JDK annotations (javax.* package)
+1. @Autowired vs @Resource vs @Inject
+i. default DI - byType vs byName vs byType
+2. @Qualifier to resolve ambiguity when using @Autowired or @Inject annotations
+3. In case of ambiguity of byType, then try resolving byName
+4. @Named annotation similar to @Component annotation
+
+Properties
+1. loading properties into IoC container context scope
+2. PropertyPlaceHolderConfigurer class location attribute to be set to read properties file
+3. use placeholders in XML file to inject properties file values
+
+I18N - language support
+L10N - business or validation support
+1. create separate properties files, read and populating according to language
+2. In J2EE, Locale and ResourceBundle used to implement language support
+3. In Spring, ApplicationContext getMessage method used to fetch language wise property
+4. In Spring, basename of properties file name is set by creating ResourceBundleMessageSource bean with id messageSource and setting basename property
+
+Event handlers
+1. start
+2. stop
+3. close
+4. refresh
+
+Spring MVC support
+1.  View - Controller - Model (Service, Business, DAO)
+2. Form backup support (using Spring tag libraries)
+i. hold form data in a bean
+ii. apply validations
+iii. populate saved bean properties into form
+3. Controllers (multi action controllers and multi form controllers)
+4. Validation support
+5. I18N support
+6. Interceptors support
+7. View resolvers
+8. Exception handling
+9. Modularization support
+
+Spring MVC architecture
+1. Support from View - Controller
+2. Model layer POJO classes on WebApplicationContext container
+3. For MVC framework, recommended models are JSP-model architecture rules
+
+MVC framework architecture
+1. multiple view inputs handled by single controller
+2. Validation Controller (Front Controller) for common required operations, convert form data to bean and send to specific Controller
+3. Front Controller classes
+i. JSP - JPS-model 1 architecture
+ii. Servlet - JSP-model 2 (recommended model - Struts1x | Spring MVC)
+iii. Filters - JSP-model 3 (recommended model - Struts2x)
+iv. Tag support - JSP-model 4
+
+Spring MVC
+1. Front Controller - DispatcherServlet
+2. Map multiple form actions (url pattern - /*) to single DispatcherServlet in web.xml file
+3. *.extension url patterns can be used in case multiple frameworks used in same application
+4. input page using html/spring form tags
+5. Controller class implement using
+i. Controller Interface (implement handleRequest method and return ModelAndView object)
+ii. AbstractController
+iii. AbstractCommandController
+iv. SimpleFormController
+v. AbstractWizardController
+vi. MultiActionController
+vii. Stereotype annotation - @Controller annotation
+6. create spring.xml file with name <servletname>-servlet.xml and add servlet-url mapping in XML file to map URL and Controller
+7. configure response mapping using InternalResourceViewResolver class and set prefix and suffix values with output page location and extension respectively
+8. return ModelAndView object
+
+Spring MVC Controller types
+1. Reference: https://www.roseindia.net/spring/spring-mvc-controller.shtml
+2. Core controller
+i. Controller
+ii. AbstractController (extends class instead of implements Controller interface, implements handleRequestInternal method)
+3. Form controller
+i. ParameterizableViewController (set viewName property in XML file and use getViewName when returning ModelAndView for success response view page)
+ii. UrlFileNameViewController (forward requests based on action names to input form pages. used to hide actual view pages)
+4. Command controller
+i. BaseCommandController
+ii. AbstractFormController
+iii. AbstractWizardFormController (Form controller)
+iv. SimpleFormController (Form controller)
+v. AbstractCommandController
+4. Throwaway controller
+i. ThrowawayController
+5. Multi action controller
+i. MultiActionController
+
+HandlerMapping classes
+1. BeanNameUrlHandlerMapping (Default)
+i. configure url pattern - controller class name mapping in spring.xml file
+2. SimpleUrlHandlerMapping
+i. map url pattern to bean id
+ii. create SimpleUrlHandlerMapping bean and set mappings property
+3. ControllerClassNameUrlHandlerMapping
+i. url pattern name mapped to controller class name directly by following naming conventions
+ii. create ControllerClassNameUrlHandlerMapping bean
+4. CommonsPathMapHandlerMapping
+
+View resolvers
+1. InternalResourceViewResolver
+2. TilesViewResolver
+
+Spring configuration
+1. <servletname>-servlet.xml file
+2. custom file name but set init parameter ContextConfigLocation and set path of spring configuration file
+3. custom file name can also be set using context parameters and set context listener ContextLoaderListener
+4. Handler mapping, controller mapping and view resolvers are configured
+
+Spring MVC Architecture Diagram
+1. input forms -> DispatcherServlet (reads <servletname>-servlet.xml file) -> HandlerMapping (helper to get controller mapping) -> Controller (accept request, response objects and return ModelAndView object) -> DispatcherServlet -> ViewResolver -> output page
+2. Reference: https://www.tutorialspoint.com/spring/spring_web_mvc_framework.htm
+
+Spring DAO
+1. Interface Implementation model
+2. Create model class for RDBMS table
+3. Create DAO interface with CRUD operations/other operations method signatures
+4. Provide DAOImpl DAO implementation classes
+i. get Connection from connection pools
+ii. prepare statement
+iii. execute query
+iv. return result
+5. DataSource (DI)
+i. DriverManager
+ii. url
+iii. username
+iv. password
+v. minIdle (min idle time for connection)
+vi. wait (max connection wait time out)
+vii. maxActive (max connection pool size)
+
+Spring JDBC
+1. JdbcTemplate
+i. setDataSource (DI)
+ii. update
+iii. queryForInt
+iv. queryForFload
+v. queryForObject
+vi. queryForList
+vii. queryForMap
+
+JDBC vs Spring JDBC
+1. Compile time exceptions vs Run time exceptions
+2. SQLException vs DataAccessException
+3. java.sql.* package vs spring-data.jar
+4. required to close Connection vs not required to closed connection
+5. PreparedStatement is type safe vs all JdbcTemplate methods are type safe using Types
+6. ResultSet for queries and need to iterate for all type of select operations vs Generic select methods for all type of select operations
+
+HibernateTemplate
+1. SessionFactory bean created using DI
+2. SessionFactory setter DI into HibernateTemplate
+3. use Hibernate Session methods with HibernateTemplate
+
+Business object
+1. Interface implementation model
+2. Interface method signature depends on use case
+3. DTO (Data Transfer Object) communicate between Controller and Business object
+4. For basic CRUD operations, use case name can be method name. In signature, use model objects
+5. If operations are not simple CRUD, use case name can be method name. Using use case arguments, create DTO and use as method argument/parameter
+
+AOP (Aspect Oriented Programming)
+1. coordinate Business and Service layers
+2. Services 
+i. Transactions
+ii. Security
+iii. JMS
+iv. Mailing services
+3. AOP Advice
+i. Before - MethodBeforeAdvice
+ii. After - AfterReturningAdvice
+iii. Around - MethodInterceptors
+a. write BeforeAdvice
+b. call proceed method to execute Business
+c. write AfterAdvice
+iv. While exceptions - ThrowsAdvice
+4. Combine Business and Service layer using ProxyFactoryBean
+
+AOP Terms
+1. Aspect - a Service
+2. Advice - Service provider
+3. point cut - a point or a condition at which to execute aspects for business methods
+4. Advisor - point cut with Advice combination
+5. Proxy - a weaver - weaves (combines) business along with service and deliver a proxy object
+6. Target - business object
+
+AOP Approaches
+1. Programmatic
+2. Declarative (XML)
+3. Annotations
+
+AOP Programmatic
+1. Create Business object
+2. Create Service by implementing Advice interface
+3. Create ProxyFactoryBean and add Business object by setting Target and add Services by adding Advice
+4. Get generated proxy Business object by returning getObject of ProxyFactoryBean
+5. perform Business actions on this Business object
+
+AOP Declarative
+1. create all the beans from XML
+2. Get generated proxy Business object from ApplicationContext
+3. perform Business actions on this Business object
+
+AOP Pointcut
+1. StaticMethodMatcherPointcut
+2. NameMatchMethodPointcut
+
+AOP Advisor class
+1. DefaultPointcutAdvisor
+2. RegexpMethodPointcutAdvisor
+
+AOP Advisor
+1. create Service
+2. create Pointcut
+3. create Advisor by setting Advice and Pointcut
+4. create ProxyFactoryBean by setting Target and InterceptorNames
+5. Get generated proxy Business object by returning getObject of ProxyFactoryBean
+6. perform Business actions on this Business object
+
+AOP Aim
+1. separate Services from Business layer
+
+AOP Order of execution
+1. Before advice
+2. Around advice before proceed code
+3. Business code
+4. Around advice after proceed code
+5. After advice
+6. In case of Exception, after executing Business code, Exception handling code is executed

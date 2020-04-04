@@ -1,0 +1,180 @@
+Google Guice
+1. Guice is an open source, Java-based dependency injection framework. It is quiet lightweight and is actively developed/managed by Google.
+2. Write less boilerplate code
+3. Easy modularity
+4. Abstract scope
+5. Easy unit testing
+6. Reference: https://github.com/google/guice
+
+Guice's Philosophy
+1. Back to basics
+2. @Inject annotation for object creation and DI (inplace of new operator)
+3. Fail early but not too early (when dependency is missing)
+4. Make it easy to do the right thing (unit testable code)
+5. Types are the natural currency of Java
+6. Prefer annotations to convention (naming conventions)
+7. Singletons aren't bad - their typical implementation is
+8. Focus on readability over writability
+9. Maximize power-to-weight ratio of API
+10. Balance: just because you can, doesn't mean you should
+
+Type safety
+1. type safety != compile errors
+2. find usages
+3. documentation
+4. intelligent auto-completion
+5. refactoring
+
+Benefits
+1. more flexibility and more maintainability
+
+Benefits of DI
+1. simpler, more reliable unit test
+2. Dependencies are expressed in the API
+3. Separates creation from usage
+4. Reuse classes in different contexts
+5. roughly the same number of lines of code
+6. more startup checks (for dependencies)
+7. more up front type checking 
+8. declarative scopes (for objects)
+9. AOP
+10. Tight integration with web, data access APIs etc.
+
+Guice in a nutshell
+1. Classes have dependencies
+i. these are passed in automatically
+ii. identified by annotations
+2. Modules define how dependencies are resolved
+
+Bindings
+1. map types to their implementations
+2. Binding annotations - uniquely identify a binding
+3. Instance bindings - always use the same value - suited for value objects
+4. Named bindings using @Named annotation - pass name as argument and refer this name while binding. This is like a generic binding annotation done by name
+E.g. bind(Interface.class).annotatedWith(Names.named("name").to(InterfaceImplementation.class);
+5. Constructor bindings - create binding with specific constructor
+E.g. bind(Interface.class).toConstructor(InterfaceImplementation.class.getConstructor(String.class)); - to bind with Constructor with single String argument
+6. Inbuilt bindings
+i. Guice provides inbuilt binding for java.util.logging.Logger class
+7. Just-in-time bindings
+i. Bindings present in Binding modules are called explicit bindings
+ii. Just-in-time bindings are bindings that are not present and are attempted to be created and are called implicit bindings
+a. Injectable Constructors - non-private, no args constructor are eligibile for JIT bindings. another way is to annotate constructor with @Inject annotation
+b. @ImplementedBy annotation (on interface level)- this tells guice about the implementation class. explicit binding not required when this is used
+c. @ProvidedBy annotation (on interface level)- this tells guice about the provider of the implementation class. explicit binding not required when this is used
+
+Scopes
+1. manage how instances are reused
+i. stateful
+ii. expensive to construct or lookup
+iii. expensive to maintain
+2. Unscoped (Default) - one per use - create it, use it and toss it
+3. @Singleton - one per application
+4. HTTP Request/Session
+i. @RequestScoped - one per web or RPC request
+ii. @SessionScoped - one per HTTP session
+
+Usage
+1. Create Injector by passing Module
+2. Create Module that extends AbstractModule
+3. Implement configure method and bind concrete implementation class to Interface
+4. Create provide method with @Provides annotation to create complex objects instead of providing bindings in configure method
+i. return type is bound
+ii. dependencies are passed in as parameters
+5. getInstance of class and pass to Interface handle from Injector (object creation)
+6. @Inject annotation - to inject instance of class into another class (Dependency injection)
+
+How Guice builds objects
+1. When TypeA is requested, it does two things,
+i. Consults binding to resolve the concrete type
+ii. Build object of the type
+2. If TypeA is interface, then we must have bindings for it with a concrete implementation class
+3. If TypeA is a concrete implementation, then
+i. if no bindings present, then create object of TypeA
+ii. if binding present with bind subclass of TypeA to TypeA, then create object of subclass of TypeA
+
+How to inject constant dependencies
+1. Bind values to class of member variables
+E.g. bind(String.class).toInstance("Red"); 
+     bind(Integer.class).toInstance(40);
+2. Create custom annotations and mark them as @BindingAnnotation to tell guice where to inject values
+3. Inject value to member variable annotated with custom annotation
+E.g. bind(String.class).annotatedWith(ColorValue.class).toInstance("Red");
+     bind(Integer.class).annotatedWith(EdgeValue.class).toInstance(40);
+     bindConstant().annotatedWith(BorderSize.class).to(2);
+4. Bind multiple implementations to the same type
+
+Singleton
+1. getInstance method of Injector returns new instance each time
+2. Usage
+E.g. bind(DrawShape.class).to(DrawSquare.class).in(Scopes.SINGLETON);
+     bind(SquareRequest.class).in(Scopes.SINGLETON);
+3. @Singleton annotation - to mark class scope
+
+Multiple instance of an object
+1. inject using Provider interface and call get method (deferred loading)
+
+Ways of injection
+1. Constructor injection
+2. Method injection
+3. Field injection
+4. Optional injection
+i. means injecting dependency if it exists.
+ii. method and field injections may be optionally dependent and should have some default value if dependency is not present
+5. On-demand injection - method and field injections can be used to initialize existing objects using injector.injectMembers method
+
+prefer constructor injection 
+1. fields can be final
+i. immutability
+ii. easier concurrency
+2. guaranteed to be called
+3. see all dependencies at a glance
+
+Providers
+1. to load lazily
+2. to get multiple instances
+3. mix scope e.g. to access request scoped objects from a singleton scoped object
+4. dynamic injection i.e. at runtime
+5. similar to a factory
+6. Usage
+i. create a Provider class that implements Provider interface
+ii. implement get method which returns instance of the class that Provider is offering
+iii. In Binding module, bind Interface to Provider class
+iv. Another way is implement get method in Module class and mark with @Provides annotation
+v. Another way is to mark interface with @ProvidedBy annotation with value of Provider implementation class
+7. MapBinder
+i. assume single interface
+ii. it has multiple implementations
+iii. create MapBinder which will bind different implementations to interface, based on some index or enum value
+iv. this can be injected into a class as dependency as a Map from where we can select specific implementation
+
+Modularity
+1. separate implementation from interface
+
+Servlets and App Engine
+1. Configure servlets programmatically
+2. Use @RequestScoped and @SessionScoped to manage application state safely and easily
+3. Module extends ServletModule and implements configureServlets method
+E.g. serve("/search").with(TwitterSearchServlet.class);
+
+AOP
+1. apply method interceptors to injected objects
+2. Matcher - Matcher is an interface to either accept or reject a value. In Guice AOP, we need two matchers: one to define which classes participate, and another for the methods of those classes
+3. MethodInterceptor - MethodInterceptors are executed when a matching method is called. They can inspect the call: the method, its arguments, and the receiving instance. We can perform cross-cutting logic and then delegate to the underlying method. Finally, we may inspect the return value or exception and return
+4. Usage
+i. Create annotation @CallTracker at method level
+ii. Create service/aspect that implements MethodInterceptor interface and implement invoke method
+iii. configure service/aspect binding to annotation like below
+E.g. bindInterceptor(Matchers.any(), 
+         Matchers.annotatedWith(CallTracker.class), 
+         new CallTrackerService());
+iv. aspect/service will get executed for methods (before and after i.e. around) where @CallTracker annotation is present
+
+Introspection SPI Service Provider Interface
+1. module and injectory internals are available via a mirror SPI
+2. inspect, analyze and rewrite bindings
+
+Assisted injection
+1. runtime parameters injection
+2. @Assisted annotation
+3. Guice creates Provider factory required to return instance

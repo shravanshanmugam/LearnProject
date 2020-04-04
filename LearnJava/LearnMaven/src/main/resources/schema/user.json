@@ -1,0 +1,44 @@
+{
+  "$schema": "http:\/\/json-schema.org\/draft-04\/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "pincode": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "city",
+        "region",
+        "pincode"
+      ]
+    },
+    "age": {
+      "type": "integer"
+    },
+    "gender": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "address",
+    "age",
+    "gender"
+  ]
+}
