@@ -337,14 +337,18 @@
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586026844730">
+    <state x="440" y="190" key="#Notifications" timestamp="1586026885137">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586026844730" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586022518148">
+    <state x="440" y="190" key="#Notifications/0.0.1680.1050@0.0.1680.1050" timestamp="1586026885137" />
+    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586026867753">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586022518148" />
+    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586026867753" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586026870131">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586026870131" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1586025940741">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
