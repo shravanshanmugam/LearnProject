@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -236,7 +232,7 @@
       <workItem from="1572977414607" duration="380000" />
       <workItem from="1586020424996" duration="1392000" />
       <workItem from="1586022476151" duration="1119000" />
-      <workItem from="1586026465766" duration="78000" />
+      <workItem from="1586026465766" duration="342000" />
     </task>
     <task id="LOCAL-00001" summary="adding learn benchmarks project">
       <created>1572117955095</created>
@@ -334,16 +330,17 @@
     <MESSAGE value="adding learn benchmarks project" />
     <MESSAGE value="adding courses urls and shortcuts" />
     <MESSAGE value="cleaning mess" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaning mess" />
+    <MESSAGE value="changing README.md file" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing README.md file" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586022516137">
+    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586026816933">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586022516137" />
+    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586026816933" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586022518148">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
