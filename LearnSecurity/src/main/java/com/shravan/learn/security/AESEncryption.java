@@ -3,9 +3,10 @@ package com.shravan.learn.security;
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
 import java.io.*;
+import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
-public class SecurityMain {
+public class AESEncryption {
     /**
      * Encryption Algorithm/Operation mode/Padding - Extra bytes to fill key (Key size)
      * AES/CBC/NoPadding (128)
@@ -32,16 +33,20 @@ public class SecurityMain {
      */
     public static void main(String[] args) throws Exception {
         String secretMessage = "This is my secret message";
-        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
-        keyGenerator.init(128);
-        SecretKey secretKey = keyGenerator.generateKey();
+        SecretKey secretKey = generateAESKey();
         SecureRandom secureRandom = new SecureRandom();
         byte[] buffer = new byte[16];
         secureRandom.nextBytes(buffer);
         IvParameterSpec ivParameterSpec = new IvParameterSpec(buffer);
         byte[] encryptedBytes = encryptWithAES(secretMessage, secretKey, ivParameterSpec);
         String decryptedMessage = decryptWithAES(encryptedBytes, secretKey, ivParameterSpec);
-        System.out.println("decryptedMessage = " + decryptedMessage);
+        System.out.println(secretMessage.equals(decryptedMessage));
+    }
+
+    private static SecretKey generateAESKey() throws NoSuchAlgorithmException {
+        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+        keyGenerator.init(128);
+        return keyGenerator.generateKey();
     }
 
     private static byte[] encryptWithAES(String secretMessage, SecretKey secretKey, IvParameterSpec ivParameterSpec) throws Exception {
