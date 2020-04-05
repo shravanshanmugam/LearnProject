@@ -27,6 +27,7 @@
         <module>learn.importing.modules</module>
         <module>learnframeworks</module>
         <module>LearnBenchmark</module>
+        <module>LearnSecurity</module>
     </modules>
 
     <properties>

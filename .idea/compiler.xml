@@ -12,6 +12,7 @@
         <module name="NewMavenModule" />
         <module name="LearnConcurrency" />
         <module name="LearnHibernate" />
+        <module name="LearnSecurity" />
         <module name="LearnBenchmark" />
         <module name="learnframeworks" />
         <module name="DesignPatterns" />
@@ -25,6 +26,7 @@
       <module name="LearnBenchmark" options="" />
       <module name="LearnHibernate" options="-parameters" />
       <module name="LearnReactiveJava" options="-parameters" />
+      <module name="LearnSecurity" options="-parameters" />
       <module name="LearnSpring" options="-parameters" />
       <module name="LearnSpringBoot" options="-parameters" />
       <module name="learnframeworks" options="-parameters" />

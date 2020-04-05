@@ -252,3 +252,11 @@ Identitiy
 Direct key exchange - Self
 Community - Web of trust
 Authorities - Vouch for identity, Chain of trust (one person can then validate another person's identity by signing public keys)
+
+APIs in Java
+
+1. Java Cryptography Extensions (JCE)
+Symmetric cryptography: KeyGenerator -> SecretKey
+Asymmetric cryptography: KeyPairGenerator -> PublicKey PrivateKey
+Secure RNG: SecureRandom, IvParameterSpec (Initialization Vector for block ciphers)
+keys in IV create Cipher, Signature -> CipherInputStream CipherOutputStream
