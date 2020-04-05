@@ -274,3 +274,66 @@ initSign Signature with PrivateKey
 update Signature
 Recipient initVerify Signature with PublicKey
 update Signature
+
+Transport Layer Security
+1. Ensure confidentiality and authenticity of data in flight
+2. TLS is based on X509 certificates
+3. My certificate signed by Intermediate CA which is signed by Root CA which is self signed
+Root CA is trusted by Browser
+Create chain of trust
+Root CA verifies Intermediate CA
+Intermediate CA verifies me
+I cannot verify anyone
+I cannot be verified by Root CA directly
+
+Public key cryptography standards
+1. PKCS#7
+Cryptographic message syntax
+way of exchanging certificates
+2. PKCS#10
+way of exchanging certificate requests
+3. PKCS#12
+way of storing personal information such as private keys
+
+Common file formats
+1. .key file for RSA private key
+openssl genrsa
+2. .csr file for Certificate signing request
+openssl req
+3. .cer file that CA gives us after they have granted our Certificate signing request
+4. .pem file called Privacy Enhanced Mail
+Above three file formats are usually store in a .pem file
+Text based format for exchanging keys that the PKCS built upon
+5. .pfx file which is pkcs12 file stored as binary
+openssl pkcs12
+it stores Certificate and private key associated with that certificate
+
+OpenSSL
+1. Generate RSA key pair
+openssl genrsa => generates key using 512 bit long modulus
+openssl genrsa 2048 => generates key using 2048 bit long modulus
+openssl genrsa -aes256 2048 => encrypts private key using aes256 encrypting. need to enter a pass phrase
+openssl genrsa -aes256 -out private.key 2048 => writes a private key that is aes256 encrypted into a file
+openssl rsa -in private.key -out naked.key => creates naked key meaning one without requiring pass phrase to decrypt. need to enter a pass phrase
+2. Generate Certificate Signing Request
+openssl req -new -key private.key -days 365 -out crypto.csr => generates a Certificate Signing Request using private key which is valid for 365 days.
+need to enter pass phrase to decrypt the private key
+openssl req -text -in crypto.csr => display CSR as text
+Send my CSR to CA. They'll validate my identity and they'll send me back a certificate (.cer) file
+3. Certificate file
+openssl x509 -in crypto.cer -text => display CER as text
+4. Generate PKCS12 personal information file
+openssl pkcs12 -export -in crypto.cer -inkey private.key -out crypto.pfx => creates file that combines Certificate and private key associated with that certificate.
+need to enter pass phrase to decrypt the private key.
+need to enter another pass phrase to encrypt the key inside of the pfx file
+This is not in pem format
+This file can be used in IIS and Tomcat
+5. Configure in Tomcat
+vi tomcat*/conf/server.xml => open tomcat's server.xml file
+Define connector
+port=8443
+SSLEnabled=true
+keystoreFile=/path/to/crypto.pfx
+keystorePass=password_to_encrypt_key_inside_pfx_file
+keystoreType=PKCS12
+
