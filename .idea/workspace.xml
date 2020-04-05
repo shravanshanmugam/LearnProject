@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="" />
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/java/javaframeworks.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,6 +97,8 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tutorials/e-learning/freeCodeCamp" />
+      <recent name="$PROJECT_DIR$/tutorials/e-learning/Intellipaat" />
       <recent name="$PROJECT_DIR$/tutorials/e-learning" />
       <recent name="$PROJECT_DIR$/tutorials/java" />
       <recent name="$PROJECT_DIR$/tutorials" />
@@ -253,7 +258,7 @@
       <workItem from="1586020424996" duration="1392000" />
       <workItem from="1586022476151" duration="1119000" />
       <workItem from="1586026465766" duration="1717000" />
-      <workItem from="1586067142617" duration="15057000" />
+      <workItem from="1586067142617" duration="18781000" />
     </task>
     <task id="LOCAL-00001" summary="adding learn benchmarks project">
       <created>1572117955095</created>
@@ -388,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586105341285</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="restructured projects">
+      <created>1586105599924</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1586105599924</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,10 +448,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1586095842010" />
-    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586105340697">
+    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586105599793">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586105340697" />
+    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586105599793" />
     <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586100522754">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -460,10 +472,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="328" y="106" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1586097045083" />
-    <state width="500" height="476" key="SwitcherDM" timestamp="1586099895286">
+    <state width="500" height="476" key="SwitcherDM" timestamp="1586110174754">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="500" height="476" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586099895286" />
+    <state width="500" height="476" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586110174754" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586105342724">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
