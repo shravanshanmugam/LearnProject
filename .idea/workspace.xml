@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tutorials/pluralsight/cryptography" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/pluralsight/cryptography" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +251,7 @@
       <workItem from="1586020424996" duration="1392000" />
       <workItem from="1586022476151" duration="1119000" />
       <workItem from="1586026465766" duration="1717000" />
-      <workItem from="1586067142617" duration="12140000" />
+      <workItem from="1586067142617" duration="12426000" />
     </task>
     <task id="LOCAL-00001" summary="adding learn benchmarks project">
       <created>1572117955095</created>
@@ -368,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586091279424</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="LearnSecurity module added">
+      <created>1586099878219</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1586099878219</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +404,8 @@
     <MESSAGE value="changing README.md file" />
     <MESSAGE value="Merge branch 'master' of https://github.com/shravanshanmugam/LearnProject&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
     <MESSAGE value="cryptography lessons added" />
-    <option name="LAST_COMMIT_MESSAGE" value="cryptography lessons added" />
+    <MESSAGE value="LearnSecurity module added" />
+    <option name="LAST_COMMIT_MESSAGE" value="LearnSecurity module added" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -414,10 +419,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1586095842010" />
-    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586099837238">
+    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586099878114">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586099837238" />
+    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586099878114" />
     <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586099827725">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -438,14 +443,14 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="328" y="106" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1586097045083" />
-    <state width="500" height="476" key="SwitcherDM" timestamp="1586097956903">
+    <state width="500" height="476" key="SwitcherDM" timestamp="1586099895286">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="500" height="476" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586097956903" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586091281118">
+    <state width="500" height="476" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586099895286" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586099879987">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586091281118" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586099879987" />
     <state x="234" y="147" key="new project wizard" timestamp="1586095825190">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

@@ -257,6 +257,12 @@ APIs in Java
 
 1. Java Cryptography Extensions (JCE)
 Symmetric cryptography: KeyGenerator -> SecretKey
+Secure RNG: SecureRandom, IvParameterSpec (Initialization Vector for block ciphers)
+keys in IV create Cipher, Signature -> CipherInputStream CipherOutputStream
+
+2. Confidentiality With JCE
 Asymmetric cryptography: KeyPairGenerator -> PublicKey PrivateKey
 Secure RNG: SecureRandom, IvParameterSpec (Initialization Vector for block ciphers)
 keys in IV create Cipher, Signature -> CipherInputStream CipherOutputStream
+init Cipher with PublicKey
+doFinal to encrypt message and get cipher text
