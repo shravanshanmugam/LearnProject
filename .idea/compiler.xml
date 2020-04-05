@@ -6,17 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="LearnLambda" />
         <module name="LearnMaven" />
-        <module name="LearnReactiveJava" />
-        <module name="LearnConcurrency" />
-        <module name="NewMavenModule" />
-        <module name="DesignPatterns" />
         <module name="LearnSpring" />
+        <module name="NewMavenModule" />
+        <module name="LearnConcurrency" />
+        <module name="LearnHibernate" />
         <module name="LearnBenchmark" />
         <module name="learnframeworks" />
-        <module name="LearnHibernate" />
+        <module name="DesignPatterns" />
         <module name="LearnSpringBoot" />
-        <module name="LearnLambda" />
+        <module name="LearnReactiveJava" />
       </profile>
     </annotationProcessing>
   </component>

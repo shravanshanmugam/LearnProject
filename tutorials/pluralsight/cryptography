@@ -1,2 +1,254 @@
 cryptography
 
+History
+
+1. One-time pads
+you have a key and a message
+map each of the to sequence of numbers between 0-25
+add them up and take modulo 26 which will give encoded message
+subtraction modulo 26 is the inverse of this
+
+2. pseudo random number generator (PRNG)
+A, B - 2 constants
+x0 - seed
+x1 = Ax0 + B and so on
+
+3. Entropy - number of possible combinations
+i. Entropy in one-time pad
+To record one letter, we need log2 26 = 4.7 bits
+message of size 1000 characters contain 4700 bits or 4700 bits of entropy
+ii. Entropy in PRNG
+new value depends on old value
+no additional randomness added when generating the sequence
+it depends only on the seed
+entropy is atmost 64 bits
+Based on this
+One-time pad - truly random if used only once, maximum entropy. but if key is compromised it fails
+
+4. The Enigma Machine
+i. rotor mapping was fixed
+ii. point at which it starts is the only difference implies 26 offsets for a single mapping
+entropy = 4.7
+iii. because of the reflector, output could never match the input
+with reflector log2 25 = 4.6
+iv. double step rotor configuration reduced number of combinations
+single stepping: 26 * 26 * 26 = 17576
+double stepping: 26 * 25 * 26 = 16900
+v. same initial rotor settings for a day
+vi. not repeating rotor settings in a month reduces combinations
+vii. redundant encoding - easy to crack since same message is encrypted differently you could find patterns
+viii. daily plug board configurations
+they used day wise or month wise plug board configuration sheet
+
+5. Diffie Helman
+i. One time-pad and Enigma machine depend on both sender and recipient having shared secret
+ii. 2^x mod 26
+(g^a)^b = (g^b)^a = g^(ab)
+((g^a mod n)^b) mod n = ((g^b mod n)^a) mod n
+when picking a and b we need to make sure g^a mod n does not become zero, or does not repeat itself without reaching all in-between number from 0 to n-1
+So we need the following condition for a and b
+Fermat's Little Theorem: g^n-1 mod n = 1, if n is prime and g is not a multiple of n
+This should not hold true for factors of n - 1
+Today's standards 2048 bit prime numbers are considered secure =>  616 digits
+It is vulnerable to man in the middle attack
+This gives way for Asymmetric cryptography => one key to encrypt and another key to decrypt
+
+Conclusion: Encryption is a matter of making the attacker longer to decipher the message than the message is worth
+
+Cryptographic Algorithms
+
+1. Symmetric
+2. Asymmetric
+3. Hash functions
+
+Symmetric algorithms
+
+1. Use same key for encryption and decryption
+
+Block ciphers
+1. In one-time pad if key length is fixed and message length varies how can we encrypt?
+2. Break message into blocks of fixed length. Encrypt each block independently
+3. Typical block size 16 bytes = 128 bits
+4. We operate in rounds. Part of the key called round key is applied to the round and then other operations are performed on it.
+After multiple rounds we get cipher text for that block
+5. We derive the multiple round keys from encryption key using a Key schedule which is algorithm that Shift, XOR, Multiple and other operations
+on encryption key to come up with the round keys
+6. XOR not sufficient since it is one-to-one
+7. Repeat operation for each block. This mode of operation is called Electronic Code Book
+8. If there is repetition in original message, there will be repetition in cipher text as well
+9. Cipher block chaining, we will XOR first block's cipher text with next block's original text before encryption
+10. Initialization vector which is random for XORing first block. This diffuses information throughout cipher text
+11. We are able to encrypt a message of arbitray length usiing a key of fixed length
+
+Confusion
+1. Relationship between key and the cipher text
+2. Small change in key -> large change in cipher text
+
+Diffusion
+1. Relationship between message and the cipher text
+2. Small change in message -> large change in cipher text
+3. Hides patterns within the message
+
+Data Encryption Standard (DES)
+1. 64 bit key, 8 bits for parity check so it is a 56 bit key length algorithm
+2. 3DES - run DES protocol 3 times with 3 different keys. Effective key length is 168 bits. This is slow
+
+Advanced Encryption Standard (AES) - Rijndael algorithm
+1. Typically run with 128, 192 or 256 bits key length
+2. Works on 16 byte blocks. Organizes on 4x4 matrix of blocks
+3. Rounds: key expansion, XOR round key, Substitution, shifting rows and mixing columns
+4. Key expansion: Shift, XOR, Multiply to confuse the key. Resulting 16 byte is the round key
+5. XOR the round key with block and each byte within the block is passed through S box or Substitution box
+6. S box - lookup table with 256 entries each one with a different byte.
+7. Shifting rows: move row to the bottom
+8. Mixing columns: offset each row by certain number of columns to create new matrix. For example 2nd row by 1, 3rd row by 2 , 4th row by 3.
+9. AES-256 considered secure as it provides key confusion and cipher block chaining provides diffusion
+
+Modern cryptanalysis
+1. Entropy of Enigma
+47.6 bits for plug board (10 pairings)
+3 rotors => 4.7 * 3 = 14.1 bits in rotors,
+total entropy: 61.2 bits ~ 64 bits
+no diffusion in message
+little confusion in key
+
+2. Entropy of AES
+128-256 bits
+Cipher block chaining and Initialization vectors => Good diffusion
+Rounds => Good confusion
+
+Compression and encryption
+
+1. Compression algorithms squeeze out redundancy or patterns
+2. Encryption masks patterns and adds new information
+3. Compression after encryption is not effective
+4. Compression before encryption
+compression uses redundancy
+compression removes patterns
+smaller message
+more diffused
+
+Error correction and encryption
+
+1. Add checksums to discover errors or even correct errors
+2. Combined with encryption adds redundancy and easier to crack
+3. Correcting errors at time of transmission does not weaker encryption and is just as effective
+
+Asymmetric algorithms
+
+1. Diffie-Helman is vulnerable to man in the middle attacks
+2. Need proof of identity
+Means of verification - Public key
+Method of proof - Private key
+
+RSA Algorithm
+
+Make up two functions f(x) and f-1(x)
+Encrypting exponent e (public key), Modulus n, Decrypting exponent d (private key) such that
+m^e mod n = c
+c^d mod n = m
+
+((m^e)^d) mod n = m
+if n-p*q, p & q are large primes then,
+((m^e)^d) mod p = m
+((m^e)^d) mod q = m
+
+(m^ed-1)*m mod p = m
+(m^ed-1) mod p * m = m
+we need (m^ed-1) mod p = 1
+(m^p-1) mod p = 1
+ed - 1 = h(p - 1)
+similarly
+ed - 1 = h(q - 1)
+implies
+ed - 1 = h(p - 1)(q - 1)
+
+choose p and q as primes
+choose e as number having no common factor with p - 1 and q - 1
+Solve using Extended Euclidean Algorithm
+
+Patterns in RSA Algorithm
+
+1. Since n = pq, m^x mod n has certain patterns
+the difference of remainder every p or q steps is divisible by p or q respectively
+
+Discrete Logarithm Problem
+1. Inverse of exponentiation within a modulus
+Given m, n, m^e mod n then find e
+2. Big O of Discrete Logarithm Problem
+Need to try every e of size b bits
+T(b) =  O(2^b)
+3. A Heuristic Quasi-Polynomial Algorithm for Discrete Logarithm in Finite Fields of Small Characteristic*
+if n = q^2k then T(b) = b^(O (log b))
+This does not hold true for Diffie Helman (n is prime) or RSA algorithms (n = pq, product of primes)
+
+Elliptic curve cryptography
+
+1. Elliptic curve equations
+2. Properties
+A non-vertical line intersecting 2 points also intersects a third point
+No line intersects at more than 3 points
+The curve is symmetric along X-axis
+Example: y^2 = x^3 + 3x + 5
+3. Algorithm
+Procedure:
+Given A0, A1 find 3rd intersection point and take reflection as A2
+Given A0, A2 find 3rd intersection point and take reflection as A3
+Given A1, A3 find 3rd intersection point and take reflection as A4 and so on
+Problem:
+Given A0, A1, n find An - (easy-ish to solve)
+Given A0, A1, An find n
+Only way to do this is iteratively n times till you reach An
+4. We can use this equation to find public & private key pairs
+restrict x & y to integers
+find those solution within a modulus p which is a large prime number
+private key - n
+public key - An
+5. Supports much smaller key lengths
+163 to 359 bits (~10^49 to 10^108)
+
+Use of algorithms
+1. Confidentiality
+Encrypt a message
+Encrypt symmetric key with public key
+Confidence that only recipient can read it
+2. Authenticity
+Guarantee the source
+Digest of message (hash) - h1
+Encrypt digest with private key (signature)
+Recipient can compute same hash - h1
+Decrypt signature with public key - h2
+If h1 equals h2 then signature is valid
+
+Hash functions for Authenticity
+1. CRC-32
+Cyclic Redundancy Check produces 32 bit number
+Summation x^i from i=0 to 32 mod 2^33
+This is easily reversible
+Multiple inputs can give same 32 bit number
+Intended for error detection (check sum)
+
+Cryptographically Strong Hashing Algorithms
+1. MD5 uses block cipher methods
+2. SHA-1
+160 bit hash
+3. SHA-2 family of hashes
+SHA-256
+SHA-512
+3. SHA-3
+Keccak
+224 to 512 bits
+
+Birthday Attack
+1. What is the probability two people in a room of 20 share the same birthday
+P(same birthday) = 1 - P(unique birthday)
+P(same birthday) = 1 - (365/365)*(364/365)*...*(346/365) = 41.1%
+2. We could be asked to sign someone else' document such that the hash is same and document could be replaced since both have same signature
+Never sign someone else's document
+Always append randomness to the hash
+
+Identitiy
+1. How to trust public key that we receive from someone?
+Direct key exchange - Self
+Community - Web of trust
+Authorities - Vouch for identity, Chain of trust (one person can then validate another person's identity by signing public keys)

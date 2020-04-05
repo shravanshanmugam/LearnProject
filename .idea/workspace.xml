@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="Merge branch 'master' of https://github.com/shravanshanmugam/LearnProject&#10;&#10;# Conflicts:&#10;#&#9;README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/pluralsight/cryptography" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/pluralsight/cryptography" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +237,8 @@
       <workItem from="1572977414607" duration="380000" />
       <workItem from="1586020424996" duration="1392000" />
       <workItem from="1586022476151" duration="1119000" />
-      <workItem from="1586026465766" duration="787000" />
+      <workItem from="1586026465766" duration="1717000" />
+      <workItem from="1586067142617" duration="9177000" />
     </task>
     <task id="LOCAL-00001" summary="adding learn benchmarks project">
       <created>1572117955095</created>
@@ -348,6 +351,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.configurationType" implementationName="jmh-id" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -369,7 +375,8 @@
     <MESSAGE value="adding courses urls and shortcuts" />
     <MESSAGE value="cleaning mess" />
     <MESSAGE value="changing README.md file" />
-    <option name="LAST_COMMIT_MESSAGE" value="changing README.md file" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/shravanshanmugam/LearnProject&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/shravanshanmugam/LearnProject&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -379,17 +386,17 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#Notifications/0.0.1680.1050@0.0.1680.1050" timestamp="1586026972027" />
-    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586027013401">
+    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586027259575">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586027013401" />
+    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586027259575" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586026965775">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586026965775" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1586025940741">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1586028859125">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586025940741" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586028859125" />
   </component>
 </project>
