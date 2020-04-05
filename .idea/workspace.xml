@@ -1,61 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/Intellipat/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/Learning/AWS/Dynamo DB" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/AWS/Dynamo DB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/Learning/AWS/Free" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/AWS/Free" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/Learning/Udemy/Distributed Systems" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/Udemy/Distributed Systems" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/Learning/Udemy/TDD" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/Udemy/TDD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/Learning/_DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/companies/pyt/Training/DesignPatterns" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/companies/pyt/Training/Mockito" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/companies/pyt/Training/MongoDB" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/companies/pyt/Training/NodeJS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/companies/pyt/Training/Plato" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/companies/pyt/Training/ReactJS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/companies/pyt/Training/Redis" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/designpatterns.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/designpatterns.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/1-Strategy-P1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/1-Strategy-P1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/1-Strategy-P2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/1-Strategy-P2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/1-Strategy-P3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/1-Strategy-P3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/10-Observer-P1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/10-Observer-P1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/10-Observer-P4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/10-Observer-P4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/10-Observer-P5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/10-Observer-P5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/10-Observer-P6.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/10-Observer-P6.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/11-Command-P1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/11-Command-P1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/11-Command-P2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/11-Command-P2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/11-Command-P3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/11-Command-P3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/11-Command-P4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/11-Command-P4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/11-Command-P5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/11-Command-P5.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/2-Decorator-P1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/2-Decorator-P1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/2-Decorator-P2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/2-Decorator-P2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/3-Factory-P1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/3-Factory-P1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/3-Factory-P2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/3-Factory-P2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/3-Factory-P3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/3-Factory-P3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/3-Factory-Reflection-P1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/3-Factory-Reflection-P1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/3-Factory-Reflection-P2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/3-Factory-Reflection-P2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/4-Singleton-1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/4-Singleton-1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/4-Singleton-2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/4-Singleton-2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/4-Singleton-3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/4-Singleton-3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/4-Singleton-4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/4-Singleton-4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/5-Adapter-P1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/5-Adapter-P1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/5-Adapter-P2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/5-Adapter-P2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/5-Adapter-P3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/5-Adapter-P3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/7-Template-P1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/7-Template-P1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/7-Template-P2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/7-Template-P2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/7-Template-P3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/7-Template-P3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/8-Iterator-P1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/8-Iterator-P1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/8-Iterator-P2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/8-Iterator-P2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/8-Iterator-P3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/8-Iterator-P3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/8-Iterator-P4.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/8-Iterator-P4.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/9-MVC-P3.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/9-MVC-P3.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/Abstract-Factory-Pattern.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/Abstract-Factory-Pattern.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/designpatterns/resources/CountryCodeNew-2019-02-21.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/java/designpatterns/resources/CountryCodeNew-2019-02-21.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/java/designpatterns.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/notes.txt" afterDir="false" />
-    </list>
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,8 +94,9 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tutorials" />
+      <recent name="$PROJECT_DIR$/tutorials/e-learning" />
       <recent name="$PROJECT_DIR$/tutorials/java" />
+      <recent name="$PROJECT_DIR$/tutorials" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -306,7 +253,7 @@
       <workItem from="1586020424996" duration="1392000" />
       <workItem from="1586022476151" duration="1119000" />
       <workItem from="1586026465766" duration="1717000" />
-      <workItem from="1586067142617" duration="14680000" />
+      <workItem from="1586067142617" duration="15057000" />
     </task>
     <task id="LOCAL-00001" summary="adding learn benchmarks project">
       <created>1572117955095</created>
@@ -434,7 +381,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586100521103</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="restructured projects">
+      <created>1586105341285</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1586105341285</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +421,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/shravanshanmugam/LearnProject&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
     <MESSAGE value="cryptography lessons added" />
     <MESSAGE value="LearnSecurity module added" />
-    <option name="LAST_COMMIT_MESSAGE" value="LearnSecurity module added" />
+    <MESSAGE value="restructured projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="restructured projects" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -481,10 +436,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1586095842010" />
-    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586100520921">
+    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586105340697">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586100520921" />
+    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586105340697" />
     <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586100522754">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -509,10 +464,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="500" height="476" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586099895286" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586099879987">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586105342724">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586099879987" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586105342724" />
     <state x="234" y="147" key="new project wizard" timestamp="1586095825190">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
