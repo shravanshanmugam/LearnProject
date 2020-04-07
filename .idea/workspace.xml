@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="rsa encryption examples added">
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/cryptography" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/cryptography" afterDir="false" />
     </list>
@@ -68,7 +69,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA&#10;TEXT" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -149,15 +150,15 @@
       <command value="open veho" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.RSAEncryption">
+  <component name="RunManager" selected="Application.PBKDF">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AESEncryption" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.security.AESEncryption" />
+    <configuration name="PBKDF" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.security.PBKDF" />
       <module name="LearnSecurity" />
       <extension name="coverage">
         <pattern>
@@ -182,24 +183,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="get-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/get-requests.http">
-      <method v="2" />
+    <configuration name="SkipCollection" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SkipCollection" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="rest-api_1#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http">
-      <method v="2" />
+    <configuration name="TestClass (1)" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestClass" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="DummyClientTest.test_send" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="learnframeworks" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shravan.learn.frameworks.learnframeworks.concurrency.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.shravan.learn.frameworks.learnframeworks.concurrency" />
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.frameworks.learnframeworks.concurrency.DummyClientTest" />
-      <option name="METHOD_NAME" value="test_send" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="TestClass" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestClass" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -230,21 +230,21 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.AESEncryption" />
       <item itemvalue="Application.RSAEncryption" />
-      <item itemvalue="HTTP Request.rest-api_1#1" />
-      <item itemvalue="HTTP Request.get-requests#1" />
-      <item itemvalue="JUnit.DummyClientTest.test_send" />
+      <item itemvalue="Java Scratch.SkipCollection" />
+      <item itemvalue="Java Scratch.TestClass" />
+      <item itemvalue="Java Scratch.TestClass (1)" />
       <item itemvalue="Spring Boot.LearnframeworksApplication" />
       <item itemvalue="Spring Boot.ProjectReactorApplication" />
+      <item itemvalue="Application.PBKDF" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PBKDF" />
+        <item itemvalue="Java Scratch.TestClass (1)" />
+        <item itemvalue="Java Scratch.TestClass" />
+        <item itemvalue="Java Scratch.SkipCollection" />
         <item itemvalue="Application.RSAEncryption" />
-        <item itemvalue="Application.AESEncryption" />
-        <item itemvalue="HTTP Request.get-requests#1" />
-        <item itemvalue="HTTP Request.rest-api_1#1" />
-        <item itemvalue="JUnit.DummyClientTest.test_send" />
       </list>
     </recent_temporary>
   </component>
@@ -274,6 +274,8 @@
       <workItem from="1586022476151" duration="1119000" />
       <workItem from="1586026465766" duration="1717000" />
       <workItem from="1586067142617" duration="20809000" />
+      <workItem from="1586149125845" duration="12530000" />
+      <workItem from="1586268762218" duration="4885000" />
     </task>
     <task id="LOCAL-00001" summary="adding learn benchmarks project">
       <created>1572117955095</created>
@@ -422,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586110445732</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="transport layer security notes added">
+      <created>1586126550167</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1586126550167</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +466,8 @@
     <MESSAGE value="LearnSecurity module added" />
     <MESSAGE value="restructured projects" />
     <MESSAGE value="removing unnecessary files" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing unnecessary files" />
+    <MESSAGE value="transport layer security notes added" />
+    <option name="LAST_COMMIT_MESSAGE" value="transport layer security notes added" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -471,42 +481,50 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1586095842010" />
-    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1586116503055">
+    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1586282848118">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586116503055" />
-    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586110445606">
+    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586282848118" />
+    <state x="564" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586282825729">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586110445606" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586116645586">
+    <state x="564" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586282825729" />
+    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586126550056">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586116645586" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1586116645585">
+    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586126550056" />
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586287027364">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586116645585" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1586116645584">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586287027364" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1586287027363">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586116645584" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1586116645585">
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586287027363" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1586287027362">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586116645585" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586287027362" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1586287027363">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586287027363" />
     <state x="328" y="106" key="SettingsEditor" timestamp="1586097045083">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="328" y="106" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1586097045083" />
-    <state width="500" height="476" key="SwitcherDM" timestamp="1586120607320">
+    <state x="570" y="275" width="540" height="524" key="StructurePopup" timestamp="1586199100015">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="500" height="476" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586120607320" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586110447645">
+    <state x="570" y="275" width="540" height="524" key="StructurePopup/0.0.1680.1050@0.0.1680.1050" timestamp="1586199100015" />
+    <state width="500" height="476" key="SwitcherDM" timestamp="1586287107702">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586110447645" />
+    <state width="500" height="476" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586287107702" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586126552905">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586126552905" />
     <state x="578" y="285" key="extract.method.dialog" timestamp="1586116203546">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -515,9 +533,13 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="234" y="147" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1586095825190" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1586123419067">
+    <state x="505" y="248" width="670" height="675" key="run.anything.popup" timestamp="1586160636612">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586123419067" />
+    <state x="505" y="248" width="670" height="675" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586160636612" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1586282420070">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586282420070" />
   </component>
 </project>

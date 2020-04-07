@@ -337,3 +337,63 @@ keystoreFile=/path/to/crypto.pfx
 keystorePass=password_to_encrypt_key_inside_pfx_file
 keystoreType=PKCS12
 
+Authentication
+1. Passwords
+Problems: Reuse, Dictionary words, Not enough entropy
+Attacks: Online attacks, phishing (can be solved by cryptography through authenticity), social engineering, key loggers
+Offline attacks: through Read-only access to database or SQL injection
+How can we prevent attacker from getting into user accounts if he gets access to our user-password database?
+2. Hashed passwords
+if not hashed, attacker has direct access to all accounts
+Store username-hashed password
+Problems: same password => same hash, attacker can run offline dictionary attack to retrieve password
+Dictionary attack => take common words in dictionary, calculate hash and check if it matches with given hash
+usually they take pre-computed list of hashes for dictionary words, put them in a table hash->word to retrieve password much quicker
+3. Rainbow Tables
+Pre-computed hash table takes lot of space
+Hash function => text -> binary
+Retry function => binary -> text
+form a chain of these functions. continue this process for a known number of iterations say 10,000. for each text, we've computed hash
+store first text (starting point) and last binary as entry in rainbow table
+run this process for user's password, get the last binary. check if the binary is present in rainbow table
+there is a good probability that user's password is present in the 10,000 words for which we have the first text (starting point) in rainbow table
+Problem: if there is hash collision, even if text is different, since hash matches it will authenticate attacker into the site
+How to protect against rainbow table attacks?
+4. Salted passwords
+salt the hash, very similar to initialization vector. add random input to hash function
+append random string to password and run hash function over the entire string (password + salt)
+a pre-computed rainbow table has all the same inputs. so mixing some randomness into hash function as an input so that attacker cannot pre-compute all its values
+salt need not be protected
+salt needs to be different for each user and has to be stored for validating as well
+Rainbow tables are not effective on salted passwords but dictionary attacks are
+To help from dictionary attacks we need to ask user to set stronger passwords i.e. passwords with high entropy
+5. Computing password entropy
+Number of bits in a message
+H = L log2 N
+L - length of text
+N - size of alphabet (26 for English)
+for 10 letter word, H = 10 log2 26 = 47
+If we consider the natural language say English as alphabet, then N is number of words in English, L is number of such words used in password
+20_000 < N < 1_000_000 for average user
+14 < log2 N < 20
+E.g. correct horse battery sample
+H = 4 log2 20000 = 56
+i. Common substitutions: 0=o, 1=l,i, 3=e
+H = number of characters * log2 size of substitution dictionary
+ii. Dictionary words:
+H = number of words * log2 size of dictionary
+iii. Capitalization
+1 bit for each different capital not at beginning of a word
+iv. Remaining characters
+H = number of cahracters * log2 size of alphabet
+6. Password based key derivation functions (PBKDF)
+If we protect passwords from above attacks all that is left is brute force
+How do we make brute force attacks take longer time for attacker to crack the password?
+Intended for deriving symmetric key and IV from a password. can be used to generate salted hash. This can slow down an offline attack
+Key stretching
+Divide password into blocks. Run hash function for each block
+Take output block and run it through has function again. Each time you compute a hash, XOR it with previous iterations
+After running a few thousand times, we get output for that block. Get output for each block and XOR to get a result which will be the salted hash
+We have to do this only once for user when he logs in
+Attacker will have to do this for every password they try in brute force attack
+Number of iterations should be atleast 1000

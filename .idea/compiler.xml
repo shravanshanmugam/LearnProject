@@ -8,13 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="LearnLambda" />
         <module name="LearnMaven" />
-        <module name="LearnSpring" />
+        <module name="learnframeworks" />
         <module name="NewMavenModule" />
         <module name="LearnConcurrency" />
         <module name="LearnHibernate" />
-        <module name="LearnSecurity" />
+        <module name="LearnSpring" />
         <module name="LearnBenchmark" />
-        <module name="learnframeworks" />
+        <module name="LearnSecurity" />
         <module name="DesignPatterns" />
         <module name="LearnSpringBoot" />
         <module name="LearnReactiveJava" />
