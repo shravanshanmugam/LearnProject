@@ -386,7 +386,7 @@ iii. Capitalization
 1 bit for each different capital not at beginning of a word
 iv. Remaining characters
 H = number of cahracters * log2 size of alphabet
-6. Password based key derivation functions (PBKDF)
+6. Password based key derivation functions (PBKDF) or password hashes
 If we protect passwords from above attacks all that is left is brute force
 How do we make brute force attacks take longer time for attacker to crack the password?
 Intended for deriving symmetric key and IV from a password. can be used to generate salted hash. This can slow down an offline attack
@@ -397,3 +397,36 @@ After running a few thousand times, we get output for that block. Get output for
 We have to do this only once for user when he logs in
 Attacker will have to do this for every password they try in brute force attack
 Number of iterations should be atleast 1000
+7. Progressive salted hashed passwords
+Store username,hashed password,salt,algorithmId in user table (foreign key)
+Store algorithmId, algorithm, number of iterations in algorithm table
+With this data structure we can migrate over time by rehashing as user logs in
+First authenticate the user using existing algorithmId, then re-compute password hash with updated algorithm and make update in user table
+We are keeping enough information for any system to validate passwords
+But this gives extra information regarding algorithm we used to password hash.
+Attacker still has to brute force several combinations so it is not nearly enough information for attacker
+8. Federation
+Remove the responsibility of identity from applications and gives that to other providers
+Separate authentication from authorization
+Based on trust among multiple parties
+Separation of responsibilities: who you are (Authentication), what you can do (Authorization), getting the job done (Application)
+Identity Provider (IP) performs authentications. We have centralized identity management
+Secure Token Service (STS) performs authorization. We have single repository of roles and responsibilities
+Relying party (RP) consumes token and acts on those claims. Focus on business logic
+Sometimes IP can also be IP-STS or STS can be RP-STS
+9. Kerberos to implement Federated authentication and authorization
+User registers with password to Kerberos. Kerberos generates symmetric key using the password using PBKDF
+User later asks for token, kerberos encrypts token using symmetric key and sends to user
+User knows password, so client can generate symmetric key and decrypt the token
+Kerberos (IP) signs the token so that user can present it to other services to get other tickets
+This ticket is called Ticket Granting Ticket (TGT)
+Other service trust this ticket and they perform authorization
+Kerberos is used in OS
+10. WS-Trust and WS-Federation
+Defines protocol and XML Schema for SOAP web services to exchange security tokens
+SAML
+11. OAuth
+Social applications
+Delegate access to services
+12. OpenID Connect
+Built on top of OAuth
