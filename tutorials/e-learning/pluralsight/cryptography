@@ -430,3 +430,5 @@ Social applications
 Delegate access to services
 12. OpenID Connect
 Built on top of OAuth
+
+NONCE - Number used once - Used to protect against replay attacks
