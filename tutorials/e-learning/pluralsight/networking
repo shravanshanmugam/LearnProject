@@ -1,0 +1,19 @@
+networking
+
+moving information from one device to another device
+
+Open Systems Interconnection (OSI) model
+Physical Layer - Cables (Twisted pair, CoAx, Fibre optics)
+Data Link Layer - Protocols (Ethernet, DOCSIS-3 used by ISP) used to send information between network segments (computer-router, router-ISP, ISP-internet, internet-Servers)
+Network Layer - IP Addressing & IP Routing allows us to send information from one unique address to another unique address
+Transport Layer - Create connection/session between client and server using Transmission Control Protocol (TCP) before we start sending information. It provides services such as connection-oriented communication, reliability, flow control, and multiplexing.
+Session Layer - In case of a connection loss this protocol may try to recover the connection. If a connection is not used for a long period, the session-layer protocol may close it and re-open it. It provides for either full duplex or half-duplex operation and provides synchronization points in the stream of exchanged messages.
+Presentation Layer - Protocols to translating text between different encoding like ASCII and EBCDIC
+Application Layer - Hyper Text Transfer Protocol (HTTP) is formatting to send information from server to client and how to present that information in a web browser
+
+Application Layer Protocols
+Data Transfer Protocols
+Authentication Protocols
+Network Service Protocols
+Network Management Protocols
+Audio/Visual Protocols
