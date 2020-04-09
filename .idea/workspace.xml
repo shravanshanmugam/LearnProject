@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/cryptography" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/cryptography" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/networking" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/networking" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +149,7 @@
       <command value="open veho" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.PBKDF">
+  <component name="RunManager" selected="Java Scratch.Scratch">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
@@ -169,15 +169,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RSAEncryption" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.security.RSAEncryption" />
-      <module name="LearnSecurity" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shravan.learn.security.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -229,21 +223,21 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.RSAEncryption" />
+      <item itemvalue="Application.PBKDF" />
       <item itemvalue="Java Scratch.SkipCollection" />
       <item itemvalue="Java Scratch.TestClass" />
       <item itemvalue="Java Scratch.TestClass (1)" />
+      <item itemvalue="Java Scratch.Scratch" />
       <item itemvalue="Spring Boot.LearnframeworksApplication" />
       <item itemvalue="Spring Boot.ProjectReactorApplication" />
-      <item itemvalue="Application.PBKDF" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="Application.PBKDF" />
         <item itemvalue="Java Scratch.TestClass (1)" />
         <item itemvalue="Java Scratch.TestClass" />
         <item itemvalue="Java Scratch.SkipCollection" />
-        <item itemvalue="Application.RSAEncryption" />
       </list>
     </recent_temporary>
   </component>
@@ -274,7 +268,9 @@
       <workItem from="1586026465766" duration="1717000" />
       <workItem from="1586067142617" duration="20809000" />
       <workItem from="1586149125845" duration="12530000" />
-      <workItem from="1586268762218" duration="7375000" />
+      <workItem from="1586268762218" duration="7597000" />
+      <workItem from="1586410197336" duration="1428000" />
+      <workItem from="1586444241564" duration="6479000" />
     </task>
     <task id="LOCAL-00001" summary="adding learn benchmarks project">
       <created>1572117955095</created>
@@ -444,7 +440,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586292932361</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="misc notes on cryptography">
+      <created>1586295557561</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1586295557561</updated>
+    </task>
+    <task id="LOCAL-00026" summary="notes on networking">
+      <created>1586467274090</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1586467274090</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +492,9 @@
     <MESSAGE value="transport layer security notes added" />
     <MESSAGE value="password based key derivation function" />
     <MESSAGE value="salted password hashes, federation notes added" />
-    <option name="LAST_COMMIT_MESSAGE" value="salted password hashes, federation notes added" />
+    <MESSAGE value="misc notes on cryptography" />
+    <MESSAGE value="notes on networking" />
+    <option name="LAST_COMMIT_MESSAGE" value="notes on networking" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -496,34 +508,38 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="440" y="190" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1586095842010" />
-    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1586282848118">
+    <state x="561" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586462791424">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586282848118" />
+    <state x="561" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586462791424" />
+    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1586411812023">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586411812023" />
     <state x="564" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586282825729">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="564" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586282825729" />
-    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586292932243">
+    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586467273917">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586292932243" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586292937091">
+    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586467273917" />
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586444237358">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586292937091" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1586292937090">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586444237358" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1586444237357">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586292937090" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1586292937089">
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586444237357" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1586444237356">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586292937089" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1586292937090">
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586444237356" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1586444237357">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586292937090" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586444237357" />
     <state x="328" y="106" key="SettingsEditor" timestamp="1586097045083">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -536,10 +552,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="500" height="476" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586287689623" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586292933687">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586467281895">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586292933687" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586467281895" />
     <state x="578" y="285" key="extract.method.dialog" timestamp="1586116203546">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -552,9 +568,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="505" y="248" width="670" height="675" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586160636612" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1586282420070">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1586444237320">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586282420070" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586444237320" />
   </component>
 </project>
