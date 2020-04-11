@@ -22,3 +22,35 @@ New processes
 Not suitable for CRUD or data-driven applications
 Not suitable for problems with technical complexity without business domain complexity
 4. Team or Company buy-in to DDD
+
+Example: Pet clinic application
+Client schedules Appointment
+Appointment requires Resources like Exam Room, Doctor
+Appointment can be of type Office visit or Vaccination
+Another type of Appointment is Surgery which has Procedures
+Surgery requires Resources like Operation Room, Recovery room
+
+Explicitly define the context within which a model applies.
+Keep the model strictly consistent within these bounds but don't be distracted or confused by issues outside
+Distinct data/code/team per bounded context
+Introduce separation through namespaces, folders, projects
+Bounded context is shaped to fit the sub-domain
+Client in Appointment domain is different from Client in Billing domain
+
+Context Maps
+Appointment scheduler: Client, Notification, Patient, Exam, Room Appointment
+Billing: Client, Procedure, Invoice, Notification
+Shared Kernel: User authentication (consists of shared domain models)
+
+Ubiquitous language
+single shared language that everyone understands
+for a single bounded context, used throughout that context, from conversations to code
+
+Problem domain: Specific problem the software is trying to solve
+Core domain: Key differentiator for customer's business
+Sub domain: Separate applications or features that software must support or interact with
+Bounded context: Specific responsibility, explicit with boundaries that separate it from other parts of the system
+Context mapping: Identifying bounded contexts and their relationships to one another
+Shared kernel: Part of the model that is shared by two or more teams who agree to not change it without collaboration
+Ubiquitous language: Using terms from the model that programmers and domain experts use to discuss the system
+
