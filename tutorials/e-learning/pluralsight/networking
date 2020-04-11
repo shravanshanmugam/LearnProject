@@ -158,3 +158,27 @@ Private IP Address range
 192.168.0.0/16 192.168.255.255/16
 APIPA address 169.254.0.0/16
 Loopback address 127.0.0.1 to check if TCP/IP is working on local system
+
+Subnetting Networks
+1. Breaking networks into smaller networks
+Network address: 10.0.0.0
+Subnet mask: 10.255.255.255 (also broadcast address)
+CIDR Notation: 10.0.0.0/8
+Host address will be in the range 10.0.0.0.and 10.255.255.255
+Take host address: 10.0.10.0
+Take subnet mask: 255.255.255.0
+CIDR Notation: 10.0.10.0/24
+Network address will be: 10.0.10.0
+Broadcast address: 10.0.10.255
+Host address will be in the range 10.0.10.0 and 10.0.10.255
+This is a small section of the bigger network
+We can have lot of such network addresses with 24-bit network portion
+We can also have different subnets with different network portion length such that the IP addresses don't overlap
+Variable Length Subnet Masking (VLSM)
+Network address: 10.0.0.0/8
+Subnets:
+10.0.10.0/24
+10.0.16.0/22
+10.1.0.0/16
+10.2.0.0/30
+
