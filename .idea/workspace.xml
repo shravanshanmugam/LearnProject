@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="Merge branch 'master' of https://github.com/shravanshanmugam/LearnProject&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;tutorials/e-learning/pluralsight/networking">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/networking" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/networking" afterDir="false" />
     </list>
@@ -149,19 +149,19 @@
       <command value="open veho" />
     </option>
   </component>
-  <component name="RunManager" selected="Java Scratch.Scratch">
+  <component name="RunManager" selected="Application.Course">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PBKDF" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.security.PBKDF" />
-      <module name="LearnSecurity" />
+    <configuration name="Course" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.springboot.model.Course" />
+      <module name="LearnSpringBoot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.security.*" />
+          <option name="PATTERN" value="com.shravan.learn.springboot.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -169,29 +169,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Scratch" />
+    <configuration name="Greeter$Temp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.lambda.java7.Greeter$Temp" />
+      <module name="LearnLambda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shravan.learn.lambda.java7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Greeter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.lambda.java7.Greeter" />
+      <module name="LearnLambda" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shravan.learn.lambda.java7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MinStack" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MinStack" />
       <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkipCollection" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SkipCollection" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestClass (1)" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestClass" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestClass" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestClass" />
+    <configuration name="Solution" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solution" />
       <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -223,21 +235,21 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.PBKDF" />
-      <item itemvalue="Java Scratch.SkipCollection" />
-      <item itemvalue="Java Scratch.TestClass" />
-      <item itemvalue="Java Scratch.TestClass (1)" />
-      <item itemvalue="Java Scratch.Scratch" />
+      <item itemvalue="Application.Greeter$Temp" />
+      <item itemvalue="Application.Greeter" />
+      <item itemvalue="Application.Course" />
+      <item itemvalue="Java Scratch.Solution" />
+      <item itemvalue="Java Scratch.MinStack" />
       <item itemvalue="Spring Boot.LearnframeworksApplication" />
       <item itemvalue="Spring Boot.ProjectReactorApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Java Scratch.Scratch" />
-        <item itemvalue="Application.PBKDF" />
-        <item itemvalue="Java Scratch.TestClass (1)" />
-        <item itemvalue="Java Scratch.TestClass" />
-        <item itemvalue="Java Scratch.SkipCollection" />
+        <item itemvalue="Application.Course" />
+        <item itemvalue="Application.Greeter" />
+        <item itemvalue="Application.Greeter$Temp" />
+        <item itemvalue="Java Scratch.MinStack" />
+        <item itemvalue="Java Scratch.Solution" />
       </list>
     </recent_temporary>
   </component>
@@ -272,6 +284,8 @@
       <workItem from="1586410197336" duration="1428000" />
       <workItem from="1586444241564" duration="6479000" />
       <workItem from="1586444241564" duration="1839000" />
+      <workItem from="1586500545548" duration="4766000" />
+      <workItem from="1586602844849" duration="2163000" />
     </task>
     <task id="LOCAL-00001" summary="adding learn benchmarks project">
       <created>1572117955095</created>
@@ -513,46 +527,46 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="561" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586462791424" />
-    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1586411812023">
+    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1586517972557">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586411812023" />
+    <state x="653" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1586517972557" />
     <state x="564" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586282825729">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="564" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586282825729" />
-    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586477152725">
+    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586477226284">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586477152725" />
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586444237358">
+    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586477226284" />
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586548701003">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586444237358" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1586444237357">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1586548701003" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1586548701001">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586444237357" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1586444237356">
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1586548701001" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1586548701000">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586444237356" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1586444237357">
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1586548701000" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1586548701002">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586444237357" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1586548701002" />
     <state x="328" y="106" key="SettingsEditor" timestamp="1586097045083">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="328" y="106" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1586097045083" />
-    <state x="570" y="275" width="540" height="524" key="StructurePopup" timestamp="1586199100015">
+    <state x="570" y="275" width="540" height="524" key="StructurePopup" timestamp="1586527778234">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="570" y="275" width="540" height="524" key="StructurePopup/0.0.1680.1050@0.0.1680.1050" timestamp="1586199100015" />
-    <state width="500" height="476" key="SwitcherDM" timestamp="1586287689623">
+    <state x="570" y="275" width="540" height="524" key="StructurePopup/0.0.1680.1050@0.0.1680.1050" timestamp="1586527778234" />
+    <state width="500" height="476" key="SwitcherDM" timestamp="1586527812970">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="500" height="476" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586287689623" />
+    <state width="500" height="476" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586527812970" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586467281895">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -569,9 +583,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="505" y="248" width="670" height="675" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586160636612" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1586444237320">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1586548700970">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586444237320" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1586548700970" />
   </component>
 </project>
