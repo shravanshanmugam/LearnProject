@@ -1,3 +1,24 @@
 domain driven design
 
-1. Used in applications with business domain complexity
+1. Used in applications with business domain complexity as opposed to technical complexity
+
+Benefits of DDD
+1. Flexible
+2. Customer's vision/perspective of the problem
+3. Path through a very complex problem
+4. Well-organized and easily tested code
+5. Business logic lives in one place
+6. Many great patterns to leverage
+
+Drawbacks of DDD
+1. Time and effort
+Discuss and model the problem with domain experts
+Isolate domain logic from other parts of the application
+2. Learning curve
+New patterns
+New principles
+New processes
+3. Only makes sense when there is business domain complexity in the problem
+Not suitable for CRUD or data-driven applications
+Not suitable for problems with technical complexity without business domain complexity
+4. Team or Company buy-in to DDD

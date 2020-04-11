@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/networking" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/networking" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/ddd" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/ddd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +285,7 @@
       <workItem from="1586444241564" duration="6479000" />
       <workItem from="1586444241564" duration="1839000" />
       <workItem from="1586500545548" duration="4766000" />
-      <workItem from="1586602844849" duration="10405000" />
+      <workItem from="1586602844849" duration="10851000" />
     </task>
     <task id="LOCAL-00001" summary="adding learn benchmarks project">
       <created>1572117955095</created>
@@ -497,7 +497,28 @@
       <option name="project" value="LOCAL" />
       <updated>1586624216173</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="switch features in networking notes added">
+      <created>1586627419608</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1586627419608</updated>
+    </task>
+    <task id="LOCAL-00032" summary="switch features in networking notes added">
+      <created>1586627433295</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1586627433295</updated>
+    </task>
+    <task id="LOCAL-00033" summary="switch features in networking notes added">
+      <created>1586627476169</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1586627476169</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +562,8 @@
     <MESSAGE value="subnetting networks in networking notes added" />
     <MESSAGE value="IPv6 address in networking notes added" />
     <MESSAGE value="Ethernet in networking notes added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ethernet in networking notes added" />
+    <MESSAGE value="switch features in networking notes added" />
+    <option name="LAST_COMMIT_MESSAGE" value="switch features in networking notes added" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -567,10 +589,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="564" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586282825729" />
-    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586627433155">
+    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586627476068">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586627433155" />
+    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586627476068" />
     <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586548701003">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -599,10 +621,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="500" height="476" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586527812970" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586627434714">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586627478439">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586627434714" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586627478439" />
     <state x="578" y="285" key="extract.method.dialog" timestamp="1586116203546">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
