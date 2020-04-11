@@ -182,3 +182,35 @@ Subnets:
 10.1.0.0/16
 10.2.0.0/30
 
+IPv6 Addresses
+1. Size
+Bit - 1 bit (0 or 1)
+Nibble - 4 bits
+Byte - 8 bits
+Hextet - 16 bits
+2. IPv6 addresses are 128-bits long = 32 nibbles = 8 hextets
+3. Network portion and Interface Identifier (host) portion typically at 64 bits
+2001:0DB8:0002:008D:0000:0000:00A5:52F5/64
+4. Shortening IPv6 address
+eliminate leading 0s
+2001:DB8:2:8D:0:0:A5:52F5/64
+eliminate 0s with double colon
+2001:DB8:2:8D::A5:52F5
+we can use only one double colon
+5. How many IPv6 addresses?
+2^64 - 18 billion billion bits for single IPv6 network with 64-bit network portion
+6. Dual stack - both IPv4 and IPv6 address running on a machine
+IPv6 address has a link-local address that exists only within layer 2 (link layer) network
+6. Acquiring IPv6 address
+i. SLAAC (Stateless Address Auto Configuration)
+Windows device gets IPv6 address of router and picks its own IPv6 address by picking random 64 bit interface identifier value
+ii. Unix/Linux/Mac device uses modified EUI - 64
+Take MAC address which is 48 bits long, break them in half and in the middle put FF:FE
+Mac address: 000C:29FC:70A5
+Interface identifier portion of IPv6 address: 000C:29FF:FEFC:70A5
+Take first 8 bits, flip the 7th bit
+New interface identifier portion of IPv6 address: 020C:29FF:FEFC:70A5
+iii. IPv6 DHCP Server works similar to IPv4 DHCP Server
+7. Tunneling IPv6
+Hurricane Electric IPv6 internet
+
