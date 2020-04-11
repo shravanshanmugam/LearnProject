@@ -214,3 +214,69 @@ iii. IPv6 DHCP Server works similar to IPv4 DHCP Server
 7. Tunneling IPv6
 Hurricane Electric IPv6 internet
 
+Ethernet
+1. Layer 2 protocol
+2 types
+Wireless ethernet
+Wired ethernet
+2. CSMA/CD
+Carrier Sense Multiple Access with Collision Detection for Ethernet operation
+When a computer wants to send a message over a network it would send an electric pulse of +5 or -5 volts or no voltage on the wire
+On/off of 5 volts or no 5 volts creates a signal to allow us to transfer a message by creating a pulse of 1s and 0s
+All devices on network will receive the message but only the intended recipient will respond
+Multiple access here means that all devices are sharing the same wire
+When one device is transferring a message, another device that want to send data will have to wait till first device is done
+It is possible when two devices are hearing over the network, that they can find no devices communicating and end up sending electric pulse
+All devices are designed to recognise signals which are beyond 5 volts which implies collision when there is a surge of voltage
+The network stops communication waits for random period of time, start listening to the wire and start communicating again
+Collision Domain is a group of network devices that will simultaneously detect a voltage spike
+Voltage spike is multiple devices sending data at the same time
+3. Duplex and Speed
+Duplex on ethernet connection can be half or full
+Half duplex connection means one device communicates at a time. Other device waits. They cannot send data to each other simultaneously. Example: Talkie talkie
+Full duplex connection means two devices can communicate at the same time. Example: Telephone
+Collisions are not possible in full duplex communication because both devices can send data on the wire at the same time
+Modern Collision Domain is going to be on a half duplex connection between a PC and a switch
+This could be because it's an old device, an old switch or old wiring
+Most modern network are full duplex meaning PC and switch can send data both simultaneously
+Ethernet name       Speed
+Ethernet            10 Mbps
+FastEthernet        100 Mbps
+GigabitEthernet     1 Gbps
+10GigabitEthernet   10 Gbps (used to connect different ISPs together)
+40GigabitEthernet   40 Gbps (used in data centers and connections in the WAN connections that allow ISPs to communicate with each other)
+GigabitEthernet, 10GigabitEthernet and 40GigabitEthernet requires full duplex so CSMA/CD doesn't apply
+4. Ethernet Frame is mechanism used to move data across an ethernet network from one device to another
+Frame is a chunk of data with a data link layer header
+Destination Mac Address 48 bits
+Source Mac Address      48 bits
+Type                    16 bits
+Data (packet)           1500 bytes (max)
+FCS                     32 bits
+Everything except Data are part of Ethernet header
+Data can be layer 2 or layer 3 information
+MAC Address are layer 2 identifiers that are specifically tied to a network interface card
+Network Interface Card is the device we plug in our Ethernet cable into meaning Ethernet cable is plugged into NIC
+MAC Address consists of Manufacture ID (first 24 bits) and Serial Number (last 24 bits) it is a hardware address that is assigned to the devices right at the factory
+Type field tells what type of data is being transferred like layer 2 or layer 3 data
+FCS is Frame Check Sequence which does Cyclical Redundancy Check (CRC) taking in all information in a frame and computes a value which is put into a 32-bit field at the end of the frame called the FCS
+The device receiving the ethernet frame computes the FCS and checks if it is the same as the FCS of the sent frame
+Maximum Transmission Unit (MTU) is the maximum amount of data that we can transfer in an Ethernet frame
+Protocol Data Unit (PDU) varies from layer to layer on the OSI model is the entire frame and the data we're transferring
+5. Network Topologies
+i. Bus topology
+there is a single wire which we tap into and run our devices off of that
+ii. Ring topology (token ring)
+Token that would spin around a ring. As devices needed to transmit data, they would attach messages to this token.
+As a device would receive the token with a message for it, it would take the message off the token put it back on the wire and the process would start over again
+iii. Star topology (used by modern ethernet)
+Worked using a hub (multi port repeater). Put a signal into it and all other devices on the network can hear it. If two devices put a signal simultaneously there would be a collision
+Switches break up collision domains. Switches keep track of MAC addresses using Port to Mac Address table. They read frame headers and see which source Mac address is being received by a port
+When message is sent from port 1 to port 2 it creates a virtual circuit connection between the two devices through the port.
+None of the other devices can hear that message. This allows communication between only source and destination MAC addresses
+6. Broadcast messages
+Destination MAC Address = FFFF FFFF FFFF
+This is a layer 2 broadcast address
+The frame is sent to all active interfaces except the receiving interface
+Broadcast domain is a group of networked devices which will receive a layer 2 broadcast message
+
