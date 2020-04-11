@@ -303,4 +303,5 @@ Tagged ports and untagged ports on switches. Trunk links always use tagged ports
 3. Switch port mirroring
 Used to capture and analyse network traffic
 4. Power over Ethernet (PoE)
-Protocols 802.3af and 802.3at to deliver power over ethernet cable instead of requiring separate power outlets
+Ethernet is an 802.3 protocol of IEEE
+Sub Protocols 802.3af and 802.3at to deliver power over ethernet cable instead of requiring separate power outlets
