@@ -278,5 +278,29 @@ None of the other devices can hear that message. This allows communication betwe
 Destination MAC Address = FFFF FFFF FFFF
 This is a layer 2 broadcast address
 The frame is sent to all active interfaces except the receiving interface
-Broadcast domain is a group of networked devices which will receive a layer 2 broadcast message
+Broadcast domain is a group of networked devices which will receive a layer 2 broadcast message with all Fs in destination mac address
 
+
+Switching Features
+1. Connecting switches
+It broadcasts messages to all active ports
+But if two ports are used to connect to same switch for better performance, then message will be received on both switch ports
+and broadcast including to the switch ports that connect the other switch creating a loop. This can crash the network due to the broadcast storm
+Radia Perlman's Spanning Tree Protocol (STP) shuts down redundancy (redundant port) and prevents the loop from existing
+This can solve the broadcast storm
+2. VLANs
+LAN is a Local Area Network which is a group of devices connected together using ethernet switch
+VLAN
+If we have two separate broadcast domains, we can combine the two using a physical switch which has capability more than one broadcast domain
+Broadcast domain can still remain isolated by using configuration interface to configure switches and ports to VLANs
+This is used in data centers where there are lots of server connected by switch which need to have separate broadcast domains or VLANs
+VLANs are used to segment our data centers into separate networks for specific purposes. It allows us to have an organized network
+Trunk link is a link specifically designed to connect switches that are using VLANs.
+If we have devices belonging to a VLAN connected on different switches which are connected by trunk link, a message that originates from VLAN1
+that needs to be send only to devices in VLAN1 is ensured by adding VLAN tag in frame header when it reaches trunk link. Once it arrives other
+switch it will know which VLAN this message is supposed to be sent to. It will remove the VLAN tag and forward the message to the device
+Tagged ports and untagged ports on switches. Trunk links always use tagged ports
+3. Switch port mirroring
+Used to capture and analyse network traffic
+4. Power over Ethernet (PoE)
+Protocols 802.3af and 802.3at to deliver power over ethernet cable instead of requiring separate power outlets

@@ -285,7 +285,7 @@
       <workItem from="1586444241564" duration="6479000" />
       <workItem from="1586444241564" duration="1839000" />
       <workItem from="1586500545548" duration="4766000" />
-      <workItem from="1586602844849" duration="8462000" />
+      <workItem from="1586602844849" duration="10405000" />
     </task>
     <task id="LOCAL-00001" summary="adding learn benchmarks project">
       <created>1572117955095</created>
@@ -490,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586613956070</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Ethernet in networking notes added">
+      <created>1586624216173</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1586624216173</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +540,8 @@
     <MESSAGE value="ip addressing in networking notes added" />
     <MESSAGE value="subnetting networks in networking notes added" />
     <MESSAGE value="IPv6 address in networking notes added" />
-    <option name="LAST_COMMIT_MESSAGE" value="IPv6 address in networking notes added" />
+    <MESSAGE value="Ethernet in networking notes added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ethernet in networking notes added" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -559,10 +567,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="564" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586282825729" />
-    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586613955969">
+    <state x="434" y="126" key="CommitChangelistDialog2" timestamp="1586624216069">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586613955969" />
+    <state x="434" y="126" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586624216069" />
     <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1586548701003">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -591,10 +599,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="500" height="476" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586527812970" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586612224184">
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1586624217475">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586612224184" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1586624217474" />
     <state x="578" y="285" key="extract.method.dialog" timestamp="1586116203546">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
