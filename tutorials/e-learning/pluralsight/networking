@@ -369,3 +369,66 @@ Dynamic Routing
 
 
 
+Network Services
+1. Network Topologies
+i. Local Area Network (LAN) devices connected in a local network under a router
+Wireless Local Area Network for wireless devices
+This usually local to a building, business
+How do we connect to other networks?
+ii. Wide Area Network (WAN) connects devices from one network in a building to another device from another network in another building
+Campus Area Network (CAN)
+Metropolitan Area Network (MAN)
+Storage Area Network (SAN)
+Personal Area Network (PAN) bluetooth connections
+2. Network Address Translation (NAT)
+When sending data from Private IP to Public Internet using public IP of router, router replaces source IP with its public IP address which is then sent to destination.
+When destination responds, they use router's public IP address as destination IP address and send the message. Router checks NAT table and replace destination IP address with original IP address of that message
+Port Address Translation (PAT)
+Static or Dynamic Translation
+3. Port Forwarding
+Socekt is IP address + transport layer Port number
+Source socket, Destination socket
+4. Access Control Lists
+Destination IPs to be allowed or not allowed
+5. Traffic shaping
+Priority on network to some traffic over others
+Example: VoIP over HTTPS
+This is done by implementing:
+Quality of Service (QoS): Diffserv (reprioritise at each device)
+Class of Service (CoS): Type of identifier for QoS
+6. Dynamic Host Configuration Protocol (DHCP) application layer protocol
+Automatic configuration of IP addressed on our network
+Device connecting to internet sends request to DHCP Server
+DHCP Server send DHCP offer with IP Address, Default Gateway and DNS Server's IP Address
+Address is assigned to device
+DHCP Binding is created on database with DHCP offer against the device's mac address
+This is a unique binding
+This can be configuration statically as well or we can do IP reservations
+DHCP lease by default is 7 days meaning the IP address is borrowed for 7 days
+Once half of the cycle expires (3.5 days), the device will reask for the IP address and renew the lease for another 7 days
+7. DNS Hierarchy and Uniform Resource Locator
+www.pluralsight.com
+Top Level Domain (TLD) - .com
+Second Level Domain a.k.a. Domain name - typically name of company or resource we are trying to reach
+Third Level Domain - host name of device Example: www
+This gives DNS a hierarchy to find IP address for a specific URL
+i. Forward DNS Lookup
+Cannot use Domain name in destination IP address
+When sending a request, device asks DNS server for IP address for given Domain name
+DNS Server responds with destination's IP address
+This lookup happens based on Top Level Domain, Second level domain and third level domain
+DNS Server may or may not have this information cached on it
+ii. Reverse DNS Lookup
+Get domain for IP address
+DNS Record Types
+A - IPv4 record
+AAAA - IPv6 record
+CNAME (Canonical Name Record) - creating an alias for DNS
+MX - Mail Exchange Record
+NS - Identifies Authoritative Name Server
+PTR - Pointer record
+SRV - Service record
+TXT - Text record for miscellaneous use like authentication or encryption
+External DNS - URL to public IP address lookup
+Internal DNS - URL to private IP address lookup. If not found in Internal DNS, it will forward to external DNS for lookup
+
