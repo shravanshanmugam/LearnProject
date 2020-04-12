@@ -81,3 +81,20 @@ Aggregate is a transactional graph of objects
 Aggregate root is the entry point of an aggregate which ensures the integrity of the entire graph
 Invariant is a condition that should always be true for the system to be in a consistent state
 Persistence Ignorant classes are classes that have no knowledge about how they are persisted
+
+Repository
+Object life cycles
+i. No persistence: Create, Do stuff, Destroy
+ii. With persistence: Create, Reconstitute from persistence, Do Stuff, Save changes to persistence, Destroy
+Repositories are used to manage life cycle of persistent objects
+Think of it as an in-memory collection
+Implement a known, common access interface
+Methods for add, remove and defined criteria for object selection
+Repositories for aggregate roots
+Client focuses on the model, the repository focuses on the persistence
+Common repository blunders
+N+1 query errors
+Inappropriate use of eager or lazy loading
+Fetching more data than required
+
+Repository is a class that encapsulates the data persistence for an aggregate root
