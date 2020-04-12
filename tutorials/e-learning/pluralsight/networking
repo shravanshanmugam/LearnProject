@@ -305,3 +305,67 @@ Used to capture and analyse network traffic
 4. Power over Ethernet (PoE)
 Ethernet is an 802.3 protocol of IEEE
 Sub Protocols 802.3af and 802.3at to deliver power over ethernet cable instead of requiring separate power outlets
+
+IP Routing
+1. Network layer is responsible for getting traffic from one ethernet segment to another ethernet segment
+from one VLAN to another VLAN
+responsible for end to end communication through IP Addressing and IP Routing
+2. IP Packet
+ICMP (Internet Control Message Protocol)
+Source IP Address, Destination IP Address, TTL, Other, ICMP
+Packet contains header plus data carried in the network layer
+Packet information is put into a frame at layer 2 containing Destination Mac Address, Source Mac Address, Layer 3 Protocol, Packet, FCS
+TTL (=128) has how many routers packet has traversed to reach its destination. This is used to prevent loops at layer 3
+How do we know Destination Mac address?
+3. Address Resolution Protocol (ARP)
+i. Protocol used to retrieve layer 2 mac address using a layer 3 address
+Send a broadcast message using ARP requesting for destination mac address for give destination IP Address
+Request frame
+Destination mac address: FFFF FFFF FFFF
+Source mac address: 000C 29FC 70A5
+Type: ARP
+Data (Destination IP Address): 10.0.0.20
+Response frame
+Destination mac address: 000C 29FC 70A5
+Source mac address: 000C 29C7 8B22
+Type: ARP
+Data (Destination mac address): 000C 29C7 8B22
+
+Frame
+Destination IP Address: 10.0.0.20
+Source IP Address: 10.0.0.10
+Layer 3 Protocol: IPv4
+Packet:
+    Destination mac address: 000C 29C7 8B22
+    Source mac address: 000C 29FC 70A5
+    TTL: 128
+    Other
+    ICMP
+FCS
+ii. Devices maintain an ARP Cache Table for about 90 seconds
+ARP Table is not the MAC address table
+Bridge between layer 2 and layer 3
+4. Default Gateway
+Gateway is another term for Router
+Default Gateway is where RPC sends traffic to when it does not know how to reach the destination network
+It happens when destination is on a different subnet from source
+ARP request sent only to devices on our Local Area Network. Router will not forward the ARP request
+We send ARP request using router's IP Address as destination to get router's mac address
+We use router's mac address as destination mac address and destination device's IP Address as destination IP Address and send the frame
+Router has routing table that has information on connected device IP addresses and ethernet port
+Router will send ARP request to its devices using destination IP address and get destination mac address
+It will then rebuild the frame and send the message to the device
+Since message traversed through router once, the TTL value will be decremented by 1
+5. IP Routing
+Routing table is populated with all possible destinations a router can reach through which router (interface/port)
+Static Routing
+Dynamic Routing
+    Routing Information Protocol (RIP) - Distance vector
+    Enhanced Interior Gateway Routing Protocol (EIGRP) - Distance vector
+    Open Shortest Path First (OSPF) - Link state
+    BGP (Border Gateway Protocol) - Hybrid
+6. Tracert (Trace route) to trace routers between our device and some other destination device
+
+
+
+
