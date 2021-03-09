@@ -1,0 +1,8 @@
+1. Insert at front - iterate from end and shift elements
+2. Delete at front - iterate from front and shift elements
+3. In place operation - put unwanted elements at element by shifting or swapping
+4. Two pointers
+i. Same direction
+ii. Opposite direction
+iii. Fixed width
+5. Circular array - no bounds

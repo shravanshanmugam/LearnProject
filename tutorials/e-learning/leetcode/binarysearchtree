@@ -1,0 +1,16 @@
+A binary search tree (BST), a special form of a binary tree, satisfies the binary search property:
+1. The value in each node must be greater than (or equal to) any values stored in its left subtree.
+2. The value in each node must be less than (or equal to) any values stored in its right subtree.
+
+Insert a new node in BST
+1. search the left or right subtrees according to the relation of the value of the node and the value of our target node;
+2. repeat STEP 1 until reaching an external node;
+3. add the new node as its left or right child depending on the relation of the value of the node and the value of our target node.
+
+Delete an existing node in BST
+1. If the target node has no child, we can simply remove the node.
+2. If the target node has one child, we can use its child to replace itself.
+3. If the target node has two children, replace the node with its in-order successor or predecessor node and delete that node.
+
+Balanced Binary tree
+1. a binary tree in which the left and right subtrees of every node differ in height by no more than 1.

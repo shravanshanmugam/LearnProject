@@ -1,0 +1,23 @@
+1. singly linked list
+2. doubly linked list
+3. traversal, insertion, deletion
+4. two pointer technique (slow and fast pointers)
+5. remove n-th node in linked list - two pointers, one from head, one from n nodes from head
+6. reversal - create empty prev node and reverse direction of pointer
+7. cycle in linked list
+8. intersection of 2 linked lists - traverse through each and switch traversal to the other linked list and find meeting point
+9. palindrome - find middle node, reverse second half, compare first half and second half
+
+// Definition for singly-linked list.
+public class SinglyListNode {
+    int val;
+    SinglyListNode next;
+    SinglyListNode(int x) { val = x; }
+}
+
+// Definition for doubly-linked list.
+class DoublyListNode {
+    int val;
+    DoublyListNode next, prev;
+    DoublyListNode(int x) {val = x;}
+}

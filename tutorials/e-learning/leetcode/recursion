@@ -1,0 +1,127 @@
+1. Recursion is an approach to solving problems using a function that calls itself as a subroutine.
+A recursive function should have the following properties so that it does not result in an infinite loop:
+
+i. A simple base case (or cases) — a terminating scenario that does not use recursion to produce an answer.
+ii. A set of rules, also known as recurrence relation that reduces all other cases towards the base case.
+
+2. There are two important things that one needs to figure out before implementing a recursive function:
+
+i. recurrence relation: the relationship between the result of a problem and the result of its subproblems.
+ii. base case: the case where one can compute the answer directly without any further recursion calls.
+Sometimes, the base cases are also called bottom cases, since they are often the cases where the problem has been reduced to the minimal scale,
+i.e. the bottom, if we consider that dividing the problem into subproblems is in a top-down manner.
+
+Pascal's triangle
+-----------------
+
+Recurrence relation: f(i,j) = f(i−1,j−1) + f(i−1,j) where i - row index, j - column index
+Base case: f(i,j) = 1 where j = 1 or j = i
+
+Memoization
+-----------
+
+Memoization is an optimization technique used primarily to speed up computer programs by storing the results
+of expensive function calls and returning the cached result when the same inputs occur again.
+
+Time complexity
+---------------
+
+Given a recursion algorithm, its time complexity O(T) is typically the product of the number of recursion invocations R
+and the time complexity of calculation O(s) that incurs along with each recursion call:
+
+O(T) = R * O(s)
+
+Execution tree
+--------------
+
+In this case, it is better resort to the execution tree, which is a tree that is used to denote the execution flow of a
+recursive function in particular. Each node in the tree represents an invocation of the recursive function.
+Therefore, the total number of nodes in the tree corresponds to the number of recursion calls during the execution.
+
+Recursion Related Space
+-----------------------
+
+1. The returning address of the function call. Once the function call is completed, the program must know where to return to, i.e.
+the line of code after the function call.
+2. The parameters that are passed to the function call.
+3. The local variables within the function call.
+
+Tail recursion
+--------------
+
+A recursive function is tail recursive when recursive call is the last thing executed by the function
+
+Divide and conquer
+------------------
+
+A divide-and-conquer algorithm works by recursively breaking the problem down into two or more subproblems of the same or related type,
+until these subproblems become simple enough to be solved directly.
+Then one combines the results of subproblems to form the final solution.
+
+Pseudocode for D&C
+
+def divide_and_conquer( S ):
+    # (1). Divide the problem into a set of subproblems.
+    [S1, S2, ... Sn] = divide(S)
+
+    # (2). Solve the subproblem recursively,
+    #   obtain the results of subproblems as [R1, R2... Rn].
+    rets = [divide_and_conquer(Si) for Si in [S1, S2, ... Sn]]
+    [R1, R2,... Rn] = rets
+
+    # (3). combine the results from the subproblems.
+    #   and return the combined result.
+    return combine([R1, R2,... Rn])
+
+Backtracking
+------------
+
+Backtracking is a general algorithm for finding all (or some) solutions to some computational problems
+(notably Constraint satisfaction problems or CSPs), which incrementally builds candidates to the solution and
+abandons a candidate ("backtracks") as soon as it determines that the candidate cannot lead to a valid solution.
+
+Backtracking reduced the number of steps taken to reach the final result.
+This is known as pruning the recursion tree because we don't take unnecessary paths.
+
+Pseudocode template
+
+def backtrack(candidate):
+    if find_solution(candidate):
+        output(candidate)
+        return
+
+    # iterate all possible candidates.
+    for next_candidate in list_of_candidates:
+        if is_valid(next_candidate):
+            # try this partial candidate solution
+            place(next_candidate)
+            # given the candidate, explore further.
+            backtrack(next_candidate)
+            # backtrack
+            remove(next_candidate)
+
+Master theorem
+--------------
+
+Master Theorem, also known as Master Method, provides asymptotic analysis (i.e. the time complexity) for many of the
+recursion algorithms that follow the pattern of divide-and-conquer.
+
+ function dac( n ):
+   if n < k:  // k: some constant
+     Solve "n" directly without recursion
+   else:
+     [1]. divide the problem "n" into "b" subproblems of equal size.
+       - then the size of each subproblem would be "n/b"
+     [2]. call the function "dac()" recursively "a" times on the subproblems
+     [3]. combine the results from the subproblems
+
+T(n) = a * T (n/b) + f(n), where f(n) = O(n^d), d>=0
+
+1. if a > b^d, then T(n) = O(n^logb a)
+2. if a = b^d, then T(n) = O(n^d log n)
+3. if a < b^d, then T(n) = O(n^d)
+
+Examples
+1. Maximum depth of binary tree - a = 2, b = 2, d = 0 => T(n) = O(n)
+2. Binary search - a = 1, b = 2, d = 0 => T(n) = O(log n)
+3. Quickselect kth smallest element - a = 1, b = 2, d = 1 => T(n) = O(n)

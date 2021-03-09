@@ -1,0 +1,42 @@
+The key idea of Hash Table is to use a hash function to map keys to buckets. To be more specific,
+
+1. When we insert a new key, the hash function will decide which bucket the key should be assigned and the key will be stored in the corresponding bucket;
+2. When we want to search for a key, the hash table will use the same hash function to find the corresponding bucket and search only in the specific bucket.
+
+Perfect hash function would be a one-to-one mapping between the key and the bucket.
+However in most cases a hash function is not perfect and it is a trade-off between the amount of buckets and the capacity of buckets
+
+Hash collision resolution algorithm should address these problems
+
+1. How to organize the values in the same bucket?
+2. What if too many values are assigned to the same bucket?
+3. How to search a target value in a specific bucket?
+
+Typically for small N we can use array to store multiple keys in same bucket. If N is large, we need to use height-balanced binary search tree
+
+Built-in Hash table
+1. The key value can be any hashable type. And a value which belongs to a hashable type will have a hashcode.
+This code will be used in the mapping function to get the bucket index.
+2. Each bucket contains an array to store all the values in the same bucket initially.
+3. If there are too many values in the same bucket, these values will be maintained in a height-balanced binary search tree instead.
+
+Time complexity
+Best case - insertion and search O(1)
+Worst case - insertion and search O(log N) using height-balanced BST
+
+Hash set - no repeated values, looking up memoized values
+
+Hash map - Designing key
+1. All values belong to the same group will be mapped in the same group.
+2. Values which needed to be separated into different groups will not be mapped into the same group.
+
+Designing keys ideas
+1. When the order of each element in the string/array doesn't matter, you can use the sorted string/array as the key.
+2. If you only care about the offset of each value, usually the offset from the first value, you can use the offset as the key.
+3. In a tree, you might want to directly use the TreeNode as key sometimes. But in most cases, the serialization of the subtree might be a better idea.
+4. In a matrix, you might want to use the row index or the column index as key.
+5. In a Sudoku, you can combine the row index and the column index to identify which block this element belongs to.
+Block = (i/3)*3 + (j/3)
+6. Sometimes, in a matrix, you might want to aggregate the values in the same diagonal line.
+Diagonal order (i,j) -> i-j
+Anti-Diagonal order (i,j) -> i+j

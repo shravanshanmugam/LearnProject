@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/ddd" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/pluralsight/ddd" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,12 +154,29 @@
       <command value="open veho" />
     </option>
   </component>
-  <component name="RunManager" selected="Java Scratch.Solution">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Java Scratch.Solution (1)">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="js.build_tools.grunt">
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
     </configuration>
     <configuration name="Course" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shravan.learn.springboot.model.Course" />
@@ -172,35 +191,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Greeter$Temp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.lambda.java7.Greeter$Temp" />
-      <module name="LearnLambda" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shravan.learn.lambda.java7.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="MyHashMap" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyHashMap" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Greeter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.lambda.java7.Greeter" />
-      <module name="LearnLambda" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shravan.learn.lambda.java7.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="MyHashSet" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyHashSet" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MinStack" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MinStack" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+    <configuration name="Solution (1)" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solution" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -232,27 +239,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="js.build_tools.grunt">
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Application.Greeter$Temp" />
-      <item itemvalue="Application.Greeter" />
       <item itemvalue="Application.Course" />
       <item itemvalue="Java Scratch.Solution" />
-      <item itemvalue="Java Scratch.MinStack" />
-      <item itemvalue="Spring Boot.LearnframeworksApplication" />
-      <item itemvalue="Spring Boot.ProjectReactorApplication" />
+      <item itemvalue="Java Scratch.Solution (1)" />
+      <item itemvalue="Java Scratch.MyHashSet" />
+      <item itemvalue="Java Scratch.MyHashMap" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Java Scratch.Solution (1)" />
+        <item itemvalue="Java Scratch.MyHashMap" />
+        <item itemvalue="Java Scratch.MyHashSet" />
         <item itemvalue="Java Scratch.Solution" />
         <item itemvalue="Application.Course" />
-        <item itemvalue="Application.Greeter" />
-        <item itemvalue="Application.Greeter$Temp" />
-        <item itemvalue="Java Scratch.MinStack" />
       </list>
     </recent_temporary>
   </component>
