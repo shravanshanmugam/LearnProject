@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/arrays" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/arrays" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/binarytree" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/binarytree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/trie" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/trie" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,28 +178,15 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Course" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.springboot.model.Course" />
-      <module name="LearnSpringBoot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shravan.learn.springboot.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="MapSum" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MapSum" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="MyHashMap" type="Java Scratch" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MyHashMap" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyHashSet" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MyHashSet" />
       <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -212,9 +199,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Solution" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+    <configuration name="Trie" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Trie" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordDictionary" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="WordDictionary" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -240,19 +234,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Course" />
-      <item itemvalue="Java Scratch.Solution" />
       <item itemvalue="Java Scratch.Solution (1)" />
-      <item itemvalue="Java Scratch.MyHashSet" />
       <item itemvalue="Java Scratch.MyHashMap" />
+      <item itemvalue="Java Scratch.Trie" />
+      <item itemvalue="Java Scratch.MapSum" />
+      <item itemvalue="Java Scratch.WordDictionary" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Java Scratch.Solution (1)" />
+        <item itemvalue="Java Scratch.WordDictionary" />
+        <item itemvalue="Java Scratch.MapSum" />
+        <item itemvalue="Java Scratch.Trie" />
         <item itemvalue="Java Scratch.MyHashMap" />
-        <item itemvalue="Java Scratch.MyHashSet" />
-        <item itemvalue="Java Scratch.Solution" />
-        <item itemvalue="Application.Course" />
       </list>
     </recent_temporary>
   </component>
@@ -564,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615283062388</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="leetcode learning">
+      <created>1615369095334</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1615369095334</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

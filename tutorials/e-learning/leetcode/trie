@@ -1,0 +1,66 @@
+Trie, also called prefix tree, is a special form of a Nary tree
+Typically, a trie is used to store strings. Each Trie node represents a string (a prefix).
+Each node might have several children nodes while the paths to different children nodes represent different characters.
+And the strings the child nodes represent will be the origin string represented by the node itself plus the character on the path
+It is worth noting that the root node is associated with the empty string
+Trie is widely used in various applications, such as autocomplete, spell checker, etc.
+
+1. Trie using Arrays
+class TrieNode {
+    // change this value to adapt to different cases
+    public static final N = 26;
+    public TrieNode[] children = new TrieNode[N];
+
+    // you might need some extra values according to different cases
+};
+
+/** Usage:
+ *  Initialization: TrieNode root = new TrieNode();
+ *  Return a specific child node with char c: root.children[c - 'a']
+ */
+
+It is really fast to visit a child node. It is comparatively easy to visit a specific child since we can easily transfer
+a character to an index in most cases. But not all children nodes are needed. So there might be some waste of space.
+
+2. Trie using Hashmaps
+class TrieNode {
+    public Map<Character, TrieNode> children = new HashMap<>();
+
+    // you might need some extra values according to different cases
+};
+
+/** Usage:
+ *  Initialization: TrieNode root = new TrieNode();
+ *  Return a specific child node with char c: root.children.get(c)
+ */
+It is even easier to visit a specific child directly by the corresponding character. But it might be a little slower than using an array.
+However, it saves some space since we only store the children nodes we need.
+It is also more flexible because we are not limited by a fixed length and fixed range.
+
+Actual words
+Each Trie node represents a string but not all the strings represented by Trie nodes are meaningful.
+If we only want to store words in a Trie, we might declare a boolean in each node as a flag to indicate if the string represented by this node is a word or not
+
+I. Insertion pseudocode
+1. Initialize: cur = root
+2. for each char c in target string S:
+3.      if cur does not have a child c:
+4.          cur.children[c] = new Trie node
+5.      cur = cur.children[c]
+6. cur is the node which represents the string S
+
+II. Search prefix pseudocode
+1. Initialize: cur = root
+2. for each char c in target string S:
+3.   if cur does not have a child c:
+4.     search fails
+5.   cur = cur.children[c]
+6. search successes
+
+III. Search word - same as search prefix + check if it is a word and not just a prefix using the boolean flag
+
+Practical applications
+1. Autocomplete search boxes
+2. Spell checker
+3. Accelerate DFS problems
+4. IP Routing (Longest prefix match)
