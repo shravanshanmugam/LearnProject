@@ -1,0 +1,7 @@
+A string is actually an array of unicode characters
+
+String comparison
+1. == compares object reference
+2. equals method compares contents
+
+Immutable means that you can't change the content of the string once it's initialized.

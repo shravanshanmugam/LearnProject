@@ -5,6 +5,7 @@ ii. while stack not empty, pop from stack
 iii. if right subtree exists, push to stack
 iv. if left subtree exists, push to stack
 v. add current node to list
+Idea: Push right, left and pop one at a time
 
 2. Inorder traversal - left subtree, root, right subtree - sorted order for binary search tree
 Using stack
@@ -13,6 +14,7 @@ ii. go to leftmost leaf node and push each node to stack
 iii. pop from stack
 iv. add current node note to list
 v. go to right subtree
+Idea: Go to left most node and then go to right subtree
 
 3. Post-order traversal - left subtree, right subtree, root - used for mathematical expressions
 Using 2 stacks
@@ -22,6 +24,7 @@ iii. push to second stack
 iv. if left subtree exists, push to stack
 v. if right subtree exists, push to stack
 vi. while second stack not empty, pop from stack and add to list
+Idea: Push root, right, left and pop one at a time
 
 4. Breadth first search - Level order traversal
 Using queue

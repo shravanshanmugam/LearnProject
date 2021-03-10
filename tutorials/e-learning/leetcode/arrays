@@ -6,3 +6,6 @@ i. Same direction
 ii. Opposite direction
 iii. Fixed width
 5. Circular array - no bounds
+6. 2D array
+In Java, the two-dimensional array is actually a one-dimensional array which contains M elements,
+each of which is an array of N integers.

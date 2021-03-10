@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/arrays" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/arrays" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/binarytree" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/binarytree" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -557,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586717062287</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="leetcode learning">
+      <created>1615283062388</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1615283062388</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +614,8 @@
     <MESSAGE value="ip routing notes added in networking" />
     <MESSAGE value="network services notes added in networking" />
     <MESSAGE value="models, entities, value objects, aggregates notes added in ddd" />
-    <option name="LAST_COMMIT_MESSAGE" value="models, entities, value objects, aggregates notes added in ddd" />
+    <MESSAGE value="leetcode learning" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
