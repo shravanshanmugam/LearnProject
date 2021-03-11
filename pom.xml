@@ -28,6 +28,7 @@
         <module>learnframeworks</module>
         <module>LearnBenchmark</module>
         <module>LearnSecurity</module>
+        <module>LeetCode</module>
     </modules>
 
     <properties>

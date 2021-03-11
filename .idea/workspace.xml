@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/queue" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/queue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/stack" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/stack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +167,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Java Scratch.Solution (1)">
+  <component name="RunManager" selected="Application.TwoSum">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
@@ -179,37 +179,67 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="MapSum" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MapSum" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
+    <configuration name="ContainsDuplicate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.array.ContainsDuplicate" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shravan.learn.problems.array.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyHashMap" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MyHashMap" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
+    <configuration name="IntersectionOfTwoArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.array.IntersectionOfTwoArrays" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shravan.learn.problems.array.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution (1)" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Solution" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
+    <configuration name="RotateArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.array.RotateArray" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shravan.learn.problems.array.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Trie" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Trie" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
+    <configuration name="SingleNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.array.SingleNumber" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shravan.learn.problems.array.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordDictionary" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WordDictionary" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
+    <configuration name="TwoSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.array.TwoSum" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shravan.learn.problems.array.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -235,19 +265,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Java Scratch.Solution (1)" />
-      <item itemvalue="Java Scratch.MyHashMap" />
-      <item itemvalue="Java Scratch.Trie" />
-      <item itemvalue="Java Scratch.MapSum" />
-      <item itemvalue="Java Scratch.WordDictionary" />
+      <item itemvalue="Application.RotateArray" />
+      <item itemvalue="Application.ContainsDuplicate" />
+      <item itemvalue="Application.SingleNumber" />
+      <item itemvalue="Application.IntersectionOfTwoArrays" />
+      <item itemvalue="Application.TwoSum" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Java Scratch.Solution (1)" />
-        <item itemvalue="Java Scratch.WordDictionary" />
-        <item itemvalue="Java Scratch.MapSum" />
-        <item itemvalue="Java Scratch.Trie" />
-        <item itemvalue="Java Scratch.MyHashMap" />
+        <item itemvalue="Application.TwoSum" />
+        <item itemvalue="Application.IntersectionOfTwoArrays" />
+        <item itemvalue="Application.SingleNumber" />
+        <item itemvalue="Application.ContainsDuplicate" />
+        <item itemvalue="Application.RotateArray" />
       </list>
     </recent_temporary>
   </component>
@@ -573,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615402591327</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="leetcode learning n-ary tree">
+      <created>1615477001036</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1615477001036</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +636,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="adding courses urls and shortcuts" />
     <MESSAGE value="cleaning mess" />
     <MESSAGE value="changing README.md file" />
     <MESSAGE value="Merge branch 'master' of https://github.com/shravanshanmugam/LearnProject&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
@@ -624,7 +660,8 @@
     <MESSAGE value="models, entities, value objects, aggregates notes added in ddd" />
     <MESSAGE value="leetcode learning" />
     <MESSAGE value="leetcode learning trie DS" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning trie DS" />
+    <MESSAGE value="leetcode learning n-ary tree" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning n-ary tree" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

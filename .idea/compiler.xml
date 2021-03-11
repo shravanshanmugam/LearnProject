@@ -13,6 +13,7 @@
         <module name="NewMavenModule" />
         <module name="LearnConcurrency" />
         <module name="DesignPatterns" />
+        <module name="LeetCode" />
         <module name="LearnSpring" />
         <module name="LearnBenchmark" />
         <module name="LearnSecurity" />
@@ -30,6 +31,7 @@
       <module name="LearnSecurity" options="-parameters" />
       <module name="LearnSpring" options="-parameters" />
       <module name="LearnSpringBoot" options="-parameters" />
+      <module name="LeetCode" options="-parameters" />
       <module name="learnframeworks" options="-parameters" />
     </option>
   </component>
