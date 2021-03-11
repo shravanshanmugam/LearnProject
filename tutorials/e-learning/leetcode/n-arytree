@@ -1,0 +1,29 @@
+Retrospect - Traverse a Binary Tree
+
+1. Preorder Traversal: Visit the root node, then traverse the left subtree and finally traverse the right subtree.
+2. Inorder Traversal: Traverse the left subtree, then visit the root node and finally traverse the right subtree.
+3. Postorder Traversal: Traverse the left subtree, then traverse the right subtree and finally visit the root node.
+4. Level-order Traversal: Traverse the tree level by level.
+
+For N-ary tree, for each child, Traverse the subtree rooted at that child by recursively calling the traversal function
+
+I. Top-down recursion
+"Top-down" means that in each recursion level, we will visit the node first to come up with some values, and pass these
+values to its children when calling the function recursively.
+
+Pseudocode
+1. return specific value for null node
+2. update the answer if needed                              // answer <-- params
+3. for each child node root.children[k]:
+4.      ans[k] = top_down(root.children[k], new_params[k])  // new_params <-- root.val, params
+5. return the answer if needed                              // answer <-- all ans[k]
+
+II. Bottom-up recursion
+"Bottom-up" means that in each recursion level, we will firstly call the functions recursively for all the children nodes
+and then come up with the answer according to the return values and the value of the root node itself.
+
+Pseudocode
+1. return specific value for null node
+2. for each child node root.children[k]:
+3.      ans[k] = bottom_up(root.children[k])    // call function recursively for all children
+4. return answer                                // answer <- root.val, all ans[k]
