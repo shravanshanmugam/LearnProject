@@ -167,7 +167,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ShuffleArray">
+  <component name="RunManager" selected="Application.BitsUtil">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
@@ -179,12 +179,12 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="HouseRobber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.dynamicprogramming.HouseRobber" />
+    <configuration name="BitsUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.common.BitsUtil" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.dynamicprogramming.*" />
+          <option name="PATTERN" value="com.shravan.learn.common.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -192,12 +192,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReverseInteger" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.strings.ReverseInteger" />
+    <configuration name="HouseRobber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.dynamicprogramming.HouseRobber" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.strings.*" />
+          <option name="PATTERN" value="com.shravan.learn.problems.dynamicprogramming.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -265,19 +265,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ReverseInteger" />
       <item itemvalue="Application.ValidPalindrome" />
       <item itemvalue="Application.ReverseLinkedList" />
       <item itemvalue="Application.HouseRobber" />
       <item itemvalue="Application.ShuffleArray" />
+      <item itemvalue="Application.BitsUtil" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BitsUtil" />
         <item itemvalue="Application.ShuffleArray" />
         <item itemvalue="Application.HouseRobber" />
         <item itemvalue="Application.ReverseLinkedList" />
         <item itemvalue="Application.ValidPalindrome" />
-        <item itemvalue="Application.ReverseInteger" />
       </list>
     </recent_temporary>
   </component>
@@ -645,7 +645,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615568906708</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="leetcode learning math problems">
+      <created>1615570363692</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1615570363692</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,7 +678,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="restructured projects" />
     <MESSAGE value="removing unnecessary files" />
     <MESSAGE value="transport layer security notes added" />
     <MESSAGE value="password based key derivation function" />
@@ -696,7 +702,8 @@
     <MESSAGE value="leetcode easy interview trees, linkedlist, sort and search problems" />
     <MESSAGE value="leetcode easy interview trees, linkedlist, sort and search, dynamic programming, design problems" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/dynamicprogramming/MaximumSumSubArray.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/dynamicprogramming/MaximumSumSubArray.java" />
+    <MESSAGE value="leetcode learning math problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning math problems" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
