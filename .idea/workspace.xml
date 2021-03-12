@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/binarytree" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/binarytree" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,6 +95,9 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.shravan.learn.frameworks.learnframeworks.concurrency" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.shravan.learn.problems.sortandsearch" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.shravan.learn.frameworks.learnframeworks" />
     </key>
@@ -165,7 +169,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ValidPalindrome">
+  <component name="RunManager" selected="Application.ReverseLinkedList">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
@@ -203,12 +207,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SingleNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.array.SingleNumber" />
+    <configuration name="ReverseLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.linkedlist.ReverseLinkedList" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.array.*" />
+          <option name="PATTERN" value="com.shravan.learn.problems.linkedlist.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -263,19 +267,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SingleNumber" />
       <item itemvalue="Application.IntersectionOfTwoArrays" />
       <item itemvalue="Application.TwoSum" />
       <item itemvalue="Application.ReverseInteger" />
       <item itemvalue="Application.ValidPalindrome" />
+      <item itemvalue="Application.ReverseLinkedList" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReverseLinkedList" />
         <item itemvalue="Application.ValidPalindrome" />
         <item itemvalue="Application.ReverseInteger" />
         <item itemvalue="Application.TwoSum" />
         <item itemvalue="Application.IntersectionOfTwoArrays" />
-        <item itemvalue="Application.SingleNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -615,7 +619,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615484997954</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="leetcode easy interview string problems">
+      <created>1615489101220</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1615489101220</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,7 +652,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="changing README.md file" />
     <MESSAGE value="Merge branch 'master' of https://github.com/shravanshanmugam/LearnProject&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
     <MESSAGE value="cryptography lessons added" />
     <MESSAGE value="LearnSecurity module added" />
@@ -666,7 +676,8 @@
     <MESSAGE value="leetcode learning trie DS" />
     <MESSAGE value="leetcode learning n-ary tree" />
     <MESSAGE value="leetcode easy interview array problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode easy interview array problems" />
+    <MESSAGE value="leetcode easy interview string problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode easy interview string problems" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
