@@ -8,3 +8,7 @@ X   Y   X|Y     X&Y     X^Y     ~X
 & - if there is 1 then it is 1
 ^ - if different then 1, if same then 0
 ~ - opposite
+>> - right shift
+<< - left shift
+>>> - right shift for unsigned number
+<<< - left shift for unsigned number

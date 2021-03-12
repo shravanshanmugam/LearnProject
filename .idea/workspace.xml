@@ -4,9 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/others/NumberOf1Bits.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/others/NumberOf1Bits.java" afterDir="false" />
-    </list>
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,12 +91,8 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.shravan.learn.frameworks.learnframeworks.concurrency" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tutorials/e-learning/freeCodeCamp" />
-      <recent name="$PROJECT_DIR$/tutorials/e-learning/Intellipaat" />
-      <recent name="$PROJECT_DIR$/tutorials/e-learning" />
-      <recent name="$PROJECT_DIR$/tutorials/java" />
-      <recent name="$PROJECT_DIR$/tutorials" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.shravan.learn.problems.sortandsearch" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.shravan.learn.frameworks.learnframeworks" />
@@ -106,8 +100,12 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.shravan.learn.problems.sortandsearch" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tutorials/e-learning/freeCodeCamp" />
+      <recent name="$PROJECT_DIR$/tutorials/e-learning/Intellipaat" />
+      <recent name="$PROJECT_DIR$/tutorials/e-learning" />
+      <recent name="$PROJECT_DIR$/tutorials/java" />
+      <recent name="$PROJECT_DIR$/tutorials" />
     </key>
   </component>
   <component name="RestClientSettings">
