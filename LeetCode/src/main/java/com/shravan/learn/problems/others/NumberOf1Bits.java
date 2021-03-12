@@ -1,6 +1,7 @@
 package com.shravan.learn.problems.others;
 
 public class NumberOf1Bits {
+    // number of 1 bits in a number
     public int hammingWeight(int n) {
         int sum = 0;
         while (n != 0) {
