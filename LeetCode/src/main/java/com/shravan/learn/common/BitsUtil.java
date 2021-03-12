@@ -35,9 +35,4 @@ public class BitsUtil {
         }
         return count;
     }
-
-    public static void main(String[] args) {
-        int invertBits = BitsUtil.invertBits(5);
-        System.out.println("invertBits = " + invertBits);
-    }
 }

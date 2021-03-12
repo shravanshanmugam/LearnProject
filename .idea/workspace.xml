@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/BitsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/BitsUtil.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +168,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BitsUtil">
+  <component name="RunManager" selected="Application.ReverseBits">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
@@ -192,6 +193,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HammingDistance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.others.HammingDistance" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shravan.learn.problems.others.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HouseRobber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.dynamicprogramming.HouseRobber" />
       <module name="LeetCode" />
@@ -205,12 +219,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReverseLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.linkedlist.ReverseLinkedList" />
+    <configuration name="ReverseBits" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.others.ReverseBits" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.linkedlist.*" />
+          <option name="PATTERN" value="com.shravan.learn.problems.others.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -224,19 +238,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.shravan.learn.problems.design.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ValidPalindrome" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.strings.ValidPalindrome" />
-      <module name="LeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.strings.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -265,19 +266,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ValidPalindrome" />
-      <item itemvalue="Application.ReverseLinkedList" />
       <item itemvalue="Application.HouseRobber" />
       <item itemvalue="Application.ShuffleArray" />
       <item itemvalue="Application.BitsUtil" />
+      <item itemvalue="Application.HammingDistance" />
+      <item itemvalue="Application.ReverseBits" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReverseBits" />
+        <item itemvalue="Application.HammingDistance" />
         <item itemvalue="Application.BitsUtil" />
         <item itemvalue="Application.ShuffleArray" />
         <item itemvalue="Application.HouseRobber" />
-        <item itemvalue="Application.ReverseLinkedList" />
-        <item itemvalue="Application.ValidPalindrome" />
       </list>
     </recent_temporary>
   </component>
@@ -652,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615570363692</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Bit ops utility class">
+      <created>1615570909956</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1615570909956</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +686,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="removing unnecessary files" />
     <MESSAGE value="transport layer security notes added" />
     <MESSAGE value="password based key derivation function" />
     <MESSAGE value="salted password hashes, federation notes added" />
@@ -703,7 +710,8 @@
     <MESSAGE value="leetcode easy interview trees, linkedlist, sort and search, dynamic programming, design problems" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/dynamicprogramming/MaximumSumSubArray.java" />
     <MESSAGE value="leetcode learning math problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning math problems" />
+    <MESSAGE value="Bit ops utility class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bit ops utility class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
