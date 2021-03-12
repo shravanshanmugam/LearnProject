@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/binarytree" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/binarytree" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +167,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReverseLinkedList">
+  <component name="RunManager" selected="Application.ShuffleArray">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
@@ -181,12 +179,12 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="IntersectionOfTwoArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.array.IntersectionOfTwoArrays" />
+    <configuration name="HouseRobber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.dynamicprogramming.HouseRobber" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.array.*" />
+          <option name="PATTERN" value="com.shravan.learn.problems.dynamicprogramming.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -220,12 +218,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwoSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.array.TwoSum" />
+    <configuration name="ShuffleArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.design.ShuffleArray" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.array.*" />
+          <option name="PATTERN" value="com.shravan.learn.problems.design.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -267,19 +265,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.IntersectionOfTwoArrays" />
-      <item itemvalue="Application.TwoSum" />
       <item itemvalue="Application.ReverseInteger" />
       <item itemvalue="Application.ValidPalindrome" />
       <item itemvalue="Application.ReverseLinkedList" />
+      <item itemvalue="Application.HouseRobber" />
+      <item itemvalue="Application.ShuffleArray" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ShuffleArray" />
+        <item itemvalue="Application.HouseRobber" />
         <item itemvalue="Application.ReverseLinkedList" />
         <item itemvalue="Application.ValidPalindrome" />
         <item itemvalue="Application.ReverseInteger" />
-        <item itemvalue="Application.TwoSum" />
-        <item itemvalue="Application.IntersectionOfTwoArrays" />
       </list>
     </recent_temporary>
   </component>
@@ -626,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615489101220</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="leetcode easy interview trees, linkedlist, sort and search problems">
+      <created>1615550266655</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1615550266655</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -652,7 +657,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Merge branch 'master' of https://github.com/shravanshanmugam/LearnProject&#10;&#10;# Conflicts:&#10;#&#9;README.md" />
     <MESSAGE value="cryptography lessons added" />
     <MESSAGE value="LearnSecurity module added" />
     <MESSAGE value="restructured projects" />
@@ -677,7 +681,8 @@
     <MESSAGE value="leetcode learning n-ary tree" />
     <MESSAGE value="leetcode easy interview array problems" />
     <MESSAGE value="leetcode easy interview string problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode easy interview string problems" />
+    <MESSAGE value="leetcode easy interview trees, linkedlist, sort and search problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode easy interview trees, linkedlist, sort and search problems" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
