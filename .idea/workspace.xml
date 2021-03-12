@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/BitsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/BitsUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/others/ReverseBits.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/others/ReverseBits.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -316,20 +315,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00001" summary="adding learn benchmarks project">
-      <created>1572117955095</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1572117955095</updated>
-    </task>
-    <task id="LOCAL-00002" summary="adding learn benchmarks project">
-      <created>1572117975213</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1572117975213</updated>
     </task>
     <task id="LOCAL-00003" summary="adding learn benchmarks project">
       <created>1572118146118</created>
@@ -660,7 +645,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615570909956</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="leetcode learning other problems">
+      <created>1615573880334</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1615573880334</updated>
+    </task>
+    <task id="LOCAL-00051" summary="leetcode learning other problems">
+      <created>1615573951941</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1615573951941</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -686,7 +685,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="transport layer security notes added" />
     <MESSAGE value="password based key derivation function" />
     <MESSAGE value="salted password hashes, federation notes added" />
     <MESSAGE value="misc notes on cryptography" />
@@ -711,7 +709,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/dynamicprogramming/MaximumSumSubArray.java" />
     <MESSAGE value="leetcode learning math problems" />
     <MESSAGE value="Bit ops utility class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bit ops utility class" />
+    <MESSAGE value="leetcode learning other problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning other problems" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
