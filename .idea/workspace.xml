@@ -4,8 +4,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/dynamicprogramming/MaximumSumSubArray.java">
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java" afterDir="false" />
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -638,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615568514956</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/dynamicprogramming/MaximumSumSubArray.java">
+      <created>1615568906708</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1615568906708</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +671,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="LearnSecurity module added" />
     <MESSAGE value="restructured projects" />
     <MESSAGE value="removing unnecessary files" />
     <MESSAGE value="transport layer security notes added" />
@@ -689,7 +695,8 @@
     <MESSAGE value="leetcode easy interview string problems" />
     <MESSAGE value="leetcode easy interview trees, linkedlist, sort and search problems" />
     <MESSAGE value="leetcode easy interview trees, linkedlist, sort and search, dynamic programming, design problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode easy interview trees, linkedlist, sort and search, dynamic programming, design problems" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/dynamicprogramming/MaximumSumSubArray.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/dynamicprogramming/MaximumSumSubArray.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
