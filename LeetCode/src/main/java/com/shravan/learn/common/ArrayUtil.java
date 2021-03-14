@@ -1,8 +1,6 @@
 package com.shravan.learn.common;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class ArrayUtil {
 
@@ -31,6 +29,14 @@ public class ArrayUtil {
             }
         }
         return copy;
+    }
+
+    public static Map<Integer, Integer> frequency(int[] nums) {
+        Map<Integer, Integer> frequency = new HashMap<>();
+        for (int num : nums) {
+            frequency.put(num, frequency.getOrDefault(num, 0) + 1);
+        }
+        return frequency;
     }
 
     public static List<String> toList(String[] a) {
