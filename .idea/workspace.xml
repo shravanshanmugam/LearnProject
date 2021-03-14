@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -316,20 +315,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00006" summary="adding learn benchmarks project">
-      <created>1572186099748</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1572186099748</updated>
-    </task>
-    <task id="LOCAL-00007" summary="adding learn benchmarks project">
-      <created>1572195236079</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1572195236079</updated>
     </task>
     <task id="LOCAL-00008" summary="adding courses urls and shortcuts">
       <created>1586022228197</created>
@@ -660,7 +645,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615670027541</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="leetcode learning medium linkedlist problems">
+      <created>1615718378629</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1615718378630</updated>
+    </task>
+    <task id="LOCAL-00056" summary="leetcode learning medium linkedlist problems">
+      <created>1615718410305</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1615718410305</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -686,7 +685,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="notes on networking" />
     <MESSAGE value="ip addressing in networking notes added" />
     <MESSAGE value="subnetting networks in networking notes added" />
     <MESSAGE value="IPv6 address in networking notes added" />
@@ -711,7 +709,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="bit shift ops for signed and unsigned types" />
     <MESSAGE value="leetcode learning medium array and string problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning medium array and string problems" />
+    <MESSAGE value="leetcode learning medium linkedlist problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning medium linkedlist problems" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
