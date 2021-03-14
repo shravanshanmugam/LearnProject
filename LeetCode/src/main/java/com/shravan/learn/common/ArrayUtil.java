@@ -1,5 +1,9 @@
 package com.shravan.learn.common;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class ArrayUtil {
 
     public static void swap(int[] nums, int i, int j) {
@@ -27,5 +31,29 @@ public class ArrayUtil {
             }
         }
         return copy;
+    }
+
+    public static List<String> toList(String[] a) {
+        return new ArrayList<>(Arrays.asList(a));
+    }
+
+    public static String[] toArray(List<String> list) {
+        return list.toArray(new String[0]);
+    }
+
+    public static List<Integer> toList(int[] nums) {
+        List<Integer> list = new ArrayList<>();
+        for (int num : nums) {
+            list.add(num);
+        }
+        return list;
+    }
+
+    public static int[] toIntArray(List<Integer> list) {
+        int[] nums = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            nums[i] = list.get(i);
+        }
+        return nums;
     }
 }
