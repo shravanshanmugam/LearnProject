@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/ArrayUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/ArrayUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/sortandsearch/TopKFrequentElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/sortandsearch/TopKFrequentElements.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +169,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LongestIncreasingSubsequence">
+  <component name="RunManager" selected="Application.QuickSelect">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
@@ -193,12 +194,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KthLargestElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.sortandsearch.KthLargestElement" />
+    <configuration name="LongestIncreasingSubsequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.dynamicprogramming.LongestIncreasingSubsequence" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.medium.sortandsearch.*" />
+          <option name="PATTERN" value="com.shravan.learn.problems.medium.dynamicprogramming.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -206,12 +207,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LongestIncreasingSubsequence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.dynamicprogramming.LongestIncreasingSubsequence" />
+    <configuration name="QuickSelect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.algorithms.QuickSelect" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.medium.dynamicprogramming.*" />
+          <option name="PATTERN" value="com.shravan.learn.algorithms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TopKFrequentElements" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.sortandsearch.TopKFrequentElements" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shravan.learn.problems.medium.sortandsearch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -228,13 +242,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Solution" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/LeetCode.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -260,19 +267,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.KthLargestElement" />
-      <item itemvalue="Java Scratch.Solution" />
       <item itemvalue="Application.UniquePaths" />
       <item itemvalue="Application.CoinChange" />
       <item itemvalue="Application.LongestIncreasingSubsequence" />
+      <item itemvalue="Application.TopKFrequentElements" />
+      <item itemvalue="Application.QuickSelect" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.QuickSelect" />
+        <item itemvalue="Application.TopKFrequentElements" />
         <item itemvalue="Application.LongestIncreasingSubsequence" />
         <item itemvalue="Application.CoinChange" />
         <item itemvalue="Application.UniquePaths" />
-        <item itemvalue="Java Scratch.Solution" />
-        <item itemvalue="Application.KthLargestElement" />
       </list>
     </recent_temporary>
   </component>
@@ -310,13 +317,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00010" summary="cleaning mess">
-      <created>1586022516315</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1586022516315</updated>
     </task>
     <task id="LOCAL-00011" summary="changing README.md file">
       <created>1586026844867</created>
@@ -654,7 +654,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615731152735</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="leetcode learning medium dynamic programming problems">
+      <created>1615758417798</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1615758417798</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -680,7 +687,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="IPv6 address in networking notes added" />
     <MESSAGE value="Ethernet in networking notes added" />
     <MESSAGE value="switch features in networking notes added" />
     <MESSAGE value="ddd notes benefits and drawbacks added" />
@@ -705,7 +711,8 @@
     <MESSAGE value="leetcode learning medium linkedlist problems" />
     <MESSAGE value="leetcode learning medium tree problems" />
     <MESSAGE value="leetcode learning medium backtracking problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning medium backtracking problems" />
+    <MESSAGE value="leetcode learning medium dynamic programming problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning medium dynamic programming problems" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
