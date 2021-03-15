@@ -168,7 +168,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MergeIntervals">
+  <component name="RunManager" selected="Application.Division">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
@@ -180,12 +180,38 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="KthLargestElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.sortandsearch.KthLargestElement" />
+    <configuration name="Division" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.math.Division" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.medium.sortandsearch.*" />
+          <option name="PATTERN" value="com.shravan.learn.problems.medium.math.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FactorialTrailingZeroes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.math.FactorialTrailingZeroes" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shravan.learn.problems.medium.math.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HappyNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.math.HappyNumber" />
+      <module name="LeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shravan.learn.problems.medium.math.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -206,38 +232,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuickSelect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.algorithms.QuickSelect" />
+    <configuration name="SquareRoot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.math.SquareRoot" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.algorithms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.algorithms.QuickSort" />
-      <module name="LeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shravan.learn.algorithms.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchForRange" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.sortandsearch.SearchForRange" />
-      <module name="LeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.medium.sortandsearch.*" />
+          <option name="PATTERN" value="com.shravan.learn.problems.medium.math.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -266,19 +266,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.QuickSelect" />
-      <item itemvalue="Application.KthLargestElement" />
-      <item itemvalue="Application.SearchForRange" />
-      <item itemvalue="Application.QuickSort" />
       <item itemvalue="Application.MergeIntervals" />
+      <item itemvalue="Application.HappyNumber" />
+      <item itemvalue="Application.FactorialTrailingZeroes" />
+      <item itemvalue="Application.SquareRoot" />
+      <item itemvalue="Application.Division" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Division" />
+        <item itemvalue="Application.SquareRoot" />
+        <item itemvalue="Application.FactorialTrailingZeroes" />
+        <item itemvalue="Application.HappyNumber" />
         <item itemvalue="Application.MergeIntervals" />
-        <item itemvalue="Application.QuickSort" />
-        <item itemvalue="Application.SearchForRange" />
-        <item itemvalue="Application.KthLargestElement" />
-        <item itemvalue="Application.QuickSelect" />
       </list>
     </recent_temporary>
   </component>
@@ -316,13 +316,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00013" summary="changing README.md file">
-      <created>1586026930476</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1586026930476</updated>
     </task>
     <task id="LOCAL-00014" summary="changing README.md file">
       <created>1586026954041</created>
@@ -660,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615823621414</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="leetcode learning medium design problems">
+      <created>1615824444577</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1615824444577</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -686,7 +686,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="ddd notes benefits and drawbacks added" />
     <MESSAGE value="ddd notes definitions" />
     <MESSAGE value="ip routing notes added in networking" />
     <MESSAGE value="network services notes added in networking" />
@@ -711,7 +710,8 @@
     <MESSAGE value="leetcode learning medium dynamic programming problems" />
     <MESSAGE value="QuickSelect algorithm for largest K elements in array" />
     <MESSAGE value="leetcode learning medium sort and search problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning medium sort and search problems" />
+    <MESSAGE value="leetcode learning medium design problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning medium design problems" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
