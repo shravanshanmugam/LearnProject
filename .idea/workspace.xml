@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/QuickSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/QuickSelect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/sortandsearch/KthLargestElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/sortandsearch/KthLargestElement.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +38,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="shravanshanmugam &lt;shravan.shan@gmail.com&gt;s" />
         <option value="shravanshanmugam &lt;shravan.shan@gmail.com&gt;" />
+        <option value="shravanshanmugam &lt;shravan.shan@gmail.com&gt;s" />
         <option value="sh" />
       </list>
     </option>
@@ -318,13 +316,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00012" summary="changing README.md file">
-      <created>1586026867897</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1586026867897</updated>
     </task>
     <task id="LOCAL-00013" summary="changing README.md file">
       <created>1586026930476</created>
@@ -662,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615803353807</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="leetcode learning medium sort and search problems">
+      <created>1615823621414</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1615823621414</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,7 +686,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="switch features in networking notes added" />
     <MESSAGE value="ddd notes benefits and drawbacks added" />
     <MESSAGE value="ddd notes definitions" />
     <MESSAGE value="ip routing notes added in networking" />
@@ -713,7 +710,8 @@
     <MESSAGE value="leetcode learning medium backtracking problems" />
     <MESSAGE value="leetcode learning medium dynamic programming problems" />
     <MESSAGE value="QuickSelect algorithm for largest K elements in array" />
-    <option name="LAST_COMMIT_MESSAGE" value="QuickSelect algorithm for largest K elements in array" />
+    <MESSAGE value="leetcode learning medium sort and search problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning medium sort and search problems" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
