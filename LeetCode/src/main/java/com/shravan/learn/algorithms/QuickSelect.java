@@ -38,14 +38,13 @@ public class QuickSelect {
     }
 
     // Lomuto's Partition Scheme
-    // move elements less than pivotFrequency to left and greater than pivotFrequency to right
+    // move elements less than pivotFrequency to left and greater than pivot value to right
     // return index where pivot is placed
     private int partition(int[] nums, int left, int right, int pivotIndex) {
-        int pivotFrequency = nums[pivotIndex];
         ArrayUtil.swap(nums, pivotIndex, right);
         int store_index = left;
         for (int i = left; i <= right; i++) {
-            if (nums[i] < pivotFrequency) {
+            if (nums[i] < nums[pivotIndex]) {
                 ArrayUtil.swap(nums, store_index, i);
                 store_index++;
             }
