@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/math/Division.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/math/Division.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +168,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Division">
+  <component name="RunManager" selected="Application.TaskScheduler">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
@@ -221,12 +219,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeIntervals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.sortandsearch.MergeIntervals" />
+    <configuration name="SquareRoot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.math.SquareRoot" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.medium.sortandsearch.*" />
+          <option name="PATTERN" value="com.shravan.learn.problems.medium.math.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -234,12 +232,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SquareRoot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.math.SquareRoot" />
+    <configuration name="TaskScheduler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.others.TaskScheduler" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.medium.math.*" />
+          <option name="PATTERN" value="com.shravan.learn.problems.medium.others.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -268,19 +266,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.MergeIntervals" />
       <item itemvalue="Application.HappyNumber" />
       <item itemvalue="Application.FactorialTrailingZeroes" />
       <item itemvalue="Application.SquareRoot" />
       <item itemvalue="Application.Division" />
+      <item itemvalue="Application.TaskScheduler" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TaskScheduler" />
         <item itemvalue="Application.Division" />
         <item itemvalue="Application.SquareRoot" />
         <item itemvalue="Application.FactorialTrailingZeroes" />
         <item itemvalue="Application.HappyNumber" />
-        <item itemvalue="Application.MergeIntervals" />
       </list>
     </recent_temporary>
   </component>
@@ -318,13 +316,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00015" summary="changing README.md file">
-      <created>1586027013534</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1586027013534</updated>
     </task>
     <task id="LOCAL-00016" summary="cryptography lessons added">
       <created>1586091279424</created>
@@ -662,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615846268618</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="leetcode learning medium math problems">
+      <created>1615909232597</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1615909232597</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,7 +686,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="ip routing notes added in networking" />
     <MESSAGE value="network services notes added in networking" />
     <MESSAGE value="models, entities, value objects, aggregates notes added in ddd" />
     <MESSAGE value="leetcode learning" />
@@ -713,7 +710,8 @@
     <MESSAGE value="leetcode learning medium sort and search problems" />
     <MESSAGE value="leetcode learning medium design problems" />
     <MESSAGE value="leetcode learning medium math and other problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning medium math and other problems" />
+    <MESSAGE value="leetcode learning medium math problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning medium math problems" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
