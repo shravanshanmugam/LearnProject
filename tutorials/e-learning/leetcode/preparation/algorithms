@@ -1,0 +1,27 @@
+Algorithms
+==========
+
+1. Prefix sum: https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/
+2. Sieve of Eratosthenes: https://leetcode.com/problems/count-primes/
+3. Binary Gap: https://leetcode.com/problems/binary-gap/solution/
+4. Number Complement/Invert bits: https://leetcode.com/problems/number-complement/
+https://leetcode.com/problems/complement-of-base-10-integer/
+5. Polynomial product: https://leetcode.com/problems/excel-sheet-column-number/discuss/739294/Easy-java-solution-beats-100
+6. Digital Root: https://en.wikipedia.org/wiki/Digital_root
+https://leetcode.com/problems/add-digits/discuss/554252/digital-root-explanation
+7. Missing number: https://leetcode.com/problems/missing-number/solution/
+8. Brian Kernighan’s Algorithm: https://www.geeksforgeeks.org/count-set-bits-in-an-integer/
+https://leetcode.com/problems/power-of-two/discuss/738077/Java-faster-than-100
+https://leetcode.com/problems/power-of-four/discuss/80663/Java-one-line-solution
+https://leetcode.com/problems/power-of-four/discuss/80581/Java-shortest-code-without-cheating-recursion-loop.-easy-to-understand
+9. Leap year: https://www.geeksforgeeks.org/program-check-given-year-leap-year/
+10. Mersenne prime: https://www.geeksforgeeks.org/mersenne-prime/
+11. https://leetcode.com/problems/perfect-number/solution/
+Perfect number: https://en.wikipedia.org/wiki/Perfect_number
+12. Properties of square numbers: https://www.teachoo.com/8507/2761/Properties-of-Square-number/category/Properties-of-square-numbers/
+13. Largest contiguous subarray (Kadane's Algorithm): https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
+14. Target sum: https://leetcode.com/problems/target-sum/
+15. Duplicate number: https://leetcode.com/problems/find-the-duplicate-number/solution/
+Floyd's Tortoise and Hare (Cycle Detection)
+16. Find duplicate subtrees - Serialize and deserialize tree
+https://leetcode.com/problems/find-duplicate-subtrees/

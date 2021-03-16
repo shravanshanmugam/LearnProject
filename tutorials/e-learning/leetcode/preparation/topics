@@ -1,0 +1,31 @@
+Topics
+======
+
+1. Pattern Searching
+Boyer-Moore algorithm: https://leetcode.com/problems/majority-element/solution/
+https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/
+Knuth–Morris–Pratt algorithm: https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/
+https://leetcode.com/problems/implement-strstr/discuss/13276/AC-clean-Java-KMP-solution
+Rabin-Karp algorithm: https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/?ref=rp
+
+2. Backtracking
+https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
+https://www.geeksforgeeks.org/backtracking-algorithms/
+
+3. Bit manipulation/operations
+Count bits in a number: https://www.geeksforgeeks.org/count-total-bits-number/
+Count set bits in a number: https://www.geeksforgeeks.org/count-set-bits-in-an-integer/
+https://leetcode.com/problems/number-of-1-bits/solution/
+Count set bits in 1 to n: https://www.geeksforgeeks.org/count-total-set-bits-in-all-numbers-from-1-to-n/
+Invert bits of a number: https://www.geeksforgeeks.org/program-to-invert-bits-of-a-number-efficiently/?ref=rp
+https://www.geeksforgeeks.org/invert-actual-bits-number/
+Adding 2 numbers without arithmetic operation: https://www.geeksforgeeks.org/add-two-numbers-without-using-arithmetic-operators/
+
+4. Binary search tree
+https://leetcode.com/explore/learn/card/trie/
+
+5. Trie (Prefix tree)
+https://leetcode.com/explore/learn/card/trie/
+
+6. N-ary tree
+https://leetcode.com/explore/learn/card/n-ary-tree/

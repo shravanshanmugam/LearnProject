@@ -1,0 +1,153 @@
+Common Problems
+===============
+
+Arrays & Strings
+----------------
+
+1. Third maximum number
+https://leetcode.com/problems/third-maximum-number/
+i. track first, second and third max with 3 variables and keep updating
+
+2. Find all numbers disappeared in an array
+https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
+i. if number is present, then num[e] = 0, for all e
+ii. if there is any e for which num[e] != 0, then it is disappeared number
+
+3. Square of sorted array
+https://leetcode.com/problems/squares-of-a-sorted-array/
+i. use positive pointer and negative pointer (which is left of positive pointer)
+ii. square both numbers, compare and insert
+
+4. Find pivot index
+https://leetcode.com/problems/find-pivot-index/
+i. take overall sum
+ii. check left sum = right sum (right sum = sum - left sum - curr num)
+
+5. Longest common prefix
+https://leetcode.com/problems/longest-common-prefix/
+i. take first string as prefix
+ii. find common part with second string by reducing prefix length by 1 until prefix matches
+iii. check for all n strings
+
+6. Minimum size subarray sum
+https://leetcode.com/problems/minimum-size-subarray-sum/
+i. if current sum crosses target, then remove numbers from the front by using a front pointer
+ii. update min length of subarray sum whenever it meets the target
+
+7. Rotate array
+https://leetcode.com/problems/rotate-array/
+i. reverse entire list
+ii. reverse first k numbers
+iii. reverse last n-k numbers
+
+Linked list
+-----------
+
+1. Delete given node in linked list
+i. curr.val = curr.next.val and curr.next = curr.next.next;
+
+2. Linked List cycle starting point
+https://leetcode.com/problems/linked-list-cycle-ii/
+i. slow (1 step) and fast (2 steps) pointer to detect cycle.
+ii. restart slow (1 step) pointer from head until slow meets fast (1 step) again
+
+3. Odd even linked list
+https://leetcode.com/problems/odd-even-linked-list/
+i. odd, even, even.next pointers and update at every step
+ii. link tail of odd to head of even pointer
+
+4. Palindrome linked list
+https://leetcode.com/problems/palindrome-linked-list/
+i. find half way point using slow and fast pointer
+ii. reverse second half of linked list
+iii. compare first and second half
+
+5. Copy list with random pointer
+https://leetcode.com/problems/copy-list-with-random-pointer/
+i. create new node for each existing node
+ii. create map of old to new nod
+iii. iterate again to set random pointer using map
+
+Recursion
+---------
+
+1. Pascal's triangle using recursion
+https://leetcode.com/problems/pascals-triangle-ii/
+i. return list for n = 1, 2
+ii. for n > 2, get previous row list and use it to create new list and return
+
+Stack & Queue
+-------------
+
+1. Daily temperatures using stack
+https://leetcode.com/problems/daily-temperatures/
+i. push index into stack from reverse
+ii. while current temperature is higher pop from stack
+iii. update waiting days as difference in indices
+
+2. 01 matrix
+https://leetcode.com/problems/01-matrix/
+i. find indices of all 1s
+ii. BFS from each of these 1s
+
+Search and sort
+---------------
+
+1. Search in sorted rotated array
+https://leetcode.com/problems/search-in-rotated-sorted-array/
+https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
+Approach 1
+i. find pivot point
+ii. binary search on both left and right sub arrays
+Approach 2
+i. check if left to mid subarray is sorted, check which half target lies and recurse
+ii. if not sorted, then right is sort, check which half target lies and recurse
+
+2. Find peak element
+https://leetcode.com/problems/find-peak-element/
+i. if mid, mid+1 in increasing order, then peak is on the right
+ii. otherwise peak is on the left
+
+3. Find minimum in rotated sorted array
+https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+i. left half is greater than right most element
+ii. right half is less than right most element
+
+4. Find k closest elements
+https://leetcode.com/problems/find-k-closest-elements/
+Approach 1
+i. Sort based on distance from x
+ii. First k elements
+Approach 2
+i. find index of target
+ii. k closest elements should be between index - k - 1 and index + k - 1
+iii. compare distance from target for both ends and find low and high pointer values
+
+5. Intersection of 2 sorted Arrays
+https://leetcode.com/problems/intersection-of-two-arrays/
+Approach 1
+i. using hashset to store numbers present in one array and check if other array contains numbers present in the set
+Approach 2
+i. using binary search to check if each element in array 1 is present in array 2
+Approach 3
+i. array index manipulation using pointers
+
+6. Find duplicate in array
+https://leetcode.com/problems/find-the-duplicate-number
+Approach 1
+i. sort and check if any 2 consecutive numbers are equal
+Approach 2
+ii. using hashset to check if duplicate is present
+Approach 3 - Floyd's Tortoise and Hare
+iii. similar to finding cycle starting point in linked list
+
+HashTable
+---------
+
+1. Isomorphic strings
+https://leetcode.com/problems/isomorphic-strings/
+i. using hashmap check if there is one-to-one mapping for each character
+
+2. Contains duplicate within k distance
+https://leetcode.com/problems/contains-duplicate-ii/
+i. using hashmap of number to index, check if duplicate is within k distance
