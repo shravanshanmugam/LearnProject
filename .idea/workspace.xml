@@ -4,7 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="leetcode problems for preparation">
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -168,7 +168,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Java Scratch.Scratch">
+  <component name="RunManager" selected="Java Scratch.LRUCache">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
@@ -179,19 +179,6 @@
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
-    </configuration>
-    <configuration name="Division" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.math.Division" />
-      <module name="LeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.medium.math.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="FirstMissingPositive" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.hard.FirstMissingPositive" />
@@ -215,6 +202,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LRUCache" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LRUCache" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -254,19 +248,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Division" />
       <item itemvalue="Application.TaskScheduler" />
       <item itemvalue="Application.FirstMissingPositive" />
       <item itemvalue="Java Scratch.Solution" />
       <item itemvalue="Java Scratch.Scratch" />
+      <item itemvalue="Java Scratch.LRUCache" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Java Scratch.LRUCache" />
         <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="Java Scratch.Solution" />
         <item itemvalue="Application.FirstMissingPositive" />
         <item itemvalue="Application.TaskScheduler" />
-        <item itemvalue="Application.Division" />
       </list>
     </recent_temporary>
   </component>
@@ -304,20 +298,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00017" summary="LearnSecurity module added">
-      <created>1586099878219</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1586099878219</updated>
-    </task>
-    <task id="LOCAL-00018" summary="LearnSecurity module added">
-      <created>1586100521103</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1586100521103</updated>
     </task>
     <task id="LOCAL-00019" summary="restructured projects">
       <created>1586105341285</created>
@@ -648,7 +628,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615912703553</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="leetcode problems for preparation">
+      <created>1615935209880</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1615935209880</updated>
+    </task>
+    <task id="LOCAL-00067" summary="leetcode problems for preparation">
+      <created>1615935237559</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1615935237559</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,7 +668,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="models, entities, value objects, aggregates notes added in ddd" />
     <MESSAGE value="leetcode learning" />
     <MESSAGE value="leetcode learning trie DS" />
     <MESSAGE value="leetcode learning n-ary tree" />
@@ -699,7 +692,8 @@
     <MESSAGE value="leetcode learning medium math and other problems" />
     <MESSAGE value="leetcode learning medium math problems" />
     <MESSAGE value="leetcode learning medium other problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode learning medium other problems" />
+    <MESSAGE value="leetcode problems for preparation" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode problems for preparation" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
