@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/stack" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/stack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/LRUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/LRUCache.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -294,13 +293,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00020" summary="restructured projects">
-      <created>1586105599924</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1586105599924</updated>
     </task>
     <task id="LOCAL-00021" summary="removing unnecessary files">
       <created>1586110445732</created>
@@ -638,7 +630,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616160581871</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="leetcode problems monostack notes">
+      <created>1616270749782</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1616270749782</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +663,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="leetcode learning trie DS" />
     <MESSAGE value="leetcode learning n-ary tree" />
     <MESSAGE value="leetcode easy interview array problems" />
     <MESSAGE value="leetcode easy interview string problems" />
@@ -689,7 +687,8 @@
     <MESSAGE value="leetcode learning medium other problems" />
     <MESSAGE value="leetcode problems for preparation" />
     <MESSAGE value="leetcode problems lru cache implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode problems lru cache implementation" />
+    <MESSAGE value="leetcode problems monostack notes" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode problems monostack notes" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

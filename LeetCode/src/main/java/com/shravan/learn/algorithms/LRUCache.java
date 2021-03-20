@@ -2,125 +2,81 @@ package com.shravan.learn.algorithms;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
-public class LRUCache {
+class Node {
+    int value;
+    int key;
+    Node pre;
+    Node next;
 
-    private Map<Integer, DoublyLinkedList> map;
-    private DoublyLinkedList head;
-    private DoublyLinkedList tail;
-    private int size;
+    Node(int key, int value) {
+        this.key = key;
+        this.value = value;
+    }
+}
+
+class LRUCache {
+    Map<Integer, Node> map;
+    private int count, capacity;
+    private Node head, tail;
 
     public LRUCache(int capacity) {
         map = new HashMap<>();
-        size = capacity;
-    }
-
-    public int get(int key) {
-        DoublyLinkedList vNode = map.get(key);
-        if (vNode != null) {
-            if (vNode == head) {
-                updateHead();
-            } else if (vNode != tail) {
-                removeNode(vNode);
-                addToTail(vNode);
-            }
-            return vNode.value;
-        }
-        return -1;
-    }
-
-    public void put(int key, int value) {
-        DoublyLinkedList vNode = map.get(key);
-        if (vNode != null) {
-            vNode.value = value;
-            if (vNode == head) {
-                updateHead();
-            } else if (vNode != tail) {
-                removeNode(vNode);
-                addToTail(vNode);
-            }
-        } else {
-            if (map.size() == 0) {
-                DoublyLinkedList newVNode = new DoublyLinkedList(key, value);
-                head = newVNode;
-                tail = newVNode;
-                map.put(key, newVNode);
-            } else if (map.size() < size) {
-                DoublyLinkedList newVNode = new DoublyLinkedList(key, value);
-                addToTail(newVNode);
-                map.put(key, newVNode);
-            } else {
-                DoublyLinkedList newVNode = new DoublyLinkedList(key, value);
-                DoublyLinkedList currHead = head;
-                map.remove(currHead.key);
-                boolean shifted = shiftHead();
-                if (shifted) {
-                    addToTail(newVNode);
-                } else {
-                    head = newVNode;
-                }
-                map.put(key, newVNode);
-            }
-        }
-    }
-
-    private void updateHead() {
-        DoublyLinkedList currHead = head;
-        boolean shifted = shiftHead();
-        if (shifted) {
-            addToTail(currHead);
-        }
-    }
-
-    private boolean shiftHead() {
-        DoublyLinkedList next = head.next;
-        if (next != null) {
-            head = next;
-            head.prev = null;
-            return true;
-        }
-        return false;
-    }
-
-    private void removeNode(DoublyLinkedList curr) {
-        DoublyLinkedList prev = curr.prev;
-        DoublyLinkedList next = curr.next;
-        if (prev != null)
-            prev.next = next;
-        if (next != null)
-            next.prev = prev;
-    }
-
-    private void addToTail(DoublyLinkedList curr) {
-        tail.next = curr;
-        curr.prev = tail;
-        tail = tail.next;
+        count = 0;
+        this.capacity = capacity;
+        // empty head and tail nodes
+        head = new Node(0, 0);
+        tail = new Node(0, 0);
+        // link head and tail nodes
+        // all other nodes go inbetween head and tail nodes
+        head.next = tail;
+        head.pre = null;
+        tail.pre = head;
         tail.next = null;
     }
 
-    static class DoublyLinkedList {
-        int key;
-        int value;
-        DoublyLinkedList next;
-        DoublyLinkedList prev;
+    // most recently accessed element goes to head of node
+    private void addToHead(Node node) {
+        node.next = head.next;
+        head.next.pre = node;
+        head.next = node;
+        node.pre = head;
+    }
 
-        DoublyLinkedList(int key, int value) {
-            this.key = key;
-            this.value = value;
-        }
+    private void deleteNode(Node node) {
+        node.pre.next = node.next;
+        node.next.pre = node.pre;
+    }
 
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            DoublyLinkedList that = (DoublyLinkedList) o;
-            return key == that.key;
-        }
+    public int get(int key) {
+        if (map.containsKey(key)) {
+            Node node = map.get(key);
+            int result = node.value;
+            deleteNode(node);
+            addToHead(node);
+            return result;
+        } else
+            return -1;
+    }
 
-        @Override
-        public int hashCode() {
-            return Objects.hash(key);
+    public void put(int key, int value) {
+        if (map.containsKey(key)) {
+            Node node = map.get(key);
+            node.value = value;
+            deleteNode(node);
+            addToHead(node);
+        } else {
+            Node node = new Node(key, value);
+            map.put(key, node);
+            if (count < capacity) {
+                count++;
+                addToHead(node);
+            } else {
+                // remove element from tail end of list
+                map.remove(tail.pre.key);
+                deleteNode(tail.pre);
+                addToHead(node);
+            }
         }
     }
 }
