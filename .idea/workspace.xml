@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/stack" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/stack" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +170,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Java Scratch.LRUCache">
+  <component name="RunManager" selected="Java Scratch.Solution (1)">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
@@ -193,19 +195,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TaskScheduler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.problems.medium.others.TaskScheduler" />
-      <module name="LeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shravan.learn.problems.medium.others.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LRUCache" type="Java Scratch" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LRUCache" />
       <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
@@ -215,6 +204,13 @@
     </configuration>
     <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Solution (1)" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solution" />
       <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -248,19 +244,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.TaskScheduler" />
       <item itemvalue="Application.FirstMissingPositive" />
       <item itemvalue="Java Scratch.Solution" />
       <item itemvalue="Java Scratch.Scratch" />
       <item itemvalue="Java Scratch.LRUCache" />
+      <item itemvalue="Java Scratch.Solution (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Java Scratch.Solution (1)" />
         <item itemvalue="Java Scratch.LRUCache" />
         <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="Java Scratch.Solution" />
         <item itemvalue="Application.FirstMissingPositive" />
-        <item itemvalue="Application.TaskScheduler" />
       </list>
     </recent_temporary>
   </component>
@@ -298,13 +294,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00019" summary="restructured projects">
-      <created>1586105341285</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1586105341285</updated>
     </task>
     <task id="LOCAL-00020" summary="restructured projects">
       <created>1586105599924</created>
@@ -642,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615935237559</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="leetcode problems lru cache implementation">
+      <created>1616160581870</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1616160581871</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -668,7 +664,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="leetcode learning" />
     <MESSAGE value="leetcode learning trie DS" />
     <MESSAGE value="leetcode learning n-ary tree" />
     <MESSAGE value="leetcode easy interview array problems" />
@@ -693,7 +688,8 @@
     <MESSAGE value="leetcode learning medium math problems" />
     <MESSAGE value="leetcode learning medium other problems" />
     <MESSAGE value="leetcode problems for preparation" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode problems for preparation" />
+    <MESSAGE value="leetcode problems lru cache implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode problems lru cache implementation" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
