@@ -40,6 +40,11 @@ i. reverse entire list
 ii. reverse first k numbers
 iii. reverse last n-k numbers
 
+8. Find number of elements smaller than current element
+https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+i. Cumulative frequency of count sort
+ii. The frequency of previous element shows how many elements are less than current element
+
 Linked list
 -----------
 

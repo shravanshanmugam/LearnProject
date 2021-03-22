@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/ArrayUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/ArrayUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/preparation/problems" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/preparation/problems" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +169,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ShellSort">
+  <component name="RunManager" selected="Java Scratch.Solution">
     <configuration default="true" type="jmh-id" factoryName="Jmh" program-parameters="" working-dir="">
       <module name="" />
       <method v="2">
@@ -185,19 +183,6 @@
     </configuration>
     <configuration name="CountSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.shravan.learn.algorithms.sort.CountSort" />
-      <module name="LeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.shravan.learn.algorithms.sort.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DNFSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shravan.learn.algorithms.sort.DNFSort" />
       <module name="LeetCode" />
       <extension name="coverage">
         <pattern>
@@ -248,6 +233,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Solution" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solution" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LearnframeworksApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="learnframeworks" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.shravan.learn.frameworks.learnframeworks.LearnframeworksApplication" />
@@ -269,19 +261,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DNFSort" />
       <item itemvalue="Application.CountSort" />
       <item itemvalue="Application.TreeSort" />
       <item itemvalue="Application.HeapSort" />
       <item itemvalue="Application.ShellSort" />
+      <item itemvalue="Java Scratch.Solution" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Java Scratch.Solution" />
         <item itemvalue="Application.ShellSort" />
         <item itemvalue="Application.HeapSort" />
         <item itemvalue="Application.TreeSort" />
         <item itemvalue="Application.CountSort" />
-        <item itemvalue="Application.DNFSort" />
       </list>
     </recent_temporary>
   </component>
@@ -319,13 +311,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00022" summary="transport layer security notes added">
-      <created>1586126550167</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1586126550167</updated>
     </task>
     <task id="LOCAL-00023" summary="password based key derivation function">
       <created>1586287273162</created>
@@ -663,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616272408210</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="leetcode sorting algorithms">
+      <created>1616416351312</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1616416351312</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -689,7 +681,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="leetcode learning n-ary tree" />
     <MESSAGE value="leetcode easy interview array problems" />
     <MESSAGE value="leetcode easy interview string problems" />
     <MESSAGE value="leetcode easy interview trees, linkedlist, sort and search problems" />
@@ -714,7 +705,8 @@
     <MESSAGE value="leetcode problems for preparation" />
     <MESSAGE value="leetcode problems monostack notes" />
     <MESSAGE value="leetcode problems lru cache implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode problems lru cache implementation" />
+    <MESSAGE value="leetcode sorting algorithms" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode sorting algorithms" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
