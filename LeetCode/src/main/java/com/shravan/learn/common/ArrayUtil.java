@@ -4,6 +4,22 @@ import java.util.*;
 
 public class ArrayUtil {
 
+    public static int min(int[] nums) {
+        int min = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            min = Math.min(min, nums[i]);
+        }
+        return min;
+    }
+
+    public static int max(int[] nums) {
+        int max = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            max = Math.max(max, nums[i]);
+        }
+        return max;
+    }
+
     public static void swap(int[] nums, int i, int j) {
         int t = nums[i];
         nums[i] = nums[j];

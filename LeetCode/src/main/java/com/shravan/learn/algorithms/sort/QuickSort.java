@@ -1,9 +1,14 @@
-package com.shravan.learn.algorithms;
+package com.shravan.learn.algorithms.sort;
 
 import com.shravan.learn.common.ArrayUtil;
 
 import java.util.Arrays;
 
+/**
+ * It is alse based on Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot.
+ * T(n) = O(n log n), Worst case T(n) = O(n^2) when array is sorted or reverse sorted and we pick smallest or largest element as pivot
+ * S(n) = O(n)
+ */
 public class QuickSort {
 
     public static void main(String[] args) {
