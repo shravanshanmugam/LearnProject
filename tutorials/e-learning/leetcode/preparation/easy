@@ -1,0 +1,16 @@
+1. Shortest distance to a character
+https://leetcode.com/problems/shortest-distance-to-a-character/
+First pass left to right, Second pass right to left
+2. Element Appearing More Than 25% In Sorted Array
+https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array/
+Sliding window technique
+3. Binary Number with Alternating Bits
+https://leetcode.com/problems/binary-number-with-alternating-bits/
+n & n>>1 == 0 and n | n>>2 = n
+4. Complement of Base 10 Integer
+https://leetcode.com/problems/complement-of-base-10-integer/
+2^n | 2^n - 1 gives 1 in all n positions
+5. Count Binary Substrings
+https://leetcode.com/problems/count-binary-substrings/
+6. Kth Missing Positive Number
+https://leetcode.com/problems/kth-missing-positive-number/
