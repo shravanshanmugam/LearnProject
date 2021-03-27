@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/leetcode/preparation/easy" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/leetcode/preparation/easy" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -305,13 +305,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00024" summary="salted password hashes, federation notes added">
-      <created>1586292932361</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1586292932361</updated>
     </task>
     <task id="LOCAL-00025" summary="misc notes on cryptography">
       <created>1586295557561</created>
@@ -649,7 +642,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616439647044</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="leetcode easy problems">
+      <created>1616713067623</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1616713067623</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +675,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="leetcode easy interview string problems" />
     <MESSAGE value="leetcode easy interview trees, linkedlist, sort and search problems" />
     <MESSAGE value="leetcode easy interview trees, linkedlist, sort and search, dynamic programming, design problems" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/dynamicprogramming/MaximumSumSubArray.java" />
@@ -700,7 +699,8 @@
     <MESSAGE value="leetcode problems lru cache implementation" />
     <MESSAGE value="leetcode sorting algorithms" />
     <MESSAGE value="leetcode adding more problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="leetcode adding more problems" />
+    <MESSAGE value="leetcode easy problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="leetcode easy problems" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
