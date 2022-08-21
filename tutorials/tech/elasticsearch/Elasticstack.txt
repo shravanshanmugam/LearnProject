@@ -1,7 +1,7 @@
 Elastic stack
 -------------
 
-Github Workshop  - https://github.com/LisaHJung
+Github Workshop  - https://github.com/LisaHJung/Beginners-Crash-Course-to-Elastic-Stack-Series-Table-of-Contents
 
 search, analyze and visualize data
 full text search engine

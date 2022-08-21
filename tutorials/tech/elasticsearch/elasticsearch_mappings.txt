@@ -1,0 +1,128 @@
+Elastic search mappings
+-----------------------
+
+optimize performance of elastic search
+save disk space
+
+Mapping determines how a document and its fields are indexed and stored by defining the type of each field.
+
+Dynamic mapping
+---------------
+
+Elastic search creates mapping as needed by default when indexing a document
+Infers type from field value and assigns type to each field
+
+Query
+-----
+
+GET news_headlines/_mapping
+PUT news_headlines
+{
+    "mappings":{
+        "properties": {
+            "headline": {
+                "type": "text"
+            },
+            "category": {
+                "type": "keyword"
+            },
+            "content": {
+                "enabled": false // content field is not indexed but stored in elastic search
+            }
+        }
+    }
+}
+
+Term vs Keyword
+---------------
+
+By default, every string gets mapped twice as a text field and as a keyword multi-field.
+Text field type is designed for full-text searches.
+Keyword field type is designed for exact searches, aggregations, and sorting.
+Not required to have both mappings then we can specify our own mapping
+
+1. Text - Inverted index
+term -> document id mapping
+along with frequency, count, term position, term index etc.
+
+2. Keyword - Doc values
+doc id -> text mapping (entire string content)
+
+In indexed document - text type is analyzed, keyword is not analyzed
+In queries, match query string is analyzed, term query string is not analyzed
+
+Mapping rules
+-------------
+
+1. If you do not define a mapping ahead of time, Elasticsearch dynamically creates the mapping for you.
+2. If you do decide to define your own mapping, you can do so at index creation.
+3. ONE mapping is defined per index. Once the index has been created, we can only add new fields to a mapping.
+We CANNOT change the mapping of an existing field.
+4. If you must change the type of an existing field, you must create a new index with the desired mapping,
+then reindex all documents into the new index.
+
+POST _reindex
+{
+    "source": {
+        "index": "produce_index"
+    },
+    "destination": {
+        "index": "produce_v2"
+    }
+}
+
+Runtime field
+-------------
+
+The runtime field is only created and calculated when a request made on the runtime field is being executed.
+Runtime fields are not indexed so these do not take up disk space.
+
+1. Create runtime field and add to mapping of index
+
+PUT produce_v2/_mapping
+{
+  "runtime": {
+    "total": {
+      "type": "double",
+      "script": {
+        "source": "emit(doc['unit_price'].value* doc['quantity'].value)"
+      }
+    }
+  }
+}
+
+GET produce_v2/_mapping
+
+{
+    "produce_v2": {
+        "mappings": {
+            "runtime": {
+                "total": {
+                  "type": "double",
+                  "script": {
+                    "source": "emit(doc['unit_price'].value* doc['quantity'].value)",
+                    "lang": "painless"
+                  }
+                }
+            },
+            "properties": {
+                // remaining mappings
+            }
+        }
+    }
+}
+
+2. Aggregate on runtime field
+
+GET produce_v2/_search
+{
+  "size": 0,
+  "aggs": {
+    "total_expense": {
+      "sum": {
+        "field": "total"
+      }
+    }
+  }
+}
+
