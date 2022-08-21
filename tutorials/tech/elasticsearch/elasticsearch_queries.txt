@@ -1,0 +1,219 @@
+Elastic search queries
+----------------------
+Syntax
+GET _API/parameter
+
+1. CRUD queries
+i. cluster health
+GET _cluster/health
+
+ii. node stats
+GET _nodes/stats
+
+iii. create index
+PUT news_headlines
+
+iv. index document
+POST news_headlines/_doc
+{
+    // document to index
+}
+
+v. index document with id
+PUT news_headlines/_doc/1
+{
+    // document to index
+}
+
+vi. read document
+GET news_headlines/_doc/1
+{
+    "_source": {
+        // document
+    }
+}
+
+vii. create with id if not exists. throws 409 error if doc exists with id
+PUT news_headlines/_create/1
+{
+    // document to create
+}
+
+viii. update with id
+PUT news_headlines/_update/1
+{
+    {
+        "doc": {
+            // update only required fields
+        }
+    }
+}
+
+ix. delete by id
+DELETE news_headlines/_doc/1
+
+2. relevance search queries
+i. read all documents
+GET news_headlines/_search
+{
+    "hits": {
+        "total": 10000, // number of documents matched - elastic search limits number of hits to 10000
+        "relation": "gte" // eq - value equals total number of hits, gte - value greater than equal to number of hits (10000)
+    },
+    "_source": [
+        // elastic search returns top 10 hits documents
+    ]
+}
+ii. get total number of hits
+GET news_headlines/_search
+{
+    "track_total_hits": true
+}
+{
+    "hits": {
+        "total": 200853, // actual number of hits
+        "relation": "eq" // value equals total number of hits
+    },
+    "_source":[
+        //
+    ]
+}
+iii. Query
+GET news_headlines/_search
+{
+    "query": {
+        // query
+    }
+}
+
+iv. Aggregations
+GET news_headlines/_search
+{
+    "aggs": {
+        "by_category": {
+            "terms": {
+                "field": "category", // group by category
+                "size": 100 // upto 100 categories
+            }
+        }
+    }
+}
+{
+    "aggregations": {
+        "by_category": {
+            "buckets": [{
+                "key": "POLITICS",
+                "doc_count": 32739
+            }]
+        }
+    }
+}
+v. Query + Aggregations
+GET news_headlines/_search
+{
+    "query": {
+        "match": {"category":"entertainment"}
+    },
+    "aggregations": {
+        "popular_in_entertainment": {
+            "significant_text":{"field":"headline"}
+        }
+    }
+}
+{
+    "aggregations": {
+        "popular_in_entertainment": {
+            "buckets": [{
+               "key": "trailer",
+               "doc_count": 387
+           }]
+        }
+    }
+}
+vi. match Query string
+GET news_headlines/_search
+{
+    "query": {
+        "match": {
+            "headline": {
+                "query": "khloe kardashian kendall jenner"
+                // "operator": "and" // to increase precision
+                // "minimum_should_match": 3 // fine-tune between precision and recall
+            }
+        }
+    }
+}
+match query uses OR logic for each term.
+if any term is present in headline of document it is considered a hit => high recall and low precision
+to increase precision we can add and operator in query => high precision and low recall
+to fine-tune between precision and recall, we can use minimum_should_match parameter
+
+3. full text search queries
+i. match phrase query - match phrase as whole anywhere in document/field
+- must contain all terms
+- must appear in that order
+- must appear next to each other
+GET news_headlines/_search
+{
+    "query": {
+        "match_phrase": {
+            "headline": "Shape of you"
+        }
+    }
+}
+ii. multi match query - match query over multiple fields
+GET news_headlines/_search
+{
+    "query": {
+        "multi_match": {
+            "query": "Michelle Obama",
+            "fields": [
+                "headline", // "headline^2" per-field boosting
+                "authors",
+                "short_description"
+            ],
+            "type": "phrase" // match phrase query instead of match query which uses OR logic
+        }
+    }
+}
+we can get results with match in short description but not in headlines
+to get more relevant document match on headlines we can do per-field boosting
+to apply match phrase on multi match query, we can add type as phrase
+
+4. combined queries
+i. bool query - combine multiple queries
+must
+must_not
+should - higher score if document meets should criteria. should clause not considered for document hit. does not affect number of hits
+filter - does not affect score. excludes documents that do not meet filter criteria. affects number of hits.
+
+GET newsheadlines/_search
+{
+    "query": {
+        "bool": {
+            "must": [{
+                "match_phrase": {
+                    "headline": "Michelle Obama"
+                }
+            },
+            "must_not": [{
+                "match": {
+                    "category": "WEDDINGS"
+                }
+             }],
+             "should": [{
+               "match_phrase": {
+                "category": "BLACK VOICES"
+               }
+             }],
+             "filter": { // date does not affect relevance of document. but we can exclude documents outside the date range
+                "range": {
+                    "date": {
+                        "gte": "2014-03-25",
+                        "lte": "2016-03-25"
+                    }
+                }
+             }
+        }
+    }
+}
