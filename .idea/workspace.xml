@@ -7,9 +7,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="elastic search queries and aggregations">
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="change folder structures">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/tech/elasticsearch/Elasticstack.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/tech/elasticsearch/Elasticstack.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,11 +107,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\tech\jenkins" />
-      <recent name="$PROJECT_DIR$/tutorials/e-learning/freeCodeCamp" />
-      <recent name="$PROJECT_DIR$/tutorials/e-learning/Intellipaat" />
-      <recent name="$PROJECT_DIR$/tutorials/e-learning" />
-      <recent name="$PROJECT_DIR$/tutorials/java" />
+      <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning\development" />
+      <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning" />
+      <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning\networking" />
+      <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning\design\ddd" />
+      <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.shravan.learn.frameworks.learnframeworks" />
@@ -297,13 +296,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00028" summary="subnetting networks in networking notes added">
-      <created>1586612215836</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1586612215836</updated>
     </task>
     <task id="LOCAL-00029" summary="IPv6 address in networking notes added">
       <created>1586613956070</created>
@@ -641,7 +633,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661066075902</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="change folder structures">
+      <created>1661103091424</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1661103091440</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +665,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/dynamicprogramming/MaximumSumSubArray.java" />
     <MESSAGE value="leetcode learning math problems" />
     <MESSAGE value="Bit ops utility class" />
     <MESSAGE value="leetcode learning other problems" />
@@ -691,7 +689,8 @@
     <MESSAGE value="leetcode easy problems" />
     <MESSAGE value="jenkins" />
     <MESSAGE value="elastic search queries and aggregations" />
-    <option name="LAST_COMMIT_MESSAGE" value="elastic search queries and aggregations" />
+    <MESSAGE value="change folder structures" />
+    <option name="LAST_COMMIT_MESSAGE" value="change folder structures" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

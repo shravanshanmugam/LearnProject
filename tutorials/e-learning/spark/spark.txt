@@ -1,0 +1,122 @@
+Apache Spark
+------------
+
+Reference: https://www.youtube.com/watch?v=9mELEARcxJo
+
+1. Open-source cluster-computing framework for Real-time processing developed by Apache Software Foundation
+2. Provides interface for programming entire clusters with implicit data parallelism and fault-tolerance
+3. Built on top of Hadoop MapReduce and it extends the MapReduce model to efficiently use more types of computations
+
+Big data analytics
+------------------
+
+examining large datasets to uncover hidden patterns, unknown correlations, market trends, customer preferences etc.
+
+Types
+-----
+
+1. Batch analytics - analytics based on data collected over a period of time
+2. Real-time (Stream) analytics - analytics based on immediate data for instant result
+
+Hadoop
+------
+
+Batch processing of data (using MapReduce) stored over a period of time
+
+Why Spark?
+----------
+
+MapReduce is slow due to large number of I/O Operations
+Map -> Sort and Shuffle -> Reduce
+
+1. Speed - 100x faster for large scale data processing
+2. Polyglot - support in Java, Python, Scala and R
+3. In-memory computation - Simple programming layer provides powerful caching and disk persistence capabilities
+Lazy/Delayed evaluation till needed. DAG strucutre for RDD and file and executed on demand
+4. Hadoop integration - Can be deployed through Mesos, Hadoop via Yarn or Spark's own cluster manager (Standalone)
+5. Machine Learning - Spark MLlib
+6. Advanced Analytics
+
+Spark can be regarded as an extension of Hadoop
+MapReduce and Spark are used together where MapReduce is used for batch processing and Spark for real-time processing
+
+Requirements
+------------
+
+1. Process data in real-time
+2. Handle input from multiple sources
+3. Easy to use
+4. Bulk transmission of alerts
+
+How it works?
+-------------
+
+RDD - Resilient Distributed Data
+Resiliency by Replication
+In-memory processing reducing I/O Operations
+Even with low memory, Spark can handle by Data pipelining
+Transformation and Action steps
+
+Spark Ecosystem
+---------------
+
+1. Spark Core
+core engine for large scale parallel and distributed data processing. provides utilities and architecture for other components
+responsible for
+i. Memory management and fault recovery
+ii. Scheduling, distributing and monitoring jobs on a cluster
+iii. Interacting with storage systems
+
+
+Driver (Spark Context) -> Cluster Manager -> [Worker Nodes [Executor, Task, Cache]]
+
+2. Spark Streaming
+processing real-time streaming data
+enables high-throughput and fault-tolerant stream processing of live data streams
+enables analytical and interactive apps for live streaming data
+fundamental stream unit is DStream which is basically a series of RDDs to process real-time data
+
+3. Spark SQL
+integrates relational processing with Spark's functional programming
+Used for structured data and semi-structured data analysis in Spark.
+Can run unmodified Hive queries on existing Hadoop deployment
+Support various data formats
+SQL queries can be converted into RDDs for transformations
+User defined functions to define new column based functions to extend Spark vocabulary
+Following libraries
+1. Data source API
+2. Data frame API
+3. Interpreter and Optimizer
+4. SQL service
+
+4. MLlib
+Machine Learning libraries built on top of Spark
+i. Supervised algorithms - labelled data in which both input and output are provided to the algorithm
+    a. Classification - Naive Bayes, SVM
+    b. Regression - Linear, Logistic
+ii. Unsupervised algorithms - do not have output in advance. Algorithms are left to make sense of data without labels
+    c. Clustering - K means
+    d. Dimensionality Reduction - Principal component analysis, SVD
+
+MLlib techniques
+i. classification
+designate input as belonging to one of several pre-defined classes.
+E.g. credit card fraud detection, email spam detection
+ii. clustering
+groups objects into categories by analyzing similarities between input examples
+iii. collaborative filtering
+recommend items (filtering) based on preference information from many users (collaborative)
+
+5. GraphX
+Graph computation engine (Similar to Giraph). Combines data-parallel and graph-parallel concepts
+
+Use cases
+i. Event detection system
+ii. PageRank
+iii. Financial Fraud detection
+iv. Analyze Business trends
+v. Geographic Information systems
+vi. Google Pregel
+
+6. SparkR
+Package for R language to enable R-users to leverage Spark power from R shell
