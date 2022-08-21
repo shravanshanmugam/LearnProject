@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="jenkins">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="elastic search queries and aggregations" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +95,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -296,13 +294,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00026" summary="notes on networking">
-      <created>1586467274090</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1586467274090</updated>
     </task>
     <task id="LOCAL-00027" summary="ip addressing in networking notes added">
       <created>1586608183693</created>
@@ -640,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661016250117</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="elastic search queries and aggregations">
+      <created>1661065983736</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1661065983736</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +663,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="leetcode easy interview trees, linkedlist, sort and search, dynamic programming, design problems" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/design/ShuffleArray.java&#10;#&#9;LeetCode/src/main/java/com/shravan/learn/problems/dynamicprogramming/MaximumSumSubArray.java" />
     <MESSAGE value="leetcode learning math problems" />
     <MESSAGE value="Bit ops utility class" />
@@ -690,7 +687,8 @@
     <MESSAGE value="leetcode adding more problems" />
     <MESSAGE value="leetcode easy problems" />
     <MESSAGE value="jenkins" />
-    <option name="LAST_COMMIT_MESSAGE" value="jenkins" />
+    <MESSAGE value="elastic search queries and aggregations" />
+    <option name="LAST_COMMIT_MESSAGE" value="elastic search queries and aggregations" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
