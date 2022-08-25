@@ -26,8 +26,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="LearnBenchmark" options="" />
-      <module name="LearnHibernate" options="-parameters" />
-      <module name="LearnReactiveJava" options="-parameters" />
+      <module name="LearnHibernate" options="" />
+      <module name="LearnReactiveJava" options="" />
       <module name="LearnSecurity" options="-parameters" />
       <module name="LearnSpring" options="-parameters" />
       <module name="LearnSpringBoot" options="-parameters" />

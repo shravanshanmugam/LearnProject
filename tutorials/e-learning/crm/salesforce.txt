@@ -1,0 +1,164 @@
+Salesforce
+----------
+
+Cloud computing - use of remote servers to store, manage and process data, rather than a local server or personal computer
+
+Vendor delivers software app on the cloud
+Client accesses software app via the cloud
+
+Salesforce is a cloud computing platform that provide service as SaaS (software product) and PaaS (build your own product)
+
+Benefits of cloud computing
+---------------------------
+1. cheap
+2. scalable
+3. supports team collaborations (Decentralized, not setup on local computer, accessible over internet)
+4. hassle-free
+
+Multi-tenant Architecture of Salesforce
+---------------------------------------
+1. One instance shared by multiple tenants
+2. Economical; resources and maintenance cost is shared (by all the tenants)
+3. Vendor needs to update only application and changes will be reflected for all clients
+4. Single database stores data of multiple clients
+5. Sharing rules enforce by Governor limits (client 2 will not get client 1's data)
+
+Metadata Architecture of Salesforce
+-----------------------------------
+1. Salesforce uses a metadata-driven development model (Tenant-specific metadata, Common metabase, Data)
+2. Functionalities of an app are defined as metadata in a database
+3. Allows developers to concentrate only on building the application
+4. Includes processes, assignment rules, sharing & security settings, Visualforce pages & Apex triggers
+5. Stores page layouts for: Accounts, Contacts, Leads
+
+Salesforce products & services
+------------------------------
+1. Sales
+2. Marketing
+3. Service
+4. Analytics
+5. Community
+6. App
+7. Commerce
+8. IoT
+9. Health
+
+Salesforce Certification Roadmap
+--------------------------------
+1. Developer track
+Platform App Builder (touch and play) -> Technical Architect
+Platform Developer I (code on Apex)-> Platform Developer II
+2. Administrator/Implementation track
+Administrator -> Sales cloud consultant/Service cloud consultant/Advanced Administrator
+
+Sales App
+---------
+Campaigns
+Leads
+Accounts
+Contacts
+Opportunities (Hot leads/close to become customers)
+Forecasts
+Contracts
+Orders
+Cases
+Solutions
+Products
+Reports
+Dashboards
+
+Building blocks of Salesforce Apps
+----------------------------------
+1. Tabs - access objects (tables) in Salesforce App. Display list of records stored in an object
+2. Profiles - collection of settings and permissions which controls what a user can view, access and modify in Salesforce
+(Based on roles or groups)
+3. Objects - database tables where data is present
+4. Fields - Individual data points of an object
+5. Records - collection of fields with values for fields and represent an instance of an object
+
+Features
+--------
+
+1. Customize fields to view in object
+Available Fields - all fields on left pane
+(add/remove button between left and right pane)
+Selected Fields - required fields on right pane
+(up/down button to choose order)
+
+2. Custom App
+Select tabs from pre-defined list
+Available objects/Selected objects/Default landing object
+
+3. Create object
+name, label
+field name, label, data type
+optional features - allow reports, allow activities, track field history, allow in chat groups
+object classification - allow sharing, allow bulk api access, allow streaming api access
+deployment status - In development, deployed
+
+4. Custom object tab
+label, name, style, color
+profiles
+apps
+
+5. Custom fields and relationships
+Data type
+field label, name, length, required (mandatory), unique, default value
+Visibility - only me, all users or users in group
+
+6. Field dependencies - controlling field and dependent field
+Include and exclude values for each controlling field from overall list of dependent fields
+i. Master-Details relationship - parent & child relationship - child looks up parent object
+child requires parent object
+child inherits parent properties/settings
+if parent is deleted, child is also deleted (cascade delete)
+ii. Lookup relationship - parent & child relationship (one to many)
+child does not require parent object
+child does not inherit parent settings
+if parent is deleted, child is not deleted (no cascade delete)
+
+7. Page layout (for objects)
+create sections (one/two column section for left & right)
+customize section name
+tab-key order
+
+8. Validation rules
+i. Rule name, active, error condition formula (fields, operators & functions) error message
+functions - isBlank, isNull, length, includes, or, and, logical etc.
+ii. formula fields - calculates 3rd field based on formula on 2 fields
+
+Users, Profiles, Permission sets and Roles
+------------------------------------------
+users have profiles
+profiles are like teams or groups
+profiles have defined permissions sets
+profiles have access to only certain objects, fields etc.
+access can be read, create, edit, delete for basic or view all, modify all for data administration access
+permission sets extends functionality of profiles (to give few more permissions)
+permissions sets are user level access to objects, fields etc.
+roles (view/edit data within or outside profile)
+
+hierarchy - P parent of A and B, then P can access A and B's data
+A cannot access P & B's data
+B cannot access P & A's data
+M parent of P can access P, A and B's data
+
+Workflows
+---------
+When action occurs on an object, then execute workflow
+i. Workflow rules
+Evaluation criteria - created, created & every time it's edited, created & edited when it meets edit rule criteria
+Edit rule criteria - set field, operator, value
+2. Workflow action
+New email alert, New Field update, New outbound message, Select existing action
+
+Data Management Techniques
+--------------------------
+1. Data importing
+<50k records
+Add data in CSV file. Select custom object to import into.
+Select action - create new, update existing, create new and update existing records
+Edit CSV columns to Object fields mapping
+Summary of Data import (number of rows, columns etc.) and then Start import
+2. Data loading
+>50k records

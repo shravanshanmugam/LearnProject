@@ -1,0 +1,62 @@
+Uniview
+-------
+
+Multi-tenant
+------------
+using business_id in required tables
+
+Notification management
+-----------------------
+trigger point like create/update/delete
+recipient category like assignee/owner/manager
+entity like lead, service lead, contact
+type like sms, email, cloud
+content like subject, header, body, footer
+metadata like business url, logo, copyright, support phone and email
+template file name or sendgrid template id
+
+Label management
+----------------
+Manage labels for each and every form
+Headers, footers etc
+
+LOV setup
+---------
+Common place for all metadata
+type -> value (one to many)
+hierarchy using parent lov id
+
+Document management
+-------------------
+Upload common documents
+Sample documents, brochures, Import documents
+
+Manage roles
+------------
+Job roles and duty roles
+Job to duty role mapping
+
+Lead management
+---------------
+Account & Contacts are fixed
+Multiple leads inside an account (from multiple sources)
+
+Activity log
+------------
+Keep track Create/Update/Delete event on any of the entities
+
+Resource management
+-------------------
+resource id -> role id (one to one)
+resource id -> manager id (one to one)
+
+Resource De-normalization
+------------------------
+Maintain manager -> reportee mapping recursively for multiple levels
+Recalculate hierarchy whenever resource tree is changed
+
+Data import
+-----------
+Upload CSV file
+Validate fields. Error report in last column of csv file
+Submit to save data

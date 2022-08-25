@@ -4,17 +4,23 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnBenchmark" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnBenchmark/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnBenchmark/src/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnHibernate" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnJava" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnJava/DesignPatterns" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnJava/DesignPatterns/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/DesignPatterns/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnJava/LearnConcurrency" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnJava/LearnConcurrency/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/LearnConcurrency/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnJava/LearnMaven" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnJava/LearnMaven/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnJava/LearnMaven/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnJava/NewMavenModule" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnJava/NewMavenModule/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/NewMavenModule/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearnJava/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnReactiveJava" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnSecurity" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnSecurity/src/main/java" charset="UTF-8" />
@@ -26,5 +32,7 @@
     <file url="file://$PROJECT_DIR$/LeetCode/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/learnframeworks" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/learnframeworks/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
 </project>
