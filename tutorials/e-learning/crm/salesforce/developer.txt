@@ -1,0 +1,91 @@
+Salesforce developer
+--------------------
+
+1. MVC Architecture
+2. Visualforce
+3. Apex
+4. Testing and Exceptions
+
+MVC Architecture
+----------------
+Controller
+    - Standard controller
+    - Custom controller (Apex)
+View
+    - Visualforce pages/components
+    - Standard pages
+Model
+    - Standard objects
+    - Custom objects
+
+Declarative and Programmatic
+----------------------------
+
+1. User Interface
+D - Page layout, record types
+P - Visualforce pages and components
+
+2. Business Logic
+D - Workflow, validation rules, approval processes
+P - Apex triggers, controllers, classes
+
+3. Data model
+D - Objects, fields, relationships
+P - Metadata API, Rest API, Bulk API
+
+Client -> Visual force -> Apex -> Database & Web service calls
+
+Visualforce
+-----------
+A framework that allows developers to build sophisticated, custom user interfaces that can be hosted natively on Force.com platform
+
+Consists of two primary elements
+1. Visualforce markup
+i. tags, HTML, javascript or any other Web-enabled code
+ii. Embedded within a single <apex:page> tag
+iii. Defines the user interface components
+
+2. Visualforce controller
+i. Instructions that specify what happens when a user interacts with a component
+ii. Provide access to the that should be displayed in a page
+
+Visualforce can be used for
+1. Email templates
+2. Mobile interfaces
+3. Generate PDFs
+4. Embedded in Page Layout
+5. Pages Override (salesforce page)
+6. Custom Tabs
+
+Apex
+----
+Object oriented Programming language to add custom logic to your application like
+1. Web and email services
+2. Complex validation
+3. Transactional logic
+4. Complex business processes
+5. Logic to operations, like saving a record
+
+Data types and variables
+------------------------
+1. Primitive
+2. sObjects (Standard object)
+sObject refers to any object that can be stored in a database
+sObject variable refers to a row of data
+3. Collections
+Lists, sets, maps
+
+DMLs and Data Operations
+------------------------
+1. Insert
+2. Update
+3. Delete
+4. Upsert (update if exists, insert if not exists)
+
+SOQL and SOSL
+-------------
+Salesforce Object Query Language and Salesforce Object Search Language
+
+SOQL statements evaluate to a list of sObjects, a single sObject, or an Integer for count method queries
+SOSL statements evaluate to a list of sObjects, where each list contains the search results for a particular sObject type
+basically means queries on multiple objects and returns all results

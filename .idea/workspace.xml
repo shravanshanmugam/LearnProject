@@ -7,11 +7,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="change folder structures">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="crm - salesforce and uniview">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/salesforce.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,11 +106,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\LearnProject\tutorials\e-learning\crm\salesforce" />
       <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning\development" />
       <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning" />
       <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning\networking" />
       <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning\design\ddd" />
-      <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.shravan.learn.frameworks.learnframeworks" />
@@ -297,13 +295,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00029" summary="IPv6 address in networking notes added">
-      <created>1586613956070</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1586613956070</updated>
     </task>
     <task id="LOCAL-00030" summary="Ethernet in networking notes added">
       <created>1586624216173</created>
@@ -641,7 +632,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661103091440</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="crm - salesforce and uniview">
+      <created>1661455798980</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1661455798980</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +663,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="leetcode learning math problems" />
     <MESSAGE value="Bit ops utility class" />
     <MESSAGE value="leetcode learning other problems" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
@@ -690,7 +687,8 @@
     <MESSAGE value="jenkins" />
     <MESSAGE value="elastic search queries and aggregations" />
     <MESSAGE value="change folder structures" />
-    <option name="LAST_COMMIT_MESSAGE" value="change folder structures" />
+    <MESSAGE value="crm - salesforce and uniview" />
+    <option name="LAST_COMMIT_MESSAGE" value="crm - salesforce and uniview" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
