@@ -1,0 +1,6 @@
+Testing and exception handling
+------------------------------
+
+Display error message on UI
+Log error message
+Notify developer by email on error

@@ -1,2 +1,9 @@
 Custom controllers
 ------------------
+
+Apex class that implements all the logic for a page without leveraging a standard controller
+Use custom controllers when you want your Visualforce page to run entirely in system mode
+
+<apex:page controller="myController" tabStyle="Account">
+    <apex:form></apex:form>
+</apex:page>
