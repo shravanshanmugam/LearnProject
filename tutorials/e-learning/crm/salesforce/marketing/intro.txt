@@ -1,0 +1,119 @@
+Marketing cloud
+---------------
+
+Need for marketing cloud
+------------------------
+
+Digital marketing Issues
+------------------------
+Excess social media information
+Scattered conversations
+Data stuck in silos
+Struggle to find ROI across multiple channels
+
+Salesforce marketing cloud
+--------------------------
+Unified program for all social programs and data
+Build and engage audience
+Turn insights into actions
+
+Benefits
+--------
+Plan, personalize and optimize customer journey
+Gain more information about your clients
+Map customer journey across multiple channels, devices and customer life cycles
+Nurture your customer as you move them forward in their journeys
+Analyze and assess the impact of every customer interaction to determine strengths and flaws in your action
+
+Platform for 1:1 Customer journeys
+Journey
+Contact
+Content
+Channels
+Analytics
+App
+
+Data process flow
+-----------------
+
+Campaigns -> Leads -> Account, Contact, Opportunity -> Manage activities like tasks, events, calls, emails
+                ^
+                |
+        Activities (tasks, events, calls, emails)
+
+Features
+--------
+1. Channels
+
+i. Email studio
+- Welcome & Promo email. Bank statements, receipts, Build and send emails
+- Drag and drop functionality to build emails
+- Use data from sources like e-commerce, mobile push notifications and provide personalized real time messages
+- Measure and optimize your campaign with advanced email analytics
+
+ii. Mobile studio
+- Keep customers up-to-date SMS confirmations, promotions, real time account updates
+- Engage customers with Photo tutorials and audio clips
+- Geo fence feature ensures your customer gets the information at right time and place
+- Connect on customer's favorite messaging applications by sending personalized announcements
+
+iii. Social studio
+- Manage advertising across Facebook, instagram, twitter, LinkedIn
+- Teams can manage your campaigns with sophisticated targeting all-in-one elegant interface
+- Visualize, optimize and report on advertising performance
+- Take customer insights from Salesforce CRM to your social advertising
+
+iv. Advertising studio
+- Manage social media advertising
+- Use insights on loyal customers to connect with new ones
+- Reconnect with your customers using different channels and aggregate their data
+- Build audience through social topics and then track and optimize your campaign performance
+
+v. Web studio
+- Web solution to turn static websites into dynamic interactive personalized experience
+- With predictive analysis capability, observe customer behavior and build individual profiles
+- Trigger email based on site behavior to re-engage with customers
+- Using interactive and engaging tools, guide customers through process of finding the necessary information
+
+2. Platforms
+
+i. Journey Builder
+- Plan, personalize and optimize customer journey at the right moment on the channel
+- Select targeted audience and create unique journey based on their interaction
+- Apply A/B testing (split testing) to test performance of different communications and channels
+- Select goals and track progress in real time with activity metrics
+
+ii. Audience Builder
+- Understand and engage with customers and unify all data in one place
+- Use drag and drop features to quickly correlate and manipulate data
+- Combine customer data and predictive data to understand your most important customer segment
+- Drive personalized customer journey that automatically adjust to customer's level of engagement
+
+iii. Personalization Builder
+- Provides ability to deliver experience unique to each customer by building customer profiles
+- From anonymous visitor to loyal brand champion, leverage sophisticated algorithms to understand your customer intent
+- Turn static websites into dynamic experiences that deliver personalized content
+- Extend across digital channels using drag-and-drp tools
+
+iv. Content Builder
+- Cross channel content management tool allows you to consolidate images, blocks of text, templates and emails in a single location
+- Organize everything into a unified folder and leverage search and filter tools for easy navigation
+- Upload new content including images and other documents straight from your desktop
+- Takes less time to create and find perfect content and more time putting into action
+
+v. Analytics Builder
+- View real-time behavior on your website and mobile application and measure performance across entire customer journey
+- Reporting for e-mail, mobile, social and ads. Build custom reports
+- Visualization of data to uncover rich insights about customers
+- Predictive analytics provides you with likelihood of purchase
+
+vi. Marketing Cloud Contact
+- Integrate marketing cloud with Salesforce CRM, Sales cloud or Service cloud instance
+- Send emails, SMS from Sales, service or marketing cloud
+- Measure customer engagement by tracking history of profile
+- Advanced functionality provides "the plumbing" for Data stream and Journey builder
+
+Integrations available for Salesforce Marketing cloud
+-----------------------------------------------------
+
+Sales & Service cloud, Shopify, Workfront, Facebook, Twitter, LinkedIn

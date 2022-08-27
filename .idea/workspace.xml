@@ -7,9 +7,17 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="crm - salesforce triggers, governor limits, bulk operations">
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/customcontrollers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/customcontrollers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/salesforce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/intro.txt" afterDir="false" />
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="crm - salesforce custom controllers, testing and exception handling">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/bulkoperations.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/other/bulkoperations.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/customcontrollers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/other/customcontrollers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/datamanagement.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/datamanagement.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/developer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/developer.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/features.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/features.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/governorlimits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/governorlimits.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/testingandexceptionhandling.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/other/testingandexceptionhandling.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/triggers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/triggers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/workflows.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/workflows.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,11 +114,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\LearnProject\tutorials\e-learning\crm\salesforce\sales" />
+      <recent name="D:\IdeaProjects\LearnProject\tutorials\e-learning\crm\salesforce\other" />
       <recent name="D:\IdeaProjects\LearnProject\tutorials\e-learning\crm\salesforce" />
       <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning\development" />
       <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning" />
-      <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning\networking" />
-      <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning\design\ddd" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.shravan.learn.frameworks.learnframeworks" />
@@ -295,13 +303,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00032" summary="switch features in networking notes added">
-      <created>1586627433295</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1586627433295</updated>
     </task>
     <task id="LOCAL-00033" summary="switch features in networking notes added">
       <created>1586627476169</created>
@@ -639,7 +640,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661586842892</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="crm - salesforce custom controllers, testing and exception handling">
+      <created>1661589935422</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1661589935422</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +674,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="bit shift ops for signed and unsigned types" />
     <MESSAGE value="leetcode learning medium array and string problems" />
     <MESSAGE value="leetcode learning medium linkedlist problems" />
@@ -691,7 +698,8 @@
     <MESSAGE value="crm - salesforce and uniview" />
     <MESSAGE value="crm - salesforce developer" />
     <MESSAGE value="crm - salesforce triggers, governor limits, bulk operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="crm - salesforce triggers, governor limits, bulk operations" />
+    <MESSAGE value="crm - salesforce custom controllers, testing and exception handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="crm - salesforce custom controllers, testing and exception handling" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
