@@ -1,0 +1,75 @@
+Building blocks of Salesforce Apps
+----------------------------------
+1. Tabs - access objects (tables) in Salesforce App. Display list of records stored in an object
+2. Profiles - collection of settings and permissions which controls what a user can view, access and modify in Salesforce
+(Based on roles or groups)
+3. Objects - database tables where data is present
+4. Fields - Individual data points of an object
+5. Records - collection of fields with values for fields and represent an instance of an object
+
+Features
+--------
+
+1. Customize fields to view in object
+Available Fields - all fields on left pane
+(add/remove button between left and right pane)
+Selected Fields - required fields on right pane
+(up/down button to choose order)
+
+2. Custom App
+Select tabs from pre-defined list
+Available objects/Selected objects/Default landing object
+
+3. Create object
+name, label
+field name, label, data type
+optional features - allow reports, allow activities, track field history, allow in chat groups
+object classification - allow sharing, allow bulk api access, allow streaming api access
+deployment status - In development, deployed
+
+4. Custom object tab
+label, name, style, color
+profiles
+apps
+
+5. Custom fields and relationships
+Data type
+field label, name, length, required (mandatory), unique, default value
+Visibility - only me, all users or users in group
+
+6. Field dependencies - controlling field and dependent field
+Include and exclude values for each controlling field from overall list of dependent fields
+i. Master-Details relationship - parent & child relationship - child looks up parent object
+child requires parent object
+child inherits parent properties/settings
+if parent is deleted, child is also deleted (cascade delete)
+ii. Lookup relationship - parent & child relationship (one to many)
+child does not require parent object
+child does not inherit parent settings
+if parent is deleted, child is not deleted (no cascade delete)
+
+7. Page layout (for objects)
+create sections (one/two column section for left & right)
+customize section name
+tab-key order
+
+8. Validation rules
+i. Rule name, active, error condition formula (fields, operators & functions) error message
+functions - isBlank, isNull, length, includes, or, and, logical etc.
+ii. formula fields - calculates 3rd field based on formula on 2 fields
+
+Users, Profiles, Permission sets and Roles
+------------------------------------------
+users have profiles
+profiles are like teams or groups
+profiles have defined permissions sets
+profiles have access to only certain objects, fields etc.
+access can be read, create, edit, delete for basic or view all, modify all for data administration access
+permission sets extends functionality of profiles (to give few more permissions)
+permissions sets are user level access to objects, fields etc.
+roles (view/edit data within or outside profile)
+
+hierarchy - P parent of A and B, then P can access A and B's data
+A cannot access P & B's data
+B cannot access P & A's data
+M parent of P can access P, A and B's data

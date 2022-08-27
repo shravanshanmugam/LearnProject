@@ -1,0 +1,10 @@
+Data Management Techniques
+--------------------------
+1. Data importing
+<50k records
+Add data in CSV file. Select custom object to import into.
+Select action - create new, update existing, create new and update existing records
+Edit CSV columns to Object fields mapping
+Summary of Data import (number of rows, columns etc.) and then Start import
+2. Data loading
+>50k records

@@ -1,0 +1,15 @@
+Governor limits
+---------------
+
+Apex runtime engine strictly enforces limits to ensure that Apex code or processes don't monopolize shared resources
+
+Different Governor limits in Salesforce
+---------------------------------------
+
+1. Per-transaction Apex limits (number of transactions, number of records in a transaction)
+2. Force.com platform Apex limits
+3. Static Apex limits (size of static pages)
+4. Size-specific Apex limits (maximum number of characters for class or triggers)
+5. Miscellaneous Apex limits (default timeout for http requests)
+6. Email limits (number of emails sent per day)
+7. Push notification limits (number of notifications sent per day, number of notification queued)

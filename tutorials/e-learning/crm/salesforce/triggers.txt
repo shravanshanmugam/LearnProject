@@ -1,0 +1,42 @@
+Triggers
+--------
+
+Perform custom actions before or after changes to Salesforce records
+
+A trigger executes before or after below operations
+1. Insert
+2. Update
+3. Delete
+4. Merge
+5. Upsert
+6. Undelete (restore data)
+
+Order of Execution of Triggers
+------------------------------
+
+1. Before Trigger
+2. System validation rules
+3. Record saved
+4. After Trigger
+5. Assignment rules - rules to determine who the object gets assigned to. E.g. lead assignment
+6. Auto response rules - E.g. triggering automated email
+7. Workflow rules
+
+=========================
+Order of execution
+------------------
+
+Reference: https://developer.salesforce.com/forums/?id=9060G000000Bdv8QAC
+
+System Validation rule (required field, field format) (SV)
+Before Triggers are executed (BT)
+Custom Validation rules are checked (CV)
+After Triggers are executed (AT)
+Assignment Rules are executed (AR)
+Auto-Response Rules are executed (ARR)
+Workflow Rules are executed (WR)
+Before and after triggers are executed one more time if the workflow rule updates a field (BT & AT)
+Escalation Rules are executed (ER)
+Parent Rollup Summary Formula or Cross Object Formula fields are updated in the respective objects. (RSF, COF) (These parent records also goes through the entire execution order)
+Criteria Based Sharing rules are evaluated (CBS)
+Any Post-Commit Logic is executed (PCL)  (like sending an email)

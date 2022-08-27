@@ -1,0 +1,8 @@
+Workflows
+---------
+When action occurs on an object, then execute workflow
+i. Workflow rules
+Evaluation criteria - created, created & every time it's edited, created & edited when it meets edit rule criteria
+Edit rule criteria - set field, operator, value
+2. Workflow action
+New email alert, New Field update, New outbound message, Select existing action

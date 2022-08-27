@@ -7,9 +7,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="crm - salesforce and uniview">
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="crm - salesforce developer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/salesforce.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/salesforce.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/salesforce.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/uniview.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/uniview.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,13 +296,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00030" summary="Ethernet in networking notes added">
-      <created>1586624216173</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1586624216173</updated>
     </task>
     <task id="LOCAL-00031" summary="switch features in networking notes added">
       <created>1586627419608</created>
@@ -639,7 +633,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661455798980</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="crm - salesforce developer">
+      <created>1661544143563</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1661544143563</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -647,6 +648,9 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.configurationType" implementationName="jmh-id" />
+    <option featureType="dependencySupport" implementationName="java:javax.persistence:javax.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
+    <option featureType="com.intellij.configurationType" implementationName="SpringBootApplicationConfigurationType" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -663,7 +667,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Bit ops utility class" />
     <MESSAGE value="leetcode learning other problems" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="bit shift ops for signed and unsigned types" />
@@ -688,7 +691,8 @@
     <MESSAGE value="elastic search queries and aggregations" />
     <MESSAGE value="change folder structures" />
     <MESSAGE value="crm - salesforce and uniview" />
-    <option name="LAST_COMMIT_MESSAGE" value="crm - salesforce and uniview" />
+    <MESSAGE value="crm - salesforce developer" />
+    <option name="LAST_COMMIT_MESSAGE" value="crm - salesforce developer" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

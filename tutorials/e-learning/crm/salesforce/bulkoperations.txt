@@ -1,0 +1,5 @@
+Bulk operations
+---------------
+
+Performing single commit for each record can exceed governor limits
+Pre-operations step add to collections and perform single commit as bulk operation
