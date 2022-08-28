@@ -53,16 +53,25 @@ Administrator -> Sales cloud consultant/Service cloud consultant/Advanced Admini
 
 Sales App
 ---------
-Campaigns
+Campaigns - Marketing project that you want to plan, manage and track
 Leads
-Accounts
+Accounts - Organisation/Company can be customer/competitor or partner
 Contacts
 Opportunities (Hot leads/close to become customers)
-Forecasts
-Contracts
+Forecasts - Best estimate of how much revenue you can generate in a quarter
+Contracts - Written agreements with your customer
 Orders
-Cases
-Solutions
-Products
-Reports
+Cases - Issues in product/ Feedback, Attach solutions with a case
+Solutions - Build knowledge base
+Reports - Summaries and analysis of your data which you can display or print
 Dashboards
+
+Other objects
+-------------
+Products - Keeps record of items, prices, descriptions of what you sell
+Calendar and Tasks - Track your tasks and schedule calendar events
+Documents - Centralized location for storing and sharing company files
+Chatter - social engagement within organisation
+Feed tracking - track changes to specific fields only to generate chatter notifications
+Price books - Create product prices by region, day of week, season for offers
+Quote - present the customer price of products and service that you offer
