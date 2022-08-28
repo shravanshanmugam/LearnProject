@@ -1,0 +1,85 @@
+Multi-tenant architecture
+-------------------------
+
+Reference: https://www.youtube.com/watch?v=joz0DoSQDNw
+
+SaaS architecture landscape
+---------------------------
+
+1. Onboarding
+2. Authentication
+3. Application services
+4. Storage partitioning
+5. Tenant isolation
+6. Metrics/Analytics, Management and Billing
+
+Provisioning a new tenant
+-------------------------
+
+Tenant registration service
+User management service (First user as admin user when creating a tenant)
+Identity provider (OIDC - OpenID Connect Auth2.0) - Admin user, custom claims
+Access policies - Admin policies, Tenant policies
+Tenant Management service - Tenant id, Plan, Status
+
+Tenant Registration Service -> User Management Service -> Identity Provider
+   |                     \                          \
+Billing Service      Tenant Management Service     Access policies
+(Async interaction)
+
+Tenant Context everywhere
+-------------------------
+
+Identity Provider
+^
+|
+|       SaaS token (user + tenant identity)
+Tenant  <-----------------------------------> Microservice <------------> Database
+                                                   ^
+                                                   |
+                                                   |
+                                              Microservice <------------> Database
+
+Building multi-tenant microservices
+-----------------------------------
+                                                                  Orders - T1 (each tenant has its own database)
+                                                                /
+Authorization --> Application microservice --> Data Access Layer -- Orders - T2
+                     |           |                              \
+                  Metrics      Logging (with Tenant context)       Products - T1, T2 (data shared in single databased, separated by tenant context)
+
+Partitioning Data
+-----------------
+
+Pooled model - Store in common database construct indexed by individual tenant - E.g. Products in above architecture diagram
+Silo model - Each tenant gets own storage construct - E.g. Orders in above architecture diagram
+
+Microservice-by-microservice decision
+-------------------------------------
+
+1. Compliance and Security
+2. Performance
+3. Data footprint
+4. Noisy neighbor
+5. Data distribution
+
+Isolating tenant resources
+--------------------------
+
+Silo model - every tenant gets their own environment
+Pool model - share same environment and resources. Isolation through run time policies
+
+Challenge of pool-based isolation
+---------------------------------
+
+How to ensure one tenant doesn't access another tenant's data?
+
+Runtime scoped access with policies
+-----------------------------------
+
+                    Get products                     Get tenant scoped creds                         Get role for tenant
+Application service ------------> Data access manager ----------------------> Isolation token manager ------> Tenant access manager --> Tenant policy
+                                            |
+                                            | (token corresponing to role for tenant)
+                                            |
+                                   Tenant-scoped access to data

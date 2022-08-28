@@ -1,0 +1,106 @@
+Multi-tenant architecture
+-------------------------
+
+Reference: https://www.youtube.com/watch?v=0N4KknY_zdU
+
+Problems with Single tenant architecture
+----------------------------------------
+
+1. Outage - when compute node goes down it affects the customer and all the users unable to access the instance
+2. Upgrades - perform upgrade on every single compute node
+Require downtime - can roll out during maintenance time
+With customers all around world would mean 24hours to roll out and operate on production
+3. Cost - scaling by number of customers is expensive
+(which doesn't correlate to usage meaning overallocation of resource to customers who aren't using them)
+
+Multi-tenancy
+-------------
+
+1. Any compute node can serve any of the tenants
+2. Compute nodes are stateless meaning they can figure out tenant specific information on the fly
+3. Unlocks horizontal scaling, add more nodes to the pool. Scale by usage instead of number of customers
+4. During outage, when compute node goes down - take the node out of the pool, remaining nodes can serve the tenants
+5. Upgrades - spin up new compute nodes with the latest version of software, when ready switch traffic over to new compute nodes
+Zero downtime upgrades
+
+Challenges moving from single tenant to multi-tenant architecture
+-----------------------------------------------------------------
+
+1. Legacy code - changes to cache tenant data, connect database directly to compute node
+2. Infrastructure
+
+Designing
+---------
+
+1. Single database per tenant
+Problem with Build multi-tenant database risk of tenant getting access to other's data
+All data in one database. compute node fetch data based on tenant context of the request
+Problem with single database per tenant is each compute node should know which database to connect to based on tenant context
+
+2. Tenant context service (TCS) - provide lookup at runtime
+E.g. request for sarahs-company.atlassian.net comes
+Compute node request (TCS)
+Since hostname is unique, TCS can provide tenant configuration (products, users, database details) to compute node.
+Compute node connects to database with database id
+Problems (with > 30,000 requests per second)
+i. Latency - Compute node has to look up configuration from TCS for each request
+ii. Availability - Outage in TCS means outage in Atlassian cloud
+iii. Scalability - Load was only going to grow
+iv. Strong data consistency - Single source of truth of tenant configuration
+Critical information as it pertains to tenant boundaries
+PACELC - in case of network Partition, choose between Availability and Consistency Else choose between Latency and Consistency
+
+3. CQRS - Command Query Responsibility Segregation - Build Catalogue service
+One model for commands (writes - insert/update/delete) - Strong consistency single source of truth
+One model for queries (reads - select/find/filter) - Highly available, low latency
+Takes time to sync data from one system to another meaning we have Eventually consistent system
+It is fine as long as we have a single source of truth in one place of the system
+
+Building
+--------
+
+1. Catalogue Service - Store unique configuration data
+2. TCS - Serve unique configuration data
+
+Key-value store for configuration
+AWS Dynamo DB - 99.99% availability implies 4 minutes downtime per month
+Good for catalogue service, but not for TCS service
+Replicate Dynamo DB instance across regions - 3 replicas - 99.9999% availability implies 3 seconds downtime per month
+Multi-region deployment reduces network latency when serving customers from different regions
+We need to sync data from single source of truth (Catalogue service) to TCS stack
+i. Multi-region - Data needs to be propagated to three TCS deployments
+ii. Ordering - Out of order record would result in stale customer configuration
+E.g. one request to de-activate and another to activate a product
+iii. Real-time - Changes should take effect as soon as possible (in scope of ~ms)
+
+AWS Kinesis Streams
+- real time data streaming
+- multiple readers
+- at least once, order guaranteed
+
+------> Catalogue service -------> Kinesis streams -------> TCS (multi-region replica)
+
+Able to satisfy
+1. Ultra-low latency
+2. Highly available
+3. Highly scalable
+4. Strongly consistent
+
+Refining
+--------
+
+1. re-deploying TCS at high load periods, load-balancer may not scale fast enough.
+Need to pre-warm load balancer
+2. AWS outage - lose records to TCS, lose data consistency
+when AWS Dynamo DB slows down, TCS requests would time out
+3. Caching - frequent reads, infrequent writes to configuration
+only cache when we can reliably invalidate critical data
+when request comes to update tenant configuration to a node, node will update in DB and invalidate its own cache
+need to propagate to other nodes
+
+AWS SNS - Simple Notification Service
+- Pub/sub service
+- Fan out many subscribers
+- Realtime
+
+to propagate to other nodes, requested node will notify SNS and SNS will broadcast to other nodes and they will invalidate the cache

@@ -7,9 +7,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="crm - salesforce marketing cloud">
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="crm - salesforce more features">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/intro.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/intro.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,11 +105,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\LearnProject\tutorials\e-learning\design\multi_tenancy" />
+      <recent name="D:\IdeaProjects\LearnProject\tutorials\e-learning\design" />
       <recent name="D:\IdeaProjects\LearnProject\tutorials\e-learning\crm\salesforce\sales" />
       <recent name="D:\IdeaProjects\LearnProject\tutorials\e-learning\crm\salesforce\other" />
       <recent name="D:\IdeaProjects\LearnProject\tutorials\e-learning\crm\salesforce" />
-      <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning\development" />
-      <recent name="C:\Users\shrav\IdeaProjects\LearnProject\tutorials\e-learning" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.shravan.learn.frameworks.learnframeworks" />
@@ -295,13 +294,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00034" summary="ddd notes benefits and drawbacks added">
-      <created>1586629276006</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1586629276006</updated>
     </task>
     <task id="LOCAL-00035" summary="ddd notes definitions">
       <created>1586645533770</created>
@@ -639,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661594057057</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="crm - salesforce more features">
+      <created>1661670276111</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1661670276112</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +665,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="leetcode learning medium array and string problems" />
     <MESSAGE value="leetcode learning medium linkedlist problems" />
     <MESSAGE value="leetcode learning medium tree problems" />
     <MESSAGE value="leetcode learning medium backtracking problems" />
@@ -691,7 +689,8 @@
     <MESSAGE value="crm - salesforce triggers, governor limits, bulk operations" />
     <MESSAGE value="crm - salesforce custom controllers, testing and exception handling" />
     <MESSAGE value="crm - salesforce marketing cloud" />
-    <option name="LAST_COMMIT_MESSAGE" value="crm - salesforce marketing cloud" />
+    <MESSAGE value="crm - salesforce more features" />
+    <option name="LAST_COMMIT_MESSAGE" value="crm - salesforce more features" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
