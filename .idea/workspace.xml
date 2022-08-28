@@ -7,8 +7,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="crm - salesforce more features">
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="multi-tenant architecture - AWS SaaS factory and in Atlassian">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/design/multi_tenancy/aws_saas_factory.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/e-learning/design/multi_tenancy/aws_saas_factory.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,13 +295,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00035" summary="ddd notes definitions">
-      <created>1586645533770</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1586645533770</updated>
     </task>
     <task id="LOCAL-00036" summary="ip routing notes added in networking">
       <created>1586686656278</created>
@@ -638,7 +632,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661670276112</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="multi-tenant architecture - AWS SaaS factory and in Atlassian">
+      <created>1661682008170</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1661682008170</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +666,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="leetcode learning medium linkedlist problems" />
     <MESSAGE value="leetcode learning medium tree problems" />
     <MESSAGE value="leetcode learning medium backtracking problems" />
     <MESSAGE value="leetcode learning medium dynamic programming problems" />
@@ -690,7 +690,8 @@
     <MESSAGE value="crm - salesforce custom controllers, testing and exception handling" />
     <MESSAGE value="crm - salesforce marketing cloud" />
     <MESSAGE value="crm - salesforce more features" />
-    <option name="LAST_COMMIT_MESSAGE" value="crm - salesforce more features" />
+    <MESSAGE value="multi-tenant architecture - AWS SaaS factory and in Atlassian" />
+    <option name="LAST_COMMIT_MESSAGE" value="multi-tenant architecture - AWS SaaS factory and in Atlassian" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

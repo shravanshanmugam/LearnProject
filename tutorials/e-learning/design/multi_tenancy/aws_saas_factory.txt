@@ -83,3 +83,16 @@ Application service ------------> Data access manager ----------------------> Is
                                             | (token corresponing to role for tenant)
                                             |
                                    Tenant-scoped access to data
+
+Role base application flow
+--------------------------
+
+1. System admin - View all tenants, View system health, System user management
+2. Tenant admin - Tenant user management, Application policy management, Protected application features
+3. Tenant user - Application features
+
+Metering consumption
+--------------------
+
+Compute node sends out consumption metrics to Billing system
+(use Amazon Kinesis Data Firehose and Amazon RedShift for Billing Aggregation)
