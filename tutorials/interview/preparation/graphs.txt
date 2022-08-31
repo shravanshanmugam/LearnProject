@@ -1,0 +1,63 @@
+Graphs
+------
+
+nodes & edges
+things & relationships
+n - number of nodes
+e - number of edges
+
+directed and undirected graph
+
+Directed graph
+--------------
+
+Neighbor node - node accessible through edge
+
+Adjacency list
+--------------
+
+key -> list of values mapping
+node -> list of neighbors
+
+Traversal
+---------
+
+1. Depth first traversal - using stack
+
+i. if stack empty, pick a node and push node to stack
+ii. while stack is not empty, pop node from stack
+iii. add node to list
+iv. push neighbors of node to stack and go to ii
+
+2. Breadth first traversal - using queue
+
+i. if queue empty, pick a node and add to queue
+ii. while queue is not empty, remove from queue
+iii. add node to list
+iv. push neighbors of node to queue and go to ii
+
+Acyclic
+-------
+
+no cycles in graph meaning cannot traverse graph starting from node and end at same node
+
+Undirected graph
+----------------
+
+Edge - relationship, connection
+
+edges list -> list of vertices which are connected
+convert to adjacency list.
+connected nodes are neighbors of each other in undirected graph
+need to maintain data on whether node is visited when traversing graph. this is to avoid infinite loop in cycle
+
+Common problems
+---------------
+
+Has path between source and destination node (directed and undirected graph)
+Number of unconnected component graphs.
+Largest component of unconnected component graphs.
+Shortest path - BFS with distance tracking.
+Island count on a grid - same as number of unconnected component graphs.
+minimum island size on a grid - BFS with size tracking
+
