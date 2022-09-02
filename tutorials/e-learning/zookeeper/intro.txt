@@ -1,0 +1,103 @@
+Zookeeper
+---------
+
+Reference: https://www.youtube.com/watch?v=Qhc6RMaDkgY
+
+1. Zookeeper stores information in tree like structure.
+2. It is a traditional file system structure. A file is called Znode.
+3. A file can store data and reference to other Znodes (i.e. its children)
+4. Each Znode can store data upto 1MB
+5. Data is kept in memory and is backed up to a log for reliability. By using memory, Zookeeper is very fast and can handle high loads
+
+Zookeeper Data model
+--------------------
+
+1. Hierarchical data model, like file system
+2. Nodes are called Znodes identified by a path
+3. Znode can have data associated with it and children.
+4. Znodes are versioned
+5. Data is read/written in its entirety
+6. Znodes can be ephemeral nodes - exist as long as the session that created it is active
+7. Watches can be set on znodes
+
+Zookeeper Data flags
+--------------------
+
+1. Ephemeral - znode will be deleted when the session that created it times out, or it is explicitly deleted
+2. Sequence - the path name will have a monotonically increasing counter relative to the parent appended
+Ephemeral node use case
+
+1. master znode can be created as ephemeral node by one of the nodes in the cluster
+2. when master node crashed, ephemeral node will be removed. another node can become master and create master znode.
+3. regionserver znode can be used to see which nodes are available and which ones have crashed
+
+Zookeeper Watches
+-----------------
+
+1. Notifies client when something changes. E.g. configuration data
+2. One time trigger. It has to be reset by client if interested in future notifications
+3. Not a full-fledged notification system. Client should verify the state after receiving the watch event
+4. Ordering guarantee - a client will never see a change for which it has set a watch until it first sees the watch event
+5. Default watcher - notified of state changes in the client (connection loss, session expiry)
+
+Zookeeper Use cases
+-------------------
+
+1. Leader election
+2. Group membership
+3. Configuration management
+4. Cluster management
+5. Load balancing
+
+Zookeeper Stat structure
+------------------------
+
+1. czxid - zxid of the change that caused znode to be created
+2. mzxid - zxid that last modified the znode
+3. ctime - znode creation epoch time
+4. mtime - znode last modified epoch time
+5. version - number of changes to the data of this znode
+6. cversion - number of changes to children of this znode
+7. aversion - number of changes to ACL of this znode
+8. ephemeralOwner - session id of the owner of this znode if the znode is an ephemeral node.
+if it is not an ephemeral node it will be zero
+9. dataLength - the length of the data field of this znode
+10. numChildren - number of children of this znode
+
+Zookeeper guarantees a total order of messages and total order of proposals.
+Zookeeper exposes the total ordering using a Zookeeper transaction id (zxid).
+All proposals will be stamped with a zxid when it is proposed and exactly reflects the total ordering
+
+Zookeeper Quorum
+----------------
+
+1. All servers store a copy of the data (in memory)
+2. A Leader is elected at startup
+3. Followers service clients. All writes go through leader.
+4. Write responses are sent when a majority of servers have persisted the change.
+
+Reference: https://www.youtube.com/watch?v=dwTlW_HrsVg
+
+Zookeeper Guarantees
+--------------------
+
+1. Sequential consistency - FIFO order guarantee for specific client
+2. Atomicity - update all or nothing
+3. Single system image - client will see same view of the system. new server will not accept the connection until it has caught up
+4. Durability - updates are persisted on disk and will not be undone
+5. Timeliness - server will shut down (time out) rather than allow a client to see stale data
+
+Session
+-------
+
+1. client has list of servers in the ensemble
+2. it tries each until successful
+3. server creates new session for the client
+4. session has a time-out period decided by the caller
+5. if server hasn't received request with time-out period, it expires the session
+6. on session expire, ephemeral nodes are lost
+7. to keep sessions alive client sends pings (heartbeats)
+8. client library takes care of heartbeats
+9. fail-over is handled automatically by the client
+10. sessions are still valid on switching to another server
+11. application can't remain agnostic of server reconnections - because apps will fail during disconnection

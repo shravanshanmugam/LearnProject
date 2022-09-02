@@ -1,0 +1,46 @@
+Zookeeper
+---------
+
+Reference: https://www.youtube.com/watch?v=pbmyrNjzdDk
+
+Linearize ability
+A history is linearize-able if
+1. One Total order of operations matches real time
+2. Reads see preceding write in the order
+
+Why Zookeeper?
+1. API for general purpose co-ordination service
+2. Does N-times number of servers implies N-times the performance? - No
+- Since all requests go through leader which creates a bottleneck.
+- If all writes go through leader and read requests go to replicas - Data may not be up-to date in replicas.
+
+Zookeeper does not provide linearize ability
+
+Zookeeper does have a set of consistency guarantees
+1. Linearize able writes
+2. FIFO client order
+- linearize able for client - write to leader and read from replica, replica will wait for write operation to complete before executing read
+- writes in client specified order (particularly for async write requests)
+- reads are ordered and go forward from most recent time. zookeeper sends zxid to the client which is the latest point in commit log which was executed.
+consequent read request knows this state and reads data from current or later points in log. not from the past.
+- or zookeeper keeps zxid for writes and reads happen after latest write by that client.
+
+Ready file - if present then allowed to read the configuration, otherwise configuration is being updated and not allowed to read.
+Write order - Atomic operation
+1. delete the ready file
+2. writes zookeeper files (f1, f2)
+3. create ready file
+
+Read order
+1. Check if ready file exists
+2. if true, read zookeper files (f1, f2)
+
+Issue happens in scenario of new master election
+Master 1 - create ready
+Replica - exists ready, read f1, read f2
+Master 2 - delete ready, write f1, write f2
+
+Way zookeeper manages is to set watch on ready file. Client receives notification when ready file is deleted.
+Guarantee that it sees notification before any write.
+Replicate - exists(ready, watch=true), read f1, read f2
+Configuration management
