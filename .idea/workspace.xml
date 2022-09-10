@@ -7,9 +7,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="DSA - graph problems - beginner">
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="zookeeper tutorial">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/preparation/algorithms" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/interview/preparation/algorithms" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,13 +294,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00039" summary="leetcode learning">
-      <created>1615283062388</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1615283062388</updated>
     </task>
     <task id="LOCAL-00040" summary="leetcode learning">
       <created>1615369095334</created>
@@ -639,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661970396541</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="zookeeper tutorial">
+      <created>1662143888213</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1662143888214</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +665,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="QuickSelect algorithm for largest K elements in array" />
     <MESSAGE value="leetcode learning medium sort and search problems" />
     <MESSAGE value="leetcode learning medium design problems" />
     <MESSAGE value="leetcode learning medium math and other problems" />
@@ -691,7 +689,8 @@
     <MESSAGE value="multi-tenant architecture - AWS SaaS factory role base application flow and metering" />
     <MESSAGE value="multi-tenant architecture - implement in spring" />
     <MESSAGE value="DSA - graph problems - beginner" />
-    <option name="LAST_COMMIT_MESSAGE" value="DSA - graph problems - beginner" />
+    <MESSAGE value="zookeeper tutorial" />
+    <option name="LAST_COMMIT_MESSAGE" value="zookeeper tutorial" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
