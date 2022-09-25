@@ -1,0 +1,119 @@
+Prometheus
+----------
+
+Reference: https://www.youtube.com/watch?v=h4Sl21AKiDg
+
+Created to monitor highly containerized environments (container and microservices architecture)
+
+- constantly monitor all the services
+- hardware and application monitor
+- alert when crash
+- identify problems before (failure detection)
+
+Architecture
+------------
+
+Prometheus server
+1. Storage - stores metrics data in a time series database
+2. Data retrieval worker - pulls metrics data from applications, services, servers and other target resources and push them to storage
+3. Web server (HTTP server) - accepts queries on stored data - for visualization tools like Prometheus UI/Grafana
+
+Services monitored are called targets
+- Linux/Windows server
+- Single application
+- Apache server
+- Service like Database, cache
+
+Units monitored on targets are called metrics. Metrics are saved in Storage component
+- CPU status
+- Memory
+- Disk space
+- Exception count
+- Request count
+- Request duration
+
+Metrics
+-------
+
+Human-readable text based
+Metric entries - type and help attributes
+help - description of the metric
+type
+    - 3 types
+        - counter (how many times? like request current)
+        - gauge (what is the current value? like CPU usage)
+        - histogram (how long or how big? like response time, size of request)
+
+Services need to expose /metrics HTTP endpoint for Prometheus to pull data
+Metrics need to be sent in correct format
+
+Some services don't expose metrics. They need exporter component
+
+Exporter component is a script that fetches metrics from target and converts to correct format and exposes /metrics endpoint
+Prometheus can use this endpoint exposed by Exporter component to pull data
+
+Push system of other monitoring systems
+
+- high load of network traffic pushing metrics to centralized collection platform
+- monitoring can become bottleneck
+- install additional software or tool to push metrics
+- if system doesn't push metrics there could be other reasons - network failure, packet loss etc.
+
+Pull system
+-----------
+
+- multiple Prometheus instances can pull data
+- detect failure if service is up and running
+
+Push gateway
+------------
+
+- targets that run only for short time like short-lived jobs
+
+Configuring Prometheus
+----------------------
+
+1. interval
+2. rules - for aggregating metric values or creating alerts when condition met
+3. scrape config
+    - targets to monitor. Prometheus has its own /metrics endpoint
+    - custom jobs
+
+Alert manager
+-------------
+
+Prometheus read alert rules of config file. If condition met push alert to alert manager.
+Alert manager sends notification via different channels via Email, slack etc.
+
+Data storage
+------------
+
+Stores metrics on disk (HDD/SSD). Optionally integrate with remote storage system
+Written in custom time series format
+
+PromQL
+------
+
+- Query target directly
+- Use visualization tools like Grafana which internally use PromQL
+
+Characteristics
+---------------
+
+1. reliable
+2. stand-alone and self-containing
+3. works, even when other parts of infrastructure are broken
+4. no extensive set-up needed
+5. less complex
+
+Advantages
+----------
+
+- Compatible with Docker and Kubernetes
+
+Disadvantages
+-------------
+
+- Difficult to scale
+Workaround - Increase capacity of Prometheus server or limit number of metrics monitored to scale
+
