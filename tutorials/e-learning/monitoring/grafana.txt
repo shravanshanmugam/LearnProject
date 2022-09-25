@@ -1,0 +1,43 @@
+Grafana
+-------
+
+Continuous Monitoring
+---------------------
+
+1. Better network visibility and transparency
+2. Facilitates rapid responses
+3. Minimizes system downtime
+4. Assists with Healthy Business Performance
+
+Automated process by which one can observe and detect compliance issues and security threats during each phase of the DevOps pipeline
+
+Security measure
+Incident Response
+Threat assessment
+Computers and Database forensics
+Root cause Analysis
+
+Continuous Monitoring tools in Devops
+-------------------------------------
+
+Monitoring tools - Sensu, Nagios, Prometheus
+Configuration Management tools - automate provisioning and deployment of systems - Ansible, Chef, Puppet
+Alerting tools - Pagerduty, Servicenow, Slack
+Metric storage - Influx DB, Splunk, AWS
+Visualization tools - Grafana
+
+What is Grafana?
+----------------
+
+Multi-platform open source analytics and interactive visualization web application.
+Provides - Charts, Graphs and Alerts
+
+Features
+--------
+
+1. Visualization
+2. Alerts
+3. Unify (supports multiple data sources)
+4. Open source
+5. Extensible - discover dashboards and plugins
+6. Collaboration - share data and dashboard across teams
