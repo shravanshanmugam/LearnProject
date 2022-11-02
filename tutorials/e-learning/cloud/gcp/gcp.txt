@@ -1,0 +1,83 @@
+Google Cloud Platform
+---------------------
+
+Domains
+-------
+
+1. Compute
+App Engine
+Compute Engine
+Kubernetes Engine
+Cloud Functions
+Cloud RUn
+
+2. Storage and Database
+Cloud Storage
+Cloud SQL
+Cloud Bigtable (Unstructured data)
+Cloud Spanner
+Cloud Datastore
+Persistent Disk
+Cloud MemoryStore
+
+3. Networking
+VPC
+Cloud Armor
+Cloud CDN
+Cloud Interconnect
+Cloud DNS
+Network Service Tiers
+
+4. Big Data
+BigQuery
+Cloud
+Cloud Dataproc
+Cloud Composer
+Cloud Datalab
+Cloud Dataprep
+Cloud Pub/Sub
+Cloud Data Studio
+
+5. Developer Tools
+Cloud SDK
+Deployment Manager
+Cloud Source Repositories
+Cloud Test Lab
+
+6. Identity and Security
+Cloud Identity
+Cloud IAM
+Cloud Identity-Aware Proxy
+Cloud Data Loss Prevention API
+Security Key Enforcement
+Cloud Key Management Service
+
+7. Internet of Things
+Cloud IoT Core
+Edge TPU
+Cloud IoT
+
+8. Cloud AI
+Cloud AutoML
+Cloud TPU
+Cloud Machine Learning Engine
+Cloud Job Discovery
+DialogFlow Enterprise
+Cloud Natural Language
+Cloud
+Cloud Text-to-Speech
+
+9. Management Tools
+
+10. Data Transfer
+
+11. API Platform
+Maps Platform
+Apigee API Platform
+API Monetization
+Developer Portal
+API Analytics
+Apigee Sense
+Cloud Endpoints
+Service Infrastructure
+
