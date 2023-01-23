@@ -22,16 +22,22 @@
         <module name="LeetCode" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="graphql" target="11" />
+      <module name="LearnGraphQL" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="LearnBenchmark" options="" />
+      <module name="LearnGraphQL" options="-parameters" />
       <module name="LearnHibernate" options="" />
       <module name="LearnReactiveJava" options="" />
       <module name="LearnSecurity" options="-parameters" />
       <module name="LearnSpring" options="-parameters" />
       <module name="LearnSpringBoot" options="-parameters" />
       <module name="LeetCode" options="-parameters" />
+      <module name="graphql" options="-parameters" />
       <module name="learnframeworks" options="-parameters" />
     </option>
   </component>
