@@ -11,7 +11,7 @@
 
     <parent>
         <groupId>com.shravan.learn</groupId>
-        <artifactId>LearnProject</artifactId>
+        <artifactId>learn-project</artifactId>
         <version>1.0</version>
     </parent>
 
