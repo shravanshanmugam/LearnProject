@@ -7,285 +7,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="gcp tutorial">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LearnHibernate/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LearnHibernate/src/main/java/com/shravan/learn/hibernate/HibernateTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LearnHibernate/src/main/java/com/shravan/learn/hibernate/model/UserDetails.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LearnHibernate/src/main/main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LearnHibernate/src/main/main1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LearnHibernate/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LearnJava/DesignPatterns/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LearnJava/DesignPatterns/src/main/java/com/shravan/learn/StrategyPattern.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LearnJava/DesignPatterns/src/main/main6.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/LRUCache.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/LRUCacheLinkedHashMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/QuickSelect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/BubbleSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/BucketSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/CountSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/DNFSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/HeapSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/InsertionSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/MergeSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/QuickSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/RadixSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/SelectionSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/ShellSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/TreeSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/algorithms/sort/WaveSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/ArrayUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/BitsUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/CommonUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/RandomUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/common/StringUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/model/DoubleListNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/model/ListNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/model/NaryTreeNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/model/TreeNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/model/TrieNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/array/BuyAndSellStock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/array/ContainsDuplicate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/array/IntersectionOfTwoArrays.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/array/MoveZeroes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/array/PlusOne.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/array/RemoveDuplicatesFromSortedArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/array/RotateArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/array/RotateImage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/array/SingleNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/array/TwoSum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/array/ValidSudoku.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/design/MinStack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/design/ShuffleArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/dynamicprogramming/BuyAndSellStock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/dynamicprogramming/ClimbingStairs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/dynamicprogramming/HouseRobber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/dynamicprogramming/MaximumSumSubArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/linkedlist/DeleteNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/linkedlist/LinkedListCycle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/linkedlist/Merge2SortedLists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/linkedlist/PalindromeLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/linkedlist/RemoveNthNodeFromEnd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/linkedlist/ReverseLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/math/CountPrimes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/math/FizzBuzz.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/math/PowerOfThree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/math/RomanToInteger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/others/HammingDistance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/others/MissingNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/others/NumberOf1Bits.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/others/PascalsTriangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/others/ReverseBits.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/others/ValidParentheses.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/sortandsearch/FirstBadVersion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/sortandsearch/Merge2SortedArrays.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/strings/FirstUniqueCharacter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/strings/LongestCommonPrefix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/strings/ReverseInteger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/strings/ReverseString.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/strings/StringIndexOf.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/strings/StringToInteger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/strings/ValidAnagram.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/strings/ValidPalindrome.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/trees/LevelOrderTraversal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/trees/MaxDepthBinaryTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/trees/SortedArrayToBST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/trees/SymmetricTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/easy/trees/ValidateBST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/hard/FirstMissingPositive.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/array/IncreasingTripletSubsequence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/array/SetMatrixZeroes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/array/ThreeSum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/backtracking/GenerateParentheses.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/backtracking/LetterCombinationsOfPhoneNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/backtracking/Permutations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/backtracking/SearchWord.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/backtracking/Subsets.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/design/RandomizedSet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/dynamicprogramming/CanJump.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/dynamicprogramming/CoinChange.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/dynamicprogramming/LongestIncreasingSubsequence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/dynamicprogramming/UniquePaths.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/linkedlist/Add2Numbers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/linkedlist/IntersectionOf2LinkedLists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/linkedlist/OddEvenList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/math/Division.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/math/ExcelSheetColumnNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/math/FactorialTrailingZeroes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/math/HappyNumber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/math/PowerXToN.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/math/SquareRoot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/others/MajorityElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/others/ReversePolishNotation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/others/Sum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/others/TaskScheduler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/sortandsearch/KthLargestElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/sortandsearch/MergeIntervals.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/sortandsearch/PeakElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/sortandsearch/SearchA2DMatrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/sortandsearch/SearchForRange.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/sortandsearch/SearchInRotatedSortedArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/sortandsearch/SortColors.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/sortandsearch/TopKFrequentElements.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/strings/GroupAnagrams.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/strings/LongestPalindromicSubstring.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/strings/LongestSubstringWithoutRepeatingCharacters.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/trees/InOrderTraversal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/trees/KthSmallestInBST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/trees/NextRightPointer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/trees/NumberOfIslands.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeetCode/src/main/java/com/shravan/learn/problems/medium/trees/ZigzagLevelOrderTraversal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnframeworks/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnframeworks/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnframeworks/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnframeworks/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnframeworks/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnframeworks/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnframeworks/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnframeworks/src/main/java/com/shravan/learn/frameworks/learnframeworks/LearnframeworksApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnframeworks/src/main/java/com/shravan/learn/frameworks/learnframeworks/concurrency/DummyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/LearnSpringBoot/src/main/java/com/shravan/learn/springboot/controllers/DummyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnframeworks/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnframeworks/src/test/java/com/shravan/learn/frameworks/learnframeworks/LearnframeworksApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/cloud/gcp/gcp.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/containers/containers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/containers/docker.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/intro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/marketing/intro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/datamanagement.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/developer.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/features.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/governorlimits.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/other/bulkoperations.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/other/customcontrollers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/other/testingandexceptionhandling.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/triggers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/salesforce/sales/workflows.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/crm/uniview.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/dbms/dbms.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/design/AWS/dynamo_db.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/design/AWS/free_use.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/design/ddd/ddd1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/design/ddd/ddd2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/design/distributed_systems.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/design/microservices.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/design/multi_tenancy/atlassian.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/design/multi_tenancy/aws_saas_factory.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/design/multi_tenancy/spring_developer.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/design/serverless.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/design/softwarearchitecture.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/development/test_driven_development.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/elasticsearch/elasticsearch_aggregations.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/elasticsearch/elasticsearch_mappings.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/elasticsearch/elasticsearch_queries.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/elasticsearch/elasticstack.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/environment_variables.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/gdpr.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/concurrency/concurrency.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/designpatterns.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/1-Strategy-P1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/1-Strategy-P2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/1-Strategy-P3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/10-Observer-P1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/10-Observer-P4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/10-Observer-P5.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/10-Observer-P6.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/11-Command-P1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/11-Command-P2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/11-Command-P3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/11-Command-P4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/11-Command-P5.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/2-Decorator-P1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/2-Decorator-P2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/3-Factory-P1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/3-Factory-P2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/3-Factory-P3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/3-Factory-Reflection-P1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/3-Factory-Reflection-P2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/4-Singleton-1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/4-Singleton-2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/4-Singleton-3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/4-Singleton-4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/5-Adapter-P1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/5-Adapter-P2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/5-Adapter-P3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/7-Template-P1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/7-Template-P2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/7-Template-P3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/8-Iterator-P1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/8-Iterator-P2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/8-Iterator-P3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/8-Iterator-P4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/9-MVC-P3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/Abstract-Factory-Pattern.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/designpatterns/resources/CountryCodeNew-2019-02-21.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/guice.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/hibernate/hibernate.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/java8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/java9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/jvmarchitecture.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/lambda.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/maven.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/CommonMavenRepos.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/ConfigOfMvnRepos.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/Maven-cheat-sheet.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/MavenArchtypes.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/MavenBuildLifeCycles.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/MavenBuildProfiles.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/MavenCoordinates.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/MavenRepositories.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/MavenSettings.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/MultiModuleMvnProjects.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/OverviewMavenPlugins.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/OverviewTestingWMvn.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/maven/resources/UsingMavenBom.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/springframework/resources/UsingJPAEntities.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/springframework/security/intro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/springframework/spring3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/springframework/springframework5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/techtalk/Java Future" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/techtalk/Java10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/techtalk/Java11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/techtalk/Java8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/techtalk/Java9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/java/techtalk/Spring" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/jenkins/Jenkinsfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/jenkins/script.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/languages/golang.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/monitoring/grafana.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/monitoring/prometheus.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/networking/networking.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/phishing.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/security/cryptography.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/security/oauth2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/spark/spark.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/zookeeper/intro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/e-learning/zookeeper/theory.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/arrays" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/binarysearch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/binarysearchtree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/binarytree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/bitops" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/hashtable" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/linkedlist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/n-arytree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/preparation/algorithms" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/preparation/current" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/preparation/easy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/preparation/graphs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/preparation/guide" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/preparation/problems" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/preparation/topics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/queue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/recursion" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/stack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/strings" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/interview/trie" beforeDir="false" />
-    </list>
+    <list default="true" id="47843e17-1d6d-4f0c-b97e-38e92dcae444" name="Default Changelist" comment="rename project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -369,14 +91,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/nobroker/shravan/mystuff/repos/learn-tutorials&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/nobroker/shravan/mystuff/repos/learn-project",
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.shravan.learn.problems.sortandsearch" />
@@ -568,20 +290,6 @@
       <workItem from="1586500545548" duration="4766000" />
       <workItem from="1586602844849" duration="13091000" />
       <workItem from="1586681448027" duration="12895000" />
-    </task>
-    <task id="LOCAL-00044" summary="leetcode easy interview string problems">
-      <created>1615489101220</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1615489101220</updated>
-    </task>
-    <task id="LOCAL-00045" summary="leetcode easy interview trees, linkedlist, sort and search problems">
-      <created>1615550266655</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1615550266655</updated>
     </task>
     <task id="LOCAL-00046" summary="leetcode easy interview trees, linkedlist, sort and search, dynamic programming, design problems">
       <created>1615568514956</created>
@@ -912,7 +620,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667394271454</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="rename project">
+      <created>1675492384468</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1675492384468</updated>
+    </task>
+    <task id="LOCAL-00094" summary="rename project">
+      <created>1675492390812</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1675492390813</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -939,7 +661,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="leetcode learning medium math and other problems" />
     <MESSAGE value="leetcode learning medium math problems" />
     <MESSAGE value="leetcode learning medium other problems" />
     <MESSAGE value="leetcode problems for preparation" />
@@ -964,7 +685,8 @@
     <MESSAGE value="zookeeper tutorial" />
     <MESSAGE value="prometheus tutorial" />
     <MESSAGE value="gcp tutorial" />
-    <option name="LAST_COMMIT_MESSAGE" value="gcp tutorial" />
+    <MESSAGE value="rename project" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename project" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
