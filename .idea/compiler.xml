@@ -11,17 +11,19 @@
         <module name="NewMavenModule" />
         <module name="LearnMaven" />
         <module name="LearnSecurity" />
-        <module name="DesignPatterns" />
         <module name="LearnLambda" />
         <module name="LearnConcurrency" />
         <module name="LearnSpring" />
         <module name="LearnSpringBoot" />
         <module name="LearnBenchmark" />
-        <module name="learnframeworks" />
-        <module name="LearnHibernate" />
-        <module name="LeetCode" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DesignPatterns" target="1.7" />
+      <module name="learnframeworks" target="11" />
+      <module name="LearnHibernate" target="1.5" />
+      <module name="LeetCode" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

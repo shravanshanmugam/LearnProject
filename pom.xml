@@ -18,17 +18,14 @@
     <modules>
         <module>LearnSpring</module>
         <module>LearnJava</module>
-        <module>LearnHibernate</module>
         <module>LearnLambda</module>
         <module>LearnSpringBoot</module>
         <module>LearnReactiveJava</module>
         <module>LearnProtobuf</module>
         <module>learn.java.modules</module>
         <module>learn.importing.modules</module>
-        <module>learnframeworks</module>
         <module>LearnBenchmark</module>
         <module>LearnSecurity</module>
-        <module>LeetCode</module>
     </modules>
 
     <properties>
